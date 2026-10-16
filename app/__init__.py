@@ -1,0 +1,1 @@
+"""LegalSaathi AI Backend Application."""
