@@ -1,316 +1,430 @@
-# LegalSaathi AI - Backend
+# ⚖️ Pakistan Legal Rights Agent (LegalSaathi AI)
 
-Legal information assistant focused on employment disputes, workplace harassment, and tenant-landlord issues in Karachi, Sindh, Pakistan.
+[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
+[![React 19](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript Strict](https://img.shields.io/badge/TypeScript-Strict_6.0-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4.3-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-1.0+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Groq LLaMA 3.3](https://img.shields.io/badge/Groq-LLaMA_3.3_70B-F55036)](https://groq.com/)
+[![FAISS Vector RAG](https://img.shields.io/badge/RAG-FAISS_Semantic_Search-blueviolet)](https://github.com/facebookresearch/faiss)
 
-## Features
+An open-source, civic AI legal intelligence platform for Pakistan. Built to empower citizens, tenants, and workers with verifiable legal guidance, official provincial statutory citations, and procedural remedies across Sindh.
 
-- **Focused Legal Categories**:
-  - Unpaid salary and employment disputes
-  - Workplace harassment
-  - Tenant and landlord disputes
+---
 
-- **Geographic Scope**: Karachi, Sindh, Pakistan
+## 📑 Table of Contents
 
-- **RAG-Powered**: Semantic search over authentic legal documents with Groq LLM generation
+1. [Project Overview](#-project-overview)
+2. [Team Members & Ownership Matrix](#-team-members--ownership-matrix)
+3. [Architecture & Inter-Team Workflows](#-architecture--inter-team-workflows)
+4. [Role-Specific Workflows](#-role-specific-workflows)
+   - [1. Frontend Lead Workflow (Saeed Ali)](#1-frontend-lead-workflow--saeed-ali)
+   - [2. Project Lead & Legal Research Workflow (Aisha Siddiqui)](#2-project-lead--legal-research-workflow--aisha-siddiqui)
+   - [3. Backend & FastAPI Workflow (Yoha Ali Azam)](#3-backend--fastapi-workflow--yoha-ali-azam)
+   - [4. Frontend-Backend Integration Workflow (Anum)](#4-frontend-backend-integration-workflow--anum)
+   - [5. AI Agent & QA Lead Workflow (Muhammad Maaz)](#5-ai-agent--qa-lead-workflow--muhammad-maaz)
+5. [Full-Stack Local Setup Guide](#-full-stack-local-setup-guide)
+6. [Environment Variables Guide](#-environment-variables-guide)
+7. [API Contract & Endpoints Summary](#-api-contract--endpoints-summary)
+8. [Git Collaboration & Branching Strategy](#-git-collaboration--branching-strategy)
+9. [Project Directory Layout](#-project-directory-layout)
+10. [Legal Disclaimer & Civic Scope](#-legal-disclaimer--civic-scope)
 
-- **Multilingual**: Supports English and Urdu queries (where embedding model supports)
+---
 
-## Tech Stack
+## 🏛️ Project Overview
 
-- Python 3.11+
-- FastAPI + Uvicorn
-- SQLAlchemy 2.x + SQLite
-- Groq API for LLM inference
-- Sentence Transformers for embeddings
-- FAISS for vector search
-- PyMuPDF for PDF processing
+Over 240 million citizens in Pakistan encounter severe hurdles when attempting to understand their fundamental legal rights due to impenetrable statutory jargon, inaccessible gazette records, and high consultation costs. 
 
-## Setup
+**Pakistan Legal Rights Agent** bridges this access gap through a civic legal intelligence platform grounded in authentic enactments:
+- **Verifiable Statutory Grounding**: Direct references to authentic provincial enactments (*Sindh Rented Premises Ordinance, 1979*, *Sindh Industrial Relations Act, 2013*, *Sindh Shops and Establishments Act, 2015*, *Protection Against Harassment of Women at the Workplace Act, 2010*).
+- **Exact Evidentiary Citations**: Every answer includes section numbers, gazette context, and confidence ratings.
+- **Actionable Next Steps**: Step-by-step procedural guidelines (e.g., Section 33 grievance notices in Labour Courts, Section 11 applications before the Rent Controller).
+- **Dual-Mode Development**: Supports both live FastAPI backends and a built-in offline mock adapter for rapid frontend development.
 
-### Prerequisites
+---
 
-- Python 3.11 or newer
-- Groq API key ([get one here](https://console.groq.com))
+## 👥 Team Members & Ownership Matrix
 
-### Installation
+Our team consists of 5 specialized engineers and researchers. Each member owns specific parts of the codebase:
 
-1. **Clone the repository**:
-```bash
-cd Backend
+| Team Member | Role | Primary Responsibility | Directory Ownership | Core Technologies |
+|:---|:---|:---|:---|:---|
+| **Saeed Ali** | **Lead Frontend Developer & System Architect** | UI/UX architecture, responsive citizen interface, state management, design system & animations | `frontend/src/` | React 19, TypeScript, Tailwind CSS v4, Framer Motion |
+| **Aisha Siddiqui** | **Project Lead & Legal Tech Researcher** | Project initiation, statutory knowledge curation, provincial gazette verification, legal accuracy | `data/documents/`, `docs/` | Pakistani Jurisprudence, Legal RAG Taxonomy, Gazette Ingestion |
+| **Yoha Ali Azam** | **Backend & FastAPI Engineer** | Microservices, API routing, database models, session management, and auth security | `app/api/`, `app/db/`, `app/services/` | Python 3.11, FastAPI, SQLAlchemy 2.x, SQLite, JWT |
+| **Anum** | **Frontend & Backend Integration Engineer** | End-to-end API contract binding, authentication flows, CORS synchronization, integration testing | `frontend/src/services/`, `API_CONTRACT.md` | REST APIs, TanStack Query, Fetch Adapters, Contract Testing |
+| **Muhammad Maaz** | **AI Agent Engineer & QA Testing Lead** | RAG retrieval pipelines, Groq LLM prompt grounding, vector search, test automation | `app/rag/`, `scripts/`, `tests/` | Groq API, FAISS, Sentence Transformers, Pytest, Ruff |
+
+---
+
+## 🔄 Architecture & Inter-Team Workflows
+
+The following diagram illustrates how the team's components interact during a user query:
+
+```mermaid
+flowchart TD
+    subgraph Frontend ["Frontend Layer — Saeed Ali"]
+        A[Citizen / User] -->|Inquiry| B[React 19 Interface / ChatComposer]
+        B --> C[TanStack Query & State Cache]
+    end
+
+    subgraph Integration ["Integration Layer — Anum"]
+        C -->|Authenticated HTTP Requests| D[API Service Adapters<br/>Live / Mock Fallback]
+        D -->|REST API Contract /api/v1| E[CORS & Bearer JWT Middleware]
+    end
+
+    subgraph Backend ["Backend & Database — Yoha Ali Azam"]
+        E --> F[FastAPI Router<br/>app/api/routes]
+        F --> G[SQLAlchemy Database<br/>User Profiles & Chat History]
+        F --> H[Legal Analysis Service]
+    end
+
+    subgraph AIAgent ["AI & Retrieval Layer — Muhammad Maaz"]
+        H --> I[FAISS Vector Store<br/>Semantic Search]
+        I --> J[Context Retrieval & Prompt Grounding]
+        J --> K[Groq LLM Engine<br/>LLaMA 3.3 70B]
+        K -->|Structured Citations & Next Steps| H
+    end
+
+    subgraph LegalResearch ["Legal Grounding — Aisha Siddiqui"]
+        L[Authentic Provincial Gazettes<br/>Sindh Acts & Ordinances] -->|PDFs / Text| M[Document Ingestion Pipeline]
+        M -->|Embeddings| I
+    end
+
+    H -->|Standardized JSON Payload| D
+    D -->|Render Citations & Advice| B
 ```
 
-2. **Create virtual environment**:
+---
 
-**Windows (PowerShell)**:
-```powershell
+## 🛠️ Role-Specific Workflows
+
+### 1. Frontend Lead Workflow — Saeed Ali
+**Focus Area**: `frontend/`
+
+- **Responsibilities**:
+  - Maintain the React 19 + TypeScript component library, design system, and layouts.
+  - Implement smooth page transitions and micro-animations with Framer Motion.
+  - Optimize mobile responsiveness, accessibility, and SEO meta tags.
+  - Ensure zero build/lint errors (`oxlint`, `tsc -b`).
+- **Standard Commands**:
+  ```bash
+  cd frontend
+  npm install              # Install dependencies
+  npm run dev              # Launch Vite dev server on http://localhost:5173
+  npm run lint             # Run Oxlint for static analysis
+  npm run build            # Verify TypeScript types and generate production bundle
+  ```
+- **Key Configurations**:
+  - Environment variables: `frontend/.env.local`
+  - Style entry point: `frontend/src/index.css`
+  - Routing layout: `frontend/src/app/router.tsx`
+
+---
+
+### 2. Project Lead & Legal Research Workflow — Aisha Siddiqui
+**Focus Area**: `data/documents/`, `docs/`
+
+- **Responsibilities**:
+  - Source authenticated legal PDFs and statutory gazettes covering Sindh & Federal law.
+  - Categorize statutory texts by topic before passing to document ingestion.
+  - Review AI-generated legal summaries and citations to ensure strict adherence to Pakistani jurisprudence.
+- **Document Naming Convention for Ingestion**:
+  - Place raw legal files in `data/documents/` using standardized keyword naming:
+    - **Unpaid Salary / Labour**: `sindh_shops_employment_act.pdf`, `payment_of_wages_act.txt`
+    - **Workplace Harassment**: `workplace_harassment_act_2010.pdf`
+    - **Tenant / Landlord**: `sindh_rented_premises_ordinance_1979.pdf`
+- **Quality Standard**: Every document must be a primary official source (Gazette of Sindh or National Assembly).
+
+---
+
+### 3. Backend & FastAPI Workflow — Yoha Ali Azam
+**Focus Area**: `app/api/`, `app/db/`, `app/services/`
+
+- **Responsibilities**:
+  - Build and maintain REST endpoints (`/health`, `/api/v1/auth`, `/api/v1/legal`).
+  - Maintain SQLite schema and migrations via SQLAlchemy 2.x.
+  - Implement robust JWT authentication, password hashing, and token validation.
+  - Ensure cross-origin requests from the frontend are authorized via CORS settings.
+- **Standard Commands**:
+  ```bash
+  # Windows PowerShell
+  python -m venv venv
+  .\venv\Scripts\Activate.ps1
+  pip install -r requirements.txt
+
+  # Run API server with hot reload
+  python -m uvicorn app.main:app --reload --port 8000
+  ```
+- **Interactive Documentation**:
+  - Swagger UI: `http://localhost:8000/docs`
+  - ReDoc: `http://localhost:8000/redoc`
+
+---
+
+### 4. Frontend-Backend Integration Workflow — Anum
+**Focus Area**: `frontend/src/services/`, `API_CONTRACT.md`
+
+- **Responsibilities**:
+  - Maintain the unified API contract ([API_CONTRACT.md](file:///d:/Pakistan-legal-Rights-agent/API_CONTRACT.md)).
+  - Ensure typed frontend API clients in `frontend/src/services/` match backend Pydantic schemas.
+  - Toggle and validate switching between Mock Mode and Live Backend Mode.
+  - Test authentication header injection (`Authorization: Bearer <token>`) and error status handling (401, 422, 500).
+- **Integration Testing Steps**:
+  1. Start the FastAPI backend on port `8000`.
+  2. In `frontend/.env.local`, set:
+     ```env
+     VITE_API_BASE_URL=http://localhost:8000/api/v1
+     VITE_ENABLE_MOCK_API=false
+     ```
+  3. Start the frontend: `npm run dev`.
+  4. Perform test sign-up, sign-in, and submit a legal query in the chat assistant to verify end-to-end payload flow.
+
+---
+
+### 5. AI Agent & QA Lead Workflow — Muhammad Maaz
+**Focus Area**: `app/rag/`, `scripts/`, `tests/`
+
+- **Responsibilities**:
+  - Manage document chunking, embeddings (`sentence-transformers/paraphrase-multilingual-mpnet-base-v2`), and FAISS indexing.
+  - Maintain Groq LLM integration (`llama-3.3-70b-versatile`) with prompt templates grounded in Pakistani statutory law.
+  - Author and execute automated unit, integration, and health check test suites.
+  - Enforce Python code quality with Ruff.
+- **Standard Commands**:
+  ```bash
+  # Ingest documents from data/documents into the vector database
+  python scripts/ingest_documents.py ingest --directory data/documents
+
+  # Rebuild FAISS vector store
+  python scripts/ingest_documents.py rebuild
+
+  # Run automated test suites
+  pytest
+
+  # Run tests with code coverage
+  pytest --cov=app --cov-report=html
+
+  # Lint and format code
+  ruff check app tests scripts
+  ruff format app tests scripts
+  ```
+
+---
+
+## 🚀 Full-Stack Local Setup Guide
+
+Follow this guide to run both the FastAPI Backend and the React Frontend on your local machine:
+
+### Terminal 1: Backend Setup (FastAPI)
+
+```bash
+# 1. Clone repository and navigate to root
+git clone https://github.com/Aishasiddiqui97/Pakistan-legal-Rights-agent.git
+cd Pakistan-legal-Rights-agent
+
+# 2. Create and activate virtual environment
+# Windows (PowerShell):
 python -m venv venv
 .\venv\Scripts\Activate.ps1
-```
 
-**macOS/Linux**:
-```bash
+# Linux / macOS:
 python3 -m venv venv
 source venv/bin/activate
-```
 
-3. **Install dependencies**:
-```bash
+# 3. Install Python dependencies
 pip install -r requirements.txt
-```
 
-4. **Configure environment**:
-```bash
+# 4. Create environment file from template
 cp .env.example .env
-```
+# Edit .env and supply your GROQ_API_KEY from https://console.groq.com
 
-Edit `.env` and set your Groq API key:
-```
-GROQ_API_KEY=your_actual_groq_api_key_here
-```
-
-5. **Initialize database**:
-
-The database is automatically initialized on first run.
-
-## Running the Application
-
-### Start the API server
-
-```bash
-python -m uvicorn app.main:app --reload
-```
-
-Or:
-
-```bash
-python app/main.py
-```
-
-The API will be available at `http://localhost:8000`
-
-### API Documentation
-
-Once running, visit:
-- Swagger UI: `http://localhost:8000/docs`
-- ReDoc: `http://localhost:8000/redoc`
-
-## Ingesting Legal Documents
-
-### Add Documents
-
-Place PDF or TXT files in the `data/documents/` directory. Organize by category using filename keywords:
-
-- **Unpaid Salary**: Include "salary", "employment", or "wage" in filename
-- **Workplace Harassment**: Include "harassment" in filename
-- **Tenant/Landlord**: Include "tenant", "landlord", "rent", or "eviction" in filename
-
-### Run Ingestion
-
-```bash
+# 5. Ingest initial legal documents into FAISS vector store
 python scripts/ingest_documents.py ingest --directory data/documents
+
+# 6. Launch the backend API server
+python -m uvicorn app.main:app --reload --port 8000
 ```
+Backend will be live at `http://localhost:8000` (Swagger docs: `http://localhost:8000/docs`).
 
-### Rebuild Vector Index
+---
 
-If you need to rebuild the vector index from the database:
+### Terminal 2: Frontend Setup (React 19 + Vite)
 
 ```bash
-python scripts/ingest_documents.py rebuild
+# 1. Open a new terminal and navigate to frontend directory
+cd Pakistan-legal-Rights-agent/frontend
+
+# 2. Install Node dependencies
+npm install
+
+# 3. Create frontend environment file
+cp .env.example .env.local
+
+# 4. Launch Vite development server
+npm run dev
 ```
+Frontend will be live at `http://localhost:5173`.
 
-## Testing
+---
 
-### Run all tests
+## 🔐 Environment Variables Guide
 
-```bash
-pytest
-```
+### Root Backend `.env`
 
-### Run with coverage
+| Variable | Description | Default / Example |
+|:---|:---|:---|
+| `APP_ENV` | Application environment | `development` |
+| `APP_NAME` | Service title | `LegalSaathi AI` |
+| `API_V1_PREFIX` | Prefix for version 1 API | `/api/v1` |
+| `HOST` | Backend host binding | `0.0.0.0` |
+| `PORT` | Backend port | `8000` |
+| `GROQ_API_KEY` | Groq Cloud API key for LLM inference | `gsk_...` *(Required)* |
+| `GROQ_MODEL` | Groq LLM model name | `llama-3.3-70b-versatile` |
+| `DATABASE_URL` | SQLAlchemy database connection URI | `sqlite:///./legalsaathi.db` |
+| `CORS_ORIGINS` | Permitted client origins | `http://localhost:5173,http://localhost:3000` |
+| `EMBEDDING_MODEL` | HuggingFace embedding model ID | `sentence-transformers/paraphrase-multilingual-mpnet-base-v2` |
+| `VECTOR_STORE_PATH` | Path where FAISS index files reside | `./data/vector_store` |
+| `JWT_SECRET_KEY` | Secret key used for signing JWTs | `secure-secret-key-change-in-prod` |
 
-```bash
-pytest --cov=app --cov-report=html
-```
+### Frontend `frontend/.env.local`
 
-### Run specific test files
+| Variable | Description | Default |
+|:---|:---|:---|
+| `VITE_API_BASE_URL` | Base endpoint URL for the FastAPI backend | `http://localhost:8000/api/v1` |
+| `VITE_APP_NAME` | Display name of the application | `Pakistan Legal Rights Agent` |
+| `VITE_ENABLE_MOCK_API` | Use offline mock data adapter (`true`/`false`) | `false` (for live integration) |
+| `VITE_API_TIMEOUT_MS` | Maximum request duration before timeout | `15000` |
 
-```bash
-pytest tests/unit/test_chunking.py
-pytest tests/integration/test_health.py
-```
+---
 
-## Code Quality
+## 📡 API Contract & Endpoints Summary
 
-### Lint with Ruff
+For complete schema definitions, see the [API Contract](file:///d:/Pakistan-legal-Rights-agent/API_CONTRACT.md).
 
-```bash
-ruff check app tests scripts
-```
+### 1. Health Probes
+- `GET /health/live`: Liveness check verifying process status.
+- `GET /health/ready`: Readiness probe verifying database connectivity, vector index status, and Groq API readiness.
 
-### Format with Ruff
+### 2. Authentication
+- `POST /api/v1/auth/signup`: Create a new citizen account with email and password.
+- `POST /api/v1/auth/login`: Authenticate credentials and receive Bearer JWT token.
+- `GET /api/v1/auth/me`: Retrieve current user profile and session data (requires Bearer auth).
 
-```bash
-ruff format app tests scripts
-```
+### 3. Legal Intelligence & RAG
+- `POST /api/v1/legal/analyze`: Submit legal query with jurisdiction parameters (`city: Karachi`, `province: Sindh`, `category: unpaid_salary | workplace_harassment | tenant_landlord`).
+- `POST /api/v1/legal/search`: Direct semantic search against indexed statutory chunks without LLM synthesis.
 
-## API Usage Examples
+---
 
-### Health Check
+## 🌿 Git Collaboration & Branching Strategy
 
-```bash
-curl http://localhost:8000/health/live
-curl http://localhost:8000/health/ready
-```
+To keep collaboration smooth across all 5 team members without merge conflicts:
 
-### Legal Analysis
+### 1. Branch Naming Standard
+- Frontend enhancements: `feat/frontend-<feature-name>` (e.g. `feat/frontend-chat-stream`)
+- Backend features: `feat/backend-<feature-name>` (e.g. `feat/backend-auth-refresh`)
+- Legal RAG / QA updates: `feat/rag-<feature-name>` (e.g. `feat/rag-punjab-gazette`)
+- Bug fixes: `fix/<issue-name>`
+- Maintenance & audits: `chore/<description>`
 
-```bash
-curl -X POST http://localhost:8000/api/v1/legal/analyze \
-  -H "Content-Type: application/json" \
-  -d '{
-    "question": "My employer has not paid my salary for 3 months. What can I do?",
-    "city": "Karachi",
-    "province": "Sindh",
-    "country": "Pakistan"
-  }'
-```
+### 2. Pre-Commit Checklist
+Before opening a Pull Request or committing changes:
 
-### Search Legal Documents
+- **Frontend check**:
+  ```bash
+  cd frontend
+  npm run lint       # Must have 0 errors
+  npm run build      # Must build cleanly with 0 TypeScript errors
+  ```
+- **Backend check**:
+  ```bash
+  ruff check app tests scripts
+  pytest
+  ```
 
-```bash
-curl -X POST http://localhost:8000/api/v1/legal/search \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "unpaid wages remedies",
-    "category": "unpaid_salary",
-    "top_k": 5
-  }'
-```
+### 3. Merging Policy
+- The `main` branch is the protected production-ready branch.
+- Feature branches are reviewed and merged via Pull Request with passing CI tests.
 
-## Supported Categories
+---
 
-### 1. Unpaid Salary and Employment Disputes
-
-Questions about:
-- Unpaid or delayed wages
-- Employment contracts
-- Termination and final dues
-- Overtime pay
-- Employer-employee disputes related to payment
-
-### 2. Workplace Harassment
-
-Questions about:
-- Workplace harassment complaints
-- Complaint mechanisms
-- Legal protections
-- Reporting channels
-- Evidence preservation
-
-### 3. Tenant and Landlord Disputes
-
-Questions about:
-- Rent disputes
-- Security deposits
-- Eviction notices
-- Rental agreements
-- Maintenance and repairs
-- Tenancy rights
-
-## Geographic Limitations
-
-**LegalSaathi AI currently supports only Karachi, Sindh, Pakistan.**
-
-Questions about other cities or provinces will receive a clear out-of-scope response explaining the geographic limitation.
-
-## Known Limitations
-
-1. **Knowledge Base Coverage**: The system's answers depend on the legal documents ingested. Insufficient sources will result in an "insufficient evidence" response.
-
-2. **Not Legal Advice**: This system provides legal information only, not legal advice. Users should consult qualified lawyers for specific situations.
-
-3. **Amendment Status**: Legal sources may not reflect the most recent amendments unless explicitly updated.
-
-4. **Federal vs Provincial Law**: Some matters may be governed by federal law in addition to or instead of provincial law. The system attempts to identify applicable frameworks but cannot guarantee complete jurisdictional analysis.
-
-5. **Scanned PDFs**: Documents that are scanned images require OCR processing before ingestion.
-
-## Troubleshooting
-
-### "GROQ_API_KEY is not configured"
-
-Make sure you've set `GROQ_API_KEY` in your `.env` file.
-
-### "Vector store is empty"
-
-You need to ingest documents first:
-```bash
-python scripts/ingest_documents.py ingest --directory data/documents
-```
-
-### "Failed to load embedding model"
-
-The first run will download the embedding model (~500MB). Ensure you have:
-- Stable internet connection
-- Sufficient disk space
-- Write permissions in the Python environment
-
-### Import errors
-
-Make sure you're in the virtual environment and have installed all dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-## Project Structure
+## 📁 Project Directory Layout
 
 ```
-Backend/
-├── app/
+Pakistan-legal-Rights-agent/
+├── API_CONTRACT.md              # Official REST API contract specification
+├── FINAL_STATUS_REPORT.md       # Comprehensive system status report
+├── README.md                    # Project documentation & team workflows
+├── pyproject.toml               # Python project configuration
+├── pytest.ini                   # Pytest test suite configuration
+├── requirements.txt             # Backend dependencies
+├── .env.example                 # Backend environment variable template
+├── .gitignore                   # Workspace Git ignore patterns
+│
+├── app/                         # FastAPI Backend Application (Yoha Ali Azam)
+│   ├── main.py                  # Server bootstrap & CORS configuration
 │   ├── api/
-│   │   └── routes/          # API route handlers
-│   ├── core/                # Configuration, logging, exceptions
-│   ├── db/                  # Database models and session
-│   ├── rag/                 # RAG components (chunking, embeddings, vector store)
-│   ├── schemas/             # Pydantic schemas
-│   ├── services/            # Business logic services
-│   ├── repositories/        # Data access layer
-│   └── main.py              # FastAPI application
-├── data/
-│   ├── documents/           # Legal documents for ingestion
-│   └── vector_store/        # FAISS vector index (generated)
-├── scripts/
-│   └── ingest_documents.py  # CLI for document ingestion
-├── tests/
-│   ├── unit/                # Unit tests
-│   └── integration/         # Integration tests
-├── requirements.txt
-├── .env.example
-└── README.md
+│   │   └── routes/              # Route handlers: health.py, auth.py, legal.py
+│   ├── core/                    # Config, security, logging, error handlers
+│   ├── db/                      # SQLAlchemy models, SQLite engine, sessions
+│   ├── rag/                     # RAG pipeline: chunking, embeddings, FAISS store (Muhammad Maaz)
+│   ├── schemas/                 # Pydantic request and response schemas
+│   └── services/                # Business logic: auth_service, legal_service
+│
+├── data/                        # Legal Knowledge Base (Aisha Siddiqui)
+│   ├── documents/               # Raw statutory enactments (PDF / TXT)
+│   └── vector_store/            # FAISS index files and document metadata
+│
+├── scripts/                     # Automation Utilities (Muhammad Maaz)
+│   └── ingest_documents.py      # CLI for chunking and vector index creation
+│
+├── tests/                       # Automated Test Suites (Muhammad Maaz)
+│   ├── unit/                    # Unit tests for chunking, auth, routes
+│   └── integration/             # End-to-end integration tests
+│
+├── docs/                        # Project Audits and Architecture Records
+│   └── frontend-audit.md        # Complete frontend audit and cleanup log
+│
+└── frontend/                    # React 19 Frontend Application (Saeed Ali & Anum)
+    ├── index.html               # Entry HTML with custom branded legal favicon
+    ├── package.json             # Frontend dependencies & npm scripts
+    ├── vite.config.ts           # Vite build configuration with Tailwind v4
+    ├── tsconfig.json            # TypeScript configuration
+    ├── .env.example             # Frontend environment template
+    ├── public/
+    │   └── favicon.svg          # Scales of Justice branded SVG favicon
+    └── src/
+        ├── main.tsx             # React DOM root mounting
+        ├── app/
+        │   ├── App.tsx          # Providers (QueryClient, AuthProvider, Router)
+        │   └── router.tsx       # Code-split application route hierarchy
+        ├── components/
+        │   ├── ui/              # Reusable UI components (Buttons, Modals, Cards)
+        │   └── layout/          # Navbar, Footer, Mobile Navigation
+        ├── features/
+        │   ├── auth/            # Sign In, Sign Up, and Auth Context hooks
+        │   ├── legal-assistant/ # Real-time chat composer, message bubbles, suggested chips
+        │   ├── profile/         # Citizen profile and jurisdiction settings
+        │   └── evidence/        # Statutory citation cards and snippet modals
+        ├── pages/               # LandingPage, AssistantPage, HistoryPage, WhoBuiltThisPage
+        ├── services/            # API client and mock fallback adapter (Anum)
+        └── types/               # TypeScript interfaces for API, Chat, and Citations
 ```
 
-## Development
+---
 
-### Adding New Legal Documents
+## ⚖️ Legal Disclaimer & Civic Scope
 
-1. Obtain authentic legal documents (PDF or TXT)
-2. Place in `data/documents/`
-3. Run ingestion script
-4. Verify ingestion in logs
+> [!IMPORTANT]
+> **Educational & Information Purpose Only**:
+> Pakistan Legal Rights Agent is an artificial intelligence assistance tool designed to clarify civic rights and legal procedures under the laws of Sindh and Pakistan. **It does not constitute formal legal representation, legal advice, or an attorney-client relationship.**
+>
+> Laws and gazette interpretations evolve. For active court proceedings or formal litigation, citizens are strongly advised to consult an advocate enrolled with the **Sindh Bar Council** or the **High Court of Sindh**.
 
-### Adding New Features
+---
 
-1. Create feature branch
-2. Implement changes
-3. Add tests
-4. Run linting: `ruff check`
-5. Run tests: `pytest`
-6. Update documentation
+## 📄 License
 
-## License
-
-[Add your license here]
-
-## Contact
-
-[Add contact information here]
+This project is licensed under the [MIT License](LICENSE) — free and open for public civic empowerment.
