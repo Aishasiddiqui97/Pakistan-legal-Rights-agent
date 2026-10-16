@@ -29,7 +29,11 @@ An open-source, civic AI legal intelligence platform for Pakistan. Built to empo
 7. [API Contract & Endpoints Summary](#-api-contract--endpoints-summary)
 8. [Git Collaboration & Branching Strategy](#-git-collaboration--branching-strategy)
 9. [Project Directory Layout](#-project-directory-layout)
-10. [Legal Disclaimer & Civic Scope](#-legal-disclaimer--civic-scope)
+10. [Troubleshooting & Common Team Pitfalls](#-troubleshooting--common-team-pitfalls)
+11. [Frequently Asked Questions (FAQ)](#-frequently-asked-questions-faq)
+12. [Team Contacts & Contribution Inquiries](#-team-contacts--contribution-inquiries)
+13. [Legal Disclaimer & Civic Scope](#-legal-disclaimer--civic-scope)
+14. [License](#-license)
 
 ---
 
@@ -412,6 +416,90 @@ Pakistan-legal-Rights-agent/
         ├── services/            # API client and mock fallback adapter (Anum)
         └── types/               # TypeScript interfaces for API, Chat, and Citations
 ```
+
+---
+
+## 🔧 Troubleshooting & Common Team Pitfalls
+
+### 1. Backend & AI Retrieval Issues (Yoha & Muhammad Maaz)
+
+- **`GROQ_API_KEY is not configured`**:
+  - *Cause*: `.env` file is missing or `GROQ_API_KEY` is empty.
+  - *Fix*: Copy `.env.example` to `.env` and set `GROQ_API_KEY=gsk_...` from [console.groq.com](https://console.groq.com).
+- **`Vector store is empty / 0 documents indexed`**:
+  - *Cause*: FAISS index has not been generated from the source gazettes.
+  - *Fix*: Run `python scripts/ingest_documents.py ingest --directory data/documents`.
+- **`Failed to load embedding model` / Network Timeout**:
+  - *Cause*: First execution downloads the HuggingFace sentence transformer (~500MB).
+  - *Fix*: Ensure an active internet connection and write permissions in your Python environment.
+- **`database is locked` (SQLite)**:
+  - *Cause*: Multiple processes writing simultaneously to `legalsaathi.db`.
+  - *Fix*: Terminate dangling Uvicorn processes or increase SQLite timeout in `app/db/session.py`.
+
+### 2. Frontend Issues (Saeed Ali)
+
+- **`Port 5173 is already in use`**:
+  - *Fix*: Stop previous Vite instances or run `npm run dev -- --port 5174`.
+- **`Missing styles / Tailwind CSS v4 errors`**:
+  - *Fix*: Ensure `@import "tailwindcss";` is present in `frontend/src/index.css`. Do not create a separate `tailwind.config.js` as Tailwind v4 uses the `@tailwindcss/vite` plugin.
+- **`Blank screen or unhandled mock data`**:
+  - *Fix*: Check browser console. Ensure `VITE_ENABLE_MOCK_API=true` in `frontend/.env.local` if running without the FastAPI backend.
+
+### 3. Integration & Networking Issues (Anum)
+
+- **CORS error (`No 'Access-Control-Allow-Origin' header`)**:
+  - *Fix*: Verify that `CORS_ORIGINS` in root `.env` includes the frontend port (e.g., `http://localhost:5173,http://localhost:3000`).
+- **`401 Unauthorized` on `/api/v1/legal/analyze`**:
+  - *Fix*: Check if your JWT token has expired or if you need to log in again via `/api/v1/auth/login`. In mock mode (`VITE_ENABLE_MOCK_API=true`), mock tokens do not expire.
+- **Port mismatch (`ECONNREFUSED 127.0.0.1:8000`)**:
+  - *Fix*: Ensure the backend Uvicorn command specifies `--port 8000` matching `VITE_API_BASE_URL=http://localhost:8000/api/v1`.
+
+---
+
+## ❓ Frequently Asked Questions (FAQ)
+
+<details>
+<summary><strong>Can I develop the frontend without having Python or Groq API configured?</strong></summary>
+
+**Yes, absolutely.** The frontend includes an offline mock data adapter. Simply create `frontend/.env.local` with `VITE_ENABLE_MOCK_API=true`. You can test all citizen interfaces, interactive citations, responsive chat, and profile management without starting FastAPI.
+</details>
+
+<details>
+<summary><strong>Where should new Pakistani law acts or provincial gazettes be placed?</strong></summary>
+
+Place verified PDF or TXT statutory documents inside `data/documents/`. Use topic keywords in the filename (e.g., `sindh_rented_premises.pdf`, `workplace_harassment_act.txt`). Then execute `python scripts/ingest_documents.py ingest --directory data/documents` to re-index.
+</details>
+
+<details>
+<summary><strong>How do I add a new route or page to the frontend?</strong></summary>
+
+1. Create your component in `frontend/src/pages/YourPage.tsx`.
+2. Register the route in `frontend/src/app/router.tsx` using React lazy loading.
+3. If navigation links are needed, update `frontend/src/components/layout/Navbar.tsx`.
+</details>
+
+<details>
+<summary><strong>How can I inspect the live API request/response format?</strong></summary>
+
+Run the backend and visit Swagger UI at `http://localhost:8000/docs`, or read the standardized [API_CONTRACT.md](API_CONTRACT.md).
+</details>
+
+---
+
+## 📬 Team Contacts & Contribution Inquiries
+
+For questions regarding development, code reviews, or architectural decisions:
+
+| Name | Role | Email / Profile | Specialization |
+|:---|:---|:---|:---|
+| **Saeed Ali** | Lead Frontend Developer & System Architect | `saeedaliofficial77@gmail.com` | React 19, UI/UX, Component Architecture, Design System |
+| **Aisha Siddiqui** | Project Lead & Legal Tech Researcher | [GitHub @Aishasiddiqui97](https://github.com/Aishasiddiqui97) | Pakistani Jurisprudence, Gazette Verification, Project Vision |
+| **Yoha Ali Azam** | Backend & FastAPI Engineer | Core Team Member | High-Concurrency APIs, SQLite, JWT Security, Microservices |
+| **Anum** | Frontend & Backend Integration Engineer | Core Team Member | RESTful Contract Sync, State Pipelines, Cross-Stack Testing |
+| **Muhammad Maaz** | AI Agent Engineer & QA Testing Lead | Core Team Member | Groq LLM Grounding, FAISS Vector Indexing, Test Suites |
+
+- **Official Repository**: [https://github.com/Aishasiddiqui97/Pakistan-legal-Rights-agent](https://github.com/Aishasiddiqui97/Pakistan-legal-Rights-agent)
+- **Bug Reports & Issues**: Open an issue on GitHub or email the respective domain lead.
 
 ---
 

@@ -142,6 +142,20 @@ Set `VITE_ENABLE_MOCK_API=false` in `frontend/.env.local` and ensure your FastAP
 
 ---
 
+## 👥 Frontend Team & Contributors
+
+This frontend interface and architecture was created as part of the Pakistan Legal Rights Agent initiative:
+
+- **Saeed Ali**: Lead Frontend Developer & System Architect (`saeedaliofficial77@gmail.com`) — React 19, UI/UX architecture, responsive citizen workflows, Framer Motion animations.
+- **Aisha Siddiqui**: Project Lead & Legal Tech Researcher ([GitHub @Aishasiddiqui97](https://github.com/Aishasiddiqui97)) — Civic initiator, statutory gazette curation.
+- **Yoha Ali Azam**: Backend & FastAPI Engineer — High-concurrency microservices, JWT auth.
+- **Anum**: Frontend & Backend Integration Engineer — State synchronization, API contract validation.
+- **Muhammad Maaz**: AI Agent Engineer & QA Testing Lead — Groq RAG pipelines, model testing.
+
+Visit the live in-app **[Who Built This](/who-built-this)** team showcase for interactive bios and project milestones. For complete inter-team workflows and backend instructions, see the main [Root README](../README.md).
+
+---
+
 ## ⚖️ Legal Disclaimer
 
 Pakistan Legal Rights Agent provides educational legal information and statutory citations based on gazetted laws of Sindh and Pakistan. **It does not constitute licensed legal advice, court representation, or an attorney-client relationship.** If you are facing eviction, detention, or active litigation, consult an advocate registered with the Sindh Bar Council or a recognized legal aid clinic.
