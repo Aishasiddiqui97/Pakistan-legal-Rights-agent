@@ -66,6 +66,11 @@ class Settings(BaseSettings):
     retrieval_top_k: int = Field(default=5)
     max_retrieval_top_k: int = Field(default=10)
 
+    # Authentication & JWT
+    jwt_secret_key: str = Field(default="legalsaathi-secure-jwt-secret-key-change-in-production")
+    jwt_algorithm: str = Field(default="HS256")
+    jwt_access_token_expire_minutes: int = Field(default=1440)
+
 
 @lru_cache
 def get_settings() -> Settings:

@@ -12,7 +12,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import health, legal
+from app.api.routes import auth, health, legal
 from app.core.config import get_settings
 from app.core.logging import setup_logging
 from app.db.session import init_db
@@ -54,6 +54,12 @@ def create_app() -> FastAPI:
         health.router,
         prefix="/health",
         tags=["health"]
+    )
+
+    app.include_router(
+        auth.router,
+        prefix=f"{settings.api_v1_prefix}/auth",
+        tags=["auth"]
     )
 
     app.include_router(
