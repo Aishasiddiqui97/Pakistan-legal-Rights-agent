@@ -1,0 +1,307 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-bg-cosmic: #0a051b;
+    --color-bg-card: #120b2e;
+    --color-bg-elevated: #1a0f44;
+    --color-purple-500: #8b5cf6;
+    --color-purple-600: #7c3aed;
+    --color-purple-700: #6d28d9;
+    --color-indigo-600: #4f46e5;
+    --color-emerald-500: #10b981;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    margin: 0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html.dark {
+    background-color: #0a051b;
+    color-scheme: dark;
+  }
+
+  html.dark body {
+    background-color: #0a051b;
+    color: #f8fafc;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Cosmic Glow & Radial Backgrounds */
+.cosmic-gradient {
+  background: radial-gradient(circle at 50% 20%, rgba(124, 58, 237, 0.22) 0%, rgba(79, 70, 229, 0.12) 35%, rgba(10, 5, 27, 0.95) 70%, #0a051b 100%);
+}
+
+.cosmic-card {
+  background: rgba(18, 11, 46, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 10px 40px -10px rgba(124, 58, 237, 0.15);
+}
+
+.cosmic-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cosmic-card-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(167, 139, 250, 0.4);
+  box-shadow: 0 20px 50px -10px rgba(124, 58, 237, 0.25);
+}
+
+/* Concentric Orbit Rings */
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  border: 1px solid rgba(139, 92, 246, 0.08);
+  pointer-events: none;
+}
+
+/* Purple Glows */
+.glow-purple {
+  box-shadow: 0 0 35px -5px rgba(124, 58, 237, 0.35);
+}
+
+.glow-purple-strong {
+  box-shadow: 0 8px 30px -4px rgba(124, 58, 237, 0.55);
+}
+
+.glow-pill {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Clean Horizon AI light surface classes for dashboard */
+.horizon-surface {
+  background-color: #fbfbfe;
+  color: #1e1b4b;
+}
+
+.horizon-sidebar {
+  background-color: #ffffff;
+  border-right: 1px solid #f1f1f8;
+}
+
+.horizon-pill {
+  background: #ffffff;
+  border: 1px solid #eef0f6;
+  box-shadow: 0 2px 10px rgba(112, 144, 176, 0.08);
+}
+
+.horizon-pill-active {
+  background: #ffffff;
+  border: 1px solid #8b5cf6;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.18);
+  color: #7c3aed;
+}
+
+/* Global scrollbar hiding for clean native app aesthetic */
+html,
+body,
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  /* IE and Edge */
+  scrollbar-width: none !important;
+  /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Hide scrollbars on inputs and chat textareas */
+textarea,
+input {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+textarea::-webkit-scrollbar,
+input::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+/* Custom subtle scrollbar for long text panels */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.3) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.25);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+/* ChatGPT-style subtle scrollbar at the far right corner */
+.gpt-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+}
+
+.gpt-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.gpt-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.gpt-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.gpt-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(148, 163, 184, 0.6);
+}
+
+html.dark .gpt-scrollbar {
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+html.dark .gpt-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+html.dark .gpt-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Ambient Float & Pulse Animations for Background Icons */
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-18px) rotate(4deg);
+  }
+}
+
+@keyframes float-reverse {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(18px) rotate(-4deg);
+  }
+}
+
+@keyframes spin-very-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-subtle {
+
+  0%,
+  100% {
+    opacity: 0.03;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.07;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 14s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 18s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-very-slow 90s linear infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 8s ease-in-out infinite;
+}
+
+/* Continuous Iridescent Flow for Animated Gradient Text */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-text {
+  background-size: 250% 250%;
+  animation: gradient-shift 6s ease infinite;
+}

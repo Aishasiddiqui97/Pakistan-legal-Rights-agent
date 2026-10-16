@@ -2,6 +2,12 @@
 .env
 .env.local
 
+# Frontend & Node
+node_modules/
+dist/
+dist-ssr/
+*.tsbuildinfo
+
 # Python
 __pycache__/
 *.py[cod]
@@ -10,12 +16,12 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+/lib/
+/lib64/
+!frontend/src/lib/
 parts/
 sdist/
 var/
