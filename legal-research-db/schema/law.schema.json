@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "law.schema.json",
+  "title": "laws.json - verified laws",
+  "description": "Laws collected from official Sindh and federal portals. The agent may only state what is in key_provisions. scripts/validate_data.py enforces the rules this schema cannot express (official domains, source index ranges, route references).",
+  "type": "object",
+  "required": ["dataset", "schema_version", "last_updated", "disclaimer", "levels", "laws"],
+  "properties": {
+    "dataset": {"const": "laws"},
+    "schema_version": {"type": "string"},
+    "last_updated": {"$ref": "#/$defs/date"},
+    "maintainer": {"type": "string"},
+    "disclaimer": {"type": "string"},
+    "levels": {"type": "object", "additionalProperties": {"type": "string"}},
+    "laws": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/law"}}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "partial_date": {"type": "string", "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"},
+    "url": {"type": "string", "pattern": "^https?://"},
+    "category": {
+      "enum": ["employment", "harassment", "tenancy", "legal_aid", "human_rights", "government_complaints",
+               "children", "cyber", "family", "women", "police", "emergency", "general"]
+    },
+    "jurisdiction": {
+      "description": "sindh = Sindh provincial law; federal = federal law (e.g. trans-provincial employers); federal_ict = Islamabad Capital Territory only; national = applies across Pakistan (e.g. PPC, PECA).",
+      "enum": ["sindh", "federal", "federal_ict", "national"]
+    },
+    "source": {
+      "type": "object",
+      "required": ["url", "publisher", "kind"],
+      "additionalProperties": false,
+      "properties": {
+        "url": {"$ref": "#/$defs/url"},
+        "publisher": {"type": "string", "minLength": 1},
+        "kind": {
+          "description": "official_* and court URLs must be on *.gov.pk, *.gos.pk, shrc.org.pk or pakistanbarcouncil.org (checked by the validator).",
+          "enum": ["official_text", "official_page", "official_listing", "court", "org_own_site", "un_or_state_media", "secondary"]
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["level", "verified_on", "sources"],
+      "properties": {
+        "level": {
+          "description": "A = official full text read and every key_provision checked; B = official source confirms the law exists, only listed key_provisions are verified; C = secondary only (not allowed in laws.json - use excluded.json).",
+          "enum": ["A", "B"]
+        },
+        "verified_on": {"$ref": "#/$defs/date"},
+        "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+        "notes": {"type": "string"}
+      }
+    },
+    "amendment": {
+      "type": "object",
+      "required": ["title", "reviewed"],
+      "properties": {
+        "title": {"type": "string"},
+        "act_number": {"type": ["string", "null"]},
+        "dates": {"type": "object", "additionalProperties": {"$ref": "#/$defs/partial_date"}},
+        "url": {"oneOf": [{"$ref": "#/$defs/url"}, {"type": "null"}]},
+        "reviewed": {"type": "boolean", "description": "true only if the amendment text was read and its effect is reflected in key_provisions."},
+        "summary": {"type": "string"}
+      }
+    },
+    "provision": {
+      "type": "object",
+      "required": ["ref", "point", "source"],
+      "additionalProperties": false,
+      "properties": {
+        "ref": {"type": "string", "minLength": 1, "description": "Section reference exactly as routes cite it, e.g. 's.15(2)' or 'SO 12'."},
+        "point": {"type": "string", "minLength": 1, "description": "Plain-English paraphrase of what the provision says."},
+        "source": {
+          "description": "Index (or list of indexes) into verification.sources. Must not point to a secondary source.",
+          "oneOf": [{"type": "integer", "minimum": 0}, {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 0}}]
+        },
+        "note": {"type": "string"}
+      }
+    },
+    "law": {
+      "type": "object",
+      "required": ["id", "title", "jurisdiction", "categories", "key_provisions", "verification"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "title": {"type": "string"},
+        "short_name": {"type": "string"},
+        "act_number": {"type": ["string", "null"]},
+        "jurisdiction": {"$ref": "#/$defs/jurisdiction"},
+        "categories": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/category"}},
+        "dates": {"type": "object", "additionalProperties": {"$ref": "#/$defs/partial_date"}},
+        "official_text_url": {"oneOf": [{"$ref": "#/$defs/url"}, {"type": "null"}]},
+        "other_official_urls": {"type": "array", "items": {"$ref": "#/$defs/url"}},
+        "replaces": {"type": ["string", "null"]},
+        "scope": {"type": "string"},
+        "amendments": {"type": "array", "items": {"$ref": "#/$defs/amendment"}},
+        "key_provisions": {"type": "array", "items": {"$ref": "#/$defs/provision"}},
+        "keywords": {"type": "array", "items": {"type": "string"}, "description": "English and Roman Urdu search terms."},
+        "caveats": {"type": "array", "items": {"type": "string"}},
+        "verification": {"$ref": "#/$defs/verification"},
+        "research_notes": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

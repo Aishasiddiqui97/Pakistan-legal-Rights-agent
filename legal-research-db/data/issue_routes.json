@@ -1,0 +1,362 @@
+{
+  "dataset": "issue_routes",
+  "schema_version": "1.0",
+  "last_updated": "2026-10-17",
+  "maintainer": "Member 2 - Legal Research & Verified Support Database",
+  "how_to_use": "Each route maps a common user problem to verified law provisions and verified contacts. Every legal_basis entry (law_id + ref) must exist in laws.json key_provisions - the validator enforces this. Steps of type 'practical_tip' are common-sense guidance, not law. Always show the disclaimer and the contacts' verified_on date.",
+  "fallback": {
+    "when": "No route matches, the user is outside Sindh, or the relevant law is Level B without extracted provisions.",
+    "say": "Explain that the assistant cannot give a verified answer for this, and refer the user to free legal advice.",
+    "contact_ids": ["slacc-legal-aid-society", "mohr-1099"]
+  },
+  "routes": [
+    {
+      "id": "wages-unpaid-or-late",
+      "title": "Salary not paid, paid late, or illegally deducted",
+      "categories": ["employment"],
+      "user_phrases": ["meri tankhwah nahi mili", "do mahine se salary nahi di", "salary se paise kaat liye", "final settlement nahi diya", "salary hamesha late aati hai", "my employer has not paid my salary"],
+      "applies_when": "Worker in a factory, industrial or commercial establishment in Sindh. Domestic workers: use domestic-worker-rights.",
+      "steps": [
+        {"order": 1, "type": "practical_tip", "action": "Collect proof: appointment letter, pay slips or bank statements, attendance records, and messages with the employer.", "legal_basis": [], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "Know the deadline the employer missed: wages are due before the 7th day after the wage period (before the 10th day if more than 1,000 workers); after termination, within 2 working days. Wages must be paid by cheque or bank transfer with a pay slip.", "legal_basis": [{"law_id": "sindh-payment-of-wages-2015", "ref": "s.5(1)"}, {"law_id": "sindh-payment-of-wages-2015", "ref": "s.5(2)"}, {"law_id": "sindh-payment-of-wages-2015", "ref": "s.6"}, {"law_id": "sindh-standing-orders-2015", "ref": "SO 10(2)"}, {"law_id": "sindh-standing-orders-2015", "ref": "SO 16(4)"}], "contact_ids": []},
+        {"order": 3, "type": "legal", "action": "Only listed deductions are allowed, and total fines in one wage period cannot exceed 3% of wages.", "legal_basis": [{"law_id": "sindh-payment-of-wages-2015", "ref": "s.7"}, {"law_id": "sindh-payment-of-wages-2015", "ref": "s.8"}], "contact_ids": []},
+        {"order": 4, "type": "legal", "action": "File a claim with the Payment of Wages Authority for the area (a Commissioner for Workmen's Compensation or a Directorate of Labour officer). The worker, a lawyer, a union official, a Labour Inspector or the worker's heirs can apply, within 3 years.", "legal_basis": [{"law_id": "sindh-payment-of-wages-2015", "ref": "s.15(1)"}, {"law_id": "sindh-payment-of-wages-2015", "ref": "s.15(2)"}], "contact_ids": ["sindh-labour-department"]},
+        {"order": 5, "type": "legal", "action": "The Authority can order payment plus compensation of up to 10 times the amount deducted. Several unpaid workers can file one group application, but compensation in a group application is capped at Rs 10 per worker.", "legal_basis": [{"law_id": "sindh-payment-of-wages-2015", "ref": "s.15(3)"}, {"law_id": "sindh-payment-of-wages-2015", "ref": "s.16"}], "contact_ids": []},
+        {"order": 6, "type": "legal", "action": "Either side can appeal the Authority's direction to the Labour Court within 30 days.", "legal_basis": [{"law_id": "sindh-payment-of-wages-2015", "ref": "s.17"}], "contact_ids": []},
+        {"order": 7, "type": "contact", "action": "For free legal advice before filing, call SLACC.", "legal_basis": [], "contact_ids": ["slacc-legal-aid-society"]}
+      ],
+      "deadlines": [
+        {"what": "Claim before the Payment of Wages Authority", "limit": "3 years from the deduction or due date (later only with sufficient cause)", "legal_basis": {"law_id": "sindh-payment-of-wages-2015", "ref": "s.15(2)"}},
+        {"what": "Appeal to the Labour Court", "limit": "30 days from the Authority's direction", "legal_basis": {"law_id": "sindh-payment-of-wages-2015", "ref": "s.17"}}
+      ],
+      "contact_ids": ["sindh-labour-department", "slacc-legal-aid-society"],
+      "emergency": false,
+      "caveats": [
+        "Agreements giving up these rights are void (Payment of Wages Act s.23).",
+        "Trans-provincial employers may fall under federal law - see federal-industrial-relations-2012."
+      ]
+    },
+    {
+      "id": "paid-below-minimum-wage",
+      "title": "Paid less than the minimum wage",
+      "categories": ["employment"],
+      "user_phrases": ["minimum wage se kam tankhwah", "mujhe sirf 25 hazar dete hain", "kam se kam tankhwah kitni hai", "aurat ko mard se kam tankhwah", "am I paid below minimum wage"],
+      "applies_when": "Worker in an industrial or commercial establishment in Sindh (not Government employees).",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "Compare the pay with the current notified minimum wage (read it from current_rates.json). Minimum wage includes basic pay plus statutory allowances.", "legal_basis": [{"law_id": "sindh-minimum-wages-2015", "ref": "s.2(xv)"}, {"law_id": "sindh-minimum-wages-2015", "ref": "s.6"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "No employer may pay below the notified minimum; workers already on higher pay keep it.", "legal_basis": [{"law_id": "sindh-minimum-wages-2015", "ref": "s.9(1)"}, {"law_id": "sindh-minimum-wages-2015", "ref": "s.9(2)"}], "contact_ids": []},
+        {"order": 3, "type": "legal", "action": "Claim the shortfall before the Minimum Wages Authority within 6 months of the due date (up to 1 year with sufficient cause); the Authority can add a penalty of up to 10 times the wages withheld.", "legal_basis": [{"law_id": "sindh-minimum-wages-2015", "ref": "s.10"}], "contact_ids": ["sindh-labour-department"]},
+        {"order": 4, "type": "legal", "action": "Appeal against the Authority's order to the Labour Court within 30 days.", "legal_basis": [{"law_id": "sindh-minimum-wages-2015", "ref": "s.11"}], "contact_ids": []},
+        {"order": 5, "type": "legal", "action": "Underpaying is also a criminal offence (up to 6 months' imprisonment and/or a fine of Rs 20,000-50,000, plus the shortfall), and paying women less than men in minimum wages is separately fined.", "legal_basis": [{"law_id": "sindh-minimum-wages-2015", "ref": "s.9(3)"}, {"law_id": "sindh-minimum-wages-2015", "ref": "s.15(4)"}], "contact_ids": []}
+      ],
+      "deadlines": [
+        {"what": "Minimum wage claim before the Authority", "limit": "6 months from the due date (up to 1 year with sufficient cause)", "legal_basis": {"law_id": "sindh-minimum-wages-2015", "ref": "s.10"}},
+        {"what": "Appeal to the Labour Court", "limit": "30 days", "legal_basis": {"law_id": "sindh-minimum-wages-2015", "ref": "s.11"}}
+      ],
+      "contact_ids": ["sindh-labour-department", "slacc-legal-aid-society"],
+      "emergency": false,
+      "caveats": ["Hourly and daily minimum rates for 2026-27 are not yet verified - quote only the monthly rate."]
+    },
+    {
+      "id": "fired-or-terminated",
+      "title": "Fired, terminated or forced out of a job",
+      "categories": ["employment"],
+      "user_phrases": ["mujhe naukri se nikal diya", "bina notice ke nikala", "boss ne kaha kal se mat aana", "zabardasti resign karwaya", "termination letter nahi diya", "gate band kar diya"],
+      "applies_when": "Worker in an industrial or commercial establishment in Sindh with 10 or more workers.",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "Check the worker's class: permanent (long-term work, after completing 3 months' probation) or probationer, temporary, badli or contract.", "legal_basis": [{"law_id": "sindh-standing-orders-2015", "ref": "s.1(4)"}, {"law_id": "sindh-standing-orders-2015", "ref": "SO 1"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "A permanent worker terminated for a reason other than misconduct must get one month's notice or one month's wages in lieu. Temporary, probationer, badli and contract workers are not entitled to notice.", "legal_basis": [{"law_id": "sindh-standing-orders-2015", "ref": "SO 16(1)"}, {"law_id": "sindh-standing-orders-2015", "ref": "SO 16(2)"}], "contact_ids": []},
+        {"order": 3, "type": "legal", "action": "Termination must be by a written order that states the reason - ask for it in writing.", "legal_basis": [{"law_id": "sindh-standing-orders-2015", "ref": "SO 16(3)"}], "contact_ids": []},
+        {"order": 4, "type": "legal", "action": "Dismissal for misconduct requires a written charge within one month, a chance to explain and an independent inquiry; suspension cannot exceed 4 weeks in total and is on full pay.", "legal_basis": [{"law_id": "sindh-standing-orders-2015", "ref": "SO 21(3)"}, {"law_id": "sindh-standing-orders-2015", "ref": "SO 21(4)"}, {"law_id": "sindh-standing-orders-2015", "ref": "SO 21(5)"}], "contact_ids": []},
+        {"order": 5, "type": "legal", "action": "Final wages and dues are due within 2 working days; gratuity of one month's wages per completed year (unless dismissed for misconduct or covered by a matching provident fund); the full provident fund balance; and a service certificate for permanent workers.", "legal_basis": [{"law_id": "sindh-standing-orders-2015", "ref": "SO 16(4)"}, {"law_id": "sindh-standing-orders-2015", "ref": "SO 16(6)"}, {"law_id": "sindh-standing-orders-2015", "ref": "SO 16(7)"}, {"law_id": "sindh-standing-orders-2015", "ref": "SO 17"}], "contact_ids": []},
+        {"order": 6, "type": "legal", "action": "If the worker is stopped from entering or marking attendance, report it in writing to the area Inspector within 10 days.", "legal_basis": [{"law_id": "sindh-standing-orders-2015", "ref": "SO 16(10)"}], "contact_ids": ["sindh-labour-department"]},
+        {"order": 7, "type": "legal", "action": "Send a written grievance notice to the employer within 3 months; the employer must reply in writing within 15 days.", "legal_basis": [{"law_id": "sindh-industrial-relations-2013", "ref": "s.34(1)"}, {"law_id": "sindh-industrial-relations-2013", "ref": "s.34(2)-(3)"}], "contact_ids": []},
+        {"order": 8, "type": "legal", "action": "If there is no reply or it is unsatisfactory, file in the Labour Court within 60 days. No court fee; the Labour Court should decide within 90 days.", "legal_basis": [{"law_id": "sindh-industrial-relations-2013", "ref": "s.34(6)"}, {"law_id": "sindh-industrial-relations-2013", "ref": "s.46(4)"}, {"law_id": "sindh-industrial-relations-2013", "ref": "s.34(5)"}], "contact_ids": []},
+        {"order": 9, "type": "legal", "action": "Appeal against the Labour Court's decision to the Labour Appellate Tribunal within 30 days.", "legal_basis": [{"law_id": "sindh-industrial-relations-2013", "ref": "s.47(3)"}], "contact_ids": []},
+        {"order": 10, "type": "contact", "action": "Get free legal advice before sending the grievance notice.", "legal_basis": [], "contact_ids": ["slacc-legal-aid-society"]}
+      ],
+      "deadlines": [
+        {"what": "Report to the Inspector if not allowed to work", "limit": "10 days", "legal_basis": {"law_id": "sindh-standing-orders-2015", "ref": "SO 16(10)"}},
+        {"what": "Grievance notice to the employer", "limit": "3 months from the cause", "legal_basis": {"law_id": "sindh-industrial-relations-2013", "ref": "s.34(1)"}},
+        {"what": "Employer's written reply", "limit": "15 days (7 days if via shop steward/CBA)", "legal_basis": {"law_id": "sindh-industrial-relations-2013", "ref": "s.34(2)-(3)"}},
+        {"what": "Filing in the Labour Court", "limit": "60 days after the reply or the end of the reply period", "legal_basis": {"law_id": "sindh-industrial-relations-2013", "ref": "s.34(6)"}},
+        {"what": "Appeal to the Labour Appellate Tribunal", "limit": "30 days", "legal_basis": {"law_id": "sindh-industrial-relations-2013", "ref": "s.47(3)"}}
+      ],
+      "contact_ids": ["slacc-legal-aid-society", "sindh-labour-department"],
+      "emergency": false,
+      "caveats": [
+        "Standing Orders apply only where 10 or more workers are employed.",
+        "Dismissal because of union membership or activity is an unfair labour practice (SIRA s.17).",
+        "Trans-provincial employers: federal IRA 2012 and the NIRC may apply (federal-industrial-relations-2012)."
+      ]
+    },
+    {
+      "id": "no-appointment-letter",
+      "title": "No appointment letter or written contract",
+      "categories": ["employment"],
+      "user_phrases": ["appointment letter nahi diya", "koi likhit contract nahi", "zubani naukri hai", "no offer letter"],
+      "applies_when": "Worker in Sindh.",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "Every worker (in establishments with 10+ workers) must get an appointment letter at the time of appointment stating the terms and conditions, including wages; transfers and promotions must also be in writing.", "legal_basis": [{"law_id": "sindh-standing-orders-2015", "ref": "s.1(4)"}, {"law_id": "sindh-standing-orders-2015", "ref": "SO 3"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "Domestic workers must get a letter of employment in the prescribed form, with a copy sent to the Inspector.", "legal_basis": [{"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.6(1)-(3)"}], "contact_ids": []},
+        {"order": 3, "type": "practical_tip", "action": "Until then, keep other proof of employment: bank transfers, messages, ID or gate cards, attendance records, witnesses.", "legal_basis": [], "contact_ids": []},
+        {"order": 4, "type": "contact", "action": "Report the violation through the Labour Department's online complaint form, or get advice from SLACC.", "legal_basis": [], "contact_ids": ["sindh-labour-department", "slacc-legal-aid-society"]}
+      ],
+      "deadlines": [],
+      "contact_ids": ["sindh-labour-department", "slacc-legal-aid-society"],
+      "emergency": false,
+      "caveats": []
+    },
+    {
+      "id": "workplace-harassment",
+      "title": "Harassment or gender discrimination at work",
+      "categories": ["harassment", "employment"],
+      "user_phrases": ["office mein boss harass karta hai", "colleague ganday messages bhejta hai", "promotion ke badle favour maangta hai", "aurat hone ki wajah se discrimination", "complaint ki to badla le rahe hain", "university mein teacher tang karta hai"],
+      "applies_when": "Any workplace in Pakistan, including universities, gigs, studios, households and work-related situations outside the office.",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "What counts: unwelcome sexual advances or requests, stalking or cyber stalking, sexual conduct or demeaning attitudes, and discrimination because of gender. A single incident can count, and retaliation is also harassment.", "legal_basis": [{"law_id": "protection-against-harassment-workplace-2010", "ref": "s.2(h)"}, {"law_id": "protection-against-harassment-workplace-2010", "ref": "Schedule (Code)"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "Who is protected: any person - including contract, part-time, gig and freelance workers, interns, students, domestic and home-based workers, and former employees.", "legal_basis": [{"law_id": "protection-against-harassment-workplace-2010", "ref": "s.2(e)"}, {"law_id": "protection-against-harassment-workplace-2010", "ref": "s.2(f)"}, {"law_id": "protection-against-harassment-workplace-2010", "ref": "s.2(n)"}], "contact_ids": []},
+        {"order": 3, "type": "legal", "action": "Choose the forum: the organisation's Inquiry Committee, or directly the Ombudsperson.", "legal_basis": [{"law_id": "protection-against-harassment-workplace-2010", "ref": "s.8(1)"}, {"law_id": "protection-against-harassment-workplace-2010", "ref": "s.3"}], "contact_ids": []},
+        {"order": 4, "type": "legal", "action": "Which Ombudsperson: provincial and private organisations in Sindh go to the Provincial Ombudsman Sindh; federal or trans-provincial organisations go to FOSPAH (Karachi regional office).", "legal_basis": [{"law_id": "protection-against-harassment-workplace-2010", "ref": "s.7"}, {"law_id": "protection-against-harassment-workplace-2010", "ref": "forum-choice"}], "contact_ids": ["sindh-ombudsperson-harassment", "fospah"]},
+        {"order": 5, "type": "legal", "action": "Timelines: the Inquiry Committee sends charges within 3 days, the accused replies within 7 days, findings within 30 days. The Ombudsperson issues notice within 3 days, the accused replies within 5 days, and the decision is due within 90 days.", "legal_basis": [{"law_id": "protection-against-harassment-workplace-2010", "ref": "s.4(1)"}, {"law_id": "protection-against-harassment-workplace-2010", "ref": "s.4(4)"}, {"law_id": "protection-against-harassment-workplace-2010", "ref": "s.8(2)"}, {"law_id": "protection-against-harassment-workplace-2010", "ref": "s.8(6)"}], "contact_ids": []},
+        {"order": 6, "type": "legal", "action": "Protection: no adverse action may be taken against the complainant or witnesses, and inquiry evidence is confidential.", "legal_basis": [{"law_id": "protection-against-harassment-workplace-2010", "ref": "s.4(3)"}], "contact_ids": []},
+        {"order": 7, "type": "legal", "action": "Appeals: the Competent Authority's decision can be appealed to the Ombudsperson within 30 days; the Ombudsperson's decision can be challenged before the Governor (provincial) or President (federal) within 30 days.", "legal_basis": [{"law_id": "protection-against-harassment-workplace-2010", "ref": "s.6"}, {"law_id": "protection-against-harassment-workplace-2010", "ref": "s.9"}], "contact_ids": []},
+        {"order": 8, "type": "legal", "action": "A criminal complaint is possible at the same time: sexual harassment is an offence under s.509 PPC (up to 3 years' imprisonment and/or a fine of up to Rs 500,000).", "legal_basis": [{"law_id": "ppc-509", "ref": "s.509"}, {"law_id": "ppc-509", "ref": "s.509 (punishment)"}], "contact_ids": ["sindh-police-15"]},
+        {"order": 9, "type": "practical_tip", "action": "Write down dates, what happened and witnesses; keep screenshots and messages.", "legal_basis": [], "contact_ids": []}
+      ],
+      "deadlines": [
+        {"what": "Appeal against the Competent Authority's decision", "limit": "30 days", "legal_basis": {"law_id": "protection-against-harassment-workplace-2010", "ref": "s.6"}},
+        {"what": "Representation against the Ombudsperson's decision", "limit": "30 days", "legal_basis": {"law_id": "protection-against-harassment-workplace-2010", "ref": "s.9"}}
+      ],
+      "contact_ids": ["sindh-ombudsperson-harassment", "fospah", "slacc-legal-aid-society", "sindh-wdd-1094", "sindh-police-15"],
+      "emergency": false,
+      "caveats": [
+        "Whether every 2022 amendment is applied identically by the Sindh provincial Ombudsperson was not confirmed (see the law's caveats).",
+        "If the harassment is online, also use route online-harassment."
+      ]
+    },
+    {
+      "id": "online-harassment",
+      "title": "Online harassment, blackmail or fake accounts",
+      "categories": ["harassment", "cyber"],
+      "user_phrases": ["meri tasveerain leak karne ki dhamki", "kisi ne fake account bana liya", "online blackmail ho raha hai", "WhatsApp pe dhamkiyan", "social media pe badnaam kar raha hai"],
+      "applies_when": "Anywhere in Pakistan.",
+      "steps": [
+        {"order": 1, "type": "practical_tip", "action": "Save evidence before reporting: screenshots with dates, profile links, usernames and phone numbers. Do not delete the chats.", "legal_basis": [], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "File a cybercrime complaint with the NCCIA (online portal or helpline 1799). The NCCIA replaced the FIA Cyber Crime Wing.", "legal_basis": [{"law_id": "peca-2016", "ref": "enforcement-agency"}, {"law_id": "peca-2016", "ref": "helpline"}], "contact_ids": ["nccia-1799"]},
+        {"order": 3, "type": "contact", "action": "For guidance and support, call the Digital Rights Foundation cyber harassment helpline.", "legal_basis": [], "contact_ids": ["drf-cyber-harassment"]},
+        {"order": 4, "type": "legal", "action": "If it comes from a colleague, boss or teacher, cyber stalking is also workplace harassment - see route workplace-harassment.", "legal_basis": [{"law_id": "protection-against-harassment-workplace-2010", "ref": "s.2(h)"}], "contact_ids": ["sindh-ombudsperson-harassment"]},
+        {"order": 5, "type": "contact", "action": "If there is a threat of physical harm, call police emergency 15.", "legal_basis": [], "contact_ids": ["sindh-police-15"]}
+      ],
+      "deadlines": [],
+      "contact_ids": ["nccia-1799", "drf-cyber-harassment", "sindh-police-15"],
+      "emergency": false,
+      "caveats": ["Do not quote PECA section numbers or punishments until they are verified on Pakistan Code (see peca-2016 research_notes)."]
+    },
+    {
+      "id": "domestic-worker-rights",
+      "title": "Rights of domestic workers (maasi, cook, driver, babysitter, house help)",
+      "categories": ["employment"],
+      "user_phrases": ["ghar mein kaam karti hoon", "maasi ko chutti nahi dete", "ghar ke driver ki tankhwah", "naukrani se 12 ghante kaam", "employer ne ghar se nikal diya"],
+      "applies_when": "Domestic work in or for a household in Sindh.",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "A letter of employment is mandatory (copy to the Inspector).", "legal_basis": [{"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.6(1)-(3)"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "Full-time and live-in workers: 8 hours a day; at most 6 days a week (a 7th day only by agreement, at double wages).", "legal_basis": [{"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.6(4)-(5)"}], "contact_ids": []},
+        {"order": 3, "type": "legal", "action": "Wages may not be below the Sindh minimum wage, and are due within 5 days after the wage period; on termination, within 2 working days.", "legal_basis": [{"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.9"}, {"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.14"}], "contact_ids": []},
+        {"order": 4, "type": "legal", "action": "Leave: paid festival holidays, 6 weeks' paid maternity leave, 10 casual and 8 sick leaves a year.", "legal_basis": [{"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.7"}], "contact_ids": []},
+        {"order": 5, "type": "legal", "action": "Termination: one month's written notice by either side, or one month's wages in lieu.", "legal_basis": [{"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.13"}], "contact_ids": []},
+        {"order": 6, "type": "legal", "action": "Dignity: no forced or bonded labour, no discrimination, extra work only with consent and extra pay, and the worker must be called a 'domestic worker', not a 'servant'.", "legal_basis": [{"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.5"}], "contact_ids": []},
+        {"order": 7, "type": "legal", "action": "No child under 16 may work in a household.", "legal_basis": [{"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.3"}], "contact_ids": ["scpa-1121"]},
+        {"order": 8, "type": "legal", "action": "Disputes go to the Dispute Resolution Committee within 30 days of the dispute; appeal to the district Appellate Authority within 30 days of the award.", "legal_basis": [{"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.21-22"}], "contact_ids": ["sindh-labour-department"]},
+        {"order": 9, "type": "legal", "action": "Harassment complaints by women domestic workers go to the workplace harassment Ombudsperson.", "legal_basis": [{"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.4"}], "contact_ids": ["sindh-ombudsperson-harassment"]}
+      ],
+      "deadlines": [
+        {"what": "Present a dispute to the Dispute Resolution Committee", "limit": "30 days from when the dispute arises", "legal_basis": {"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.21-22"}},
+        {"what": "Appeal against the Committee's award", "limit": "30 days from the date of the award", "legal_basis": {"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.21-22"}}
+      ],
+      "contact_ids": ["sindh-labour-department", "slacc-legal-aid-society", "sindh-ombudsperson-harassment"],
+      "emergency": false,
+      "caveats": ["New law (June 2026): committees, inspectors and rules may not be notified yet - confirm the office with the Labour Department."]
+    },
+    {
+      "id": "child-labour",
+      "title": "A child is being made to work",
+      "categories": ["employment", "children"],
+      "user_phrases": ["chota bacha kaam kar raha hai", "12 saal ka bacha workshop mein", "ghar mein kam umar naukrani", "child labour report karna hai"],
+      "applies_when": "Anywhere in Sindh.",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "A child under 14 may not be employed in any establishment.", "legal_basis": [{"law_id": "sindh-prohibition-employment-children-2017", "ref": "s.2"}, {"law_id": "sindh-prohibition-employment-children-2017", "ref": "s.3(1)"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "No child under 16 may work in a household.", "legal_basis": [{"law_id": "sindh-domestic-workers-welfare-2025", "ref": "s.3"}], "contact_ids": []},
+        {"order": 3, "type": "legal", "action": "Adolescents (14-17) may not do hazardous work, may work at most 7 hours including rest, never between 7 pm and 8 am, and no overtime.", "legal_basis": [{"law_id": "sindh-prohibition-employment-children-2017", "ref": "s.3(2)"}, {"law_id": "sindh-prohibition-employment-children-2017", "ref": "s.7"}], "contact_ids": []},
+        {"order": 4, "type": "legal", "action": "Any person, police officer or Labour Inspector can file a complaint; the Labour Court tries the offence (penalties up to 6 months for ordinary employment of a child, up to 3 years for hazardous work, and 5-10 years for the worst forms).", "legal_basis": [{"law_id": "sindh-prohibition-employment-children-2017", "ref": "s.17"}, {"law_id": "sindh-prohibition-employment-children-2017", "ref": "s.14(1)"}], "contact_ids": ["scpa-1121"]},
+        {"order": 5, "type": "contact", "action": "If the child is in immediate danger, call police emergency 15.", "legal_basis": [], "contact_ids": ["sindh-police-15"]}
+      ],
+      "deadlines": [],
+      "contact_ids": ["scpa-1121", "sindh-labour-department", "sindh-police-15"],
+      "emergency": false,
+      "caveats": []
+    },
+    {
+      "id": "eviction-threat",
+      "title": "Landlord wants to evict the tenant",
+      "categories": ["tenancy"],
+      "user_phrases": ["malik makan ghar khali karwa raha hai", "zabardasti nikal raha hai", "saman bahar phenk dene ki dhamki", "eviction notice mila hai", "landlord ne tala laga diya"],
+      "applies_when": "Rented premises in an urban area of Sindh (not a cantonment, not Government-owned).",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "Check the location first: urban areas of Sindh fall under the SRPO 1979; cantonment areas fall under the Cantonments Rent Restriction Act, 1963.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.3"}, {"law_id": "cantonments-rent-restriction-1963", "ref": "scope"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "No tenant can be evicted except under the Ordinance - that is, through an order of the Rent Controller.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.13"}], "contact_ids": []},
+        {"order": 3, "type": "legal", "action": "The landlord must prove a ground before the Controller: rent default (15 days after the agreed date, or 60 days if no agreed date), subletting or change of use or breach without written consent, damage, nuisance, sanctioned reconstruction, or genuine personal need.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.15(2)"}], "contact_ids": []},
+        {"order": 4, "type": "legal", "action": "Exception: a widow, an orphaned minor, a retiring or retired salaried person, or a landlord aged 60+ can demand vacant possession for personal use with at least 2 months' written notice.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.14"}], "contact_ids": []},
+        {"order": 5, "type": "legal", "action": "If a case is filed: reply within the time in the notice (at most 15 days), and obey any order to deposit arrears and monthly rent by the 10th - otherwise the defence is struck off.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.19"}, {"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.16"}], "contact_ids": []},
+        {"order": 6, "type": "legal", "action": "If the landlord's application is frivolous or vexatious, the Controller may award the tenant up to 10 months' rent as compensation.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.17"}], "contact_ids": []},
+        {"order": 7, "type": "legal", "action": "Appeal against the Controller's final order to the District Judge within 30 days.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.21"}], "contact_ids": []},
+        {"order": 8, "type": "legal", "action": "If the landlord took possession for personal use or reconstruction and then misuses it, the tenant can apply to be restored.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.15(3)-(4), s.15-A"}], "contact_ids": []},
+        {"order": 9, "type": "practical_tip", "action": "If the landlord uses force, threats or a lock-out, call police 15 and get legal advice; keep the rent agreement and all rent receipts.", "legal_basis": [], "contact_ids": ["sindh-police-15", "slacc-legal-aid-society"]}
+      ],
+      "deadlines": [
+        {"what": "Written reply to the Controller's notice", "limit": "Within the period in the notice (not more than 15 days)", "legal_basis": {"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.19"}},
+        {"what": "Appeal to the District Judge", "limit": "30 days from the Controller's final order", "legal_basis": {"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.21"}}
+      ],
+      "contact_ids": ["slacc-legal-aid-society", "sindh-police-15"],
+      "emergency": false,
+      "caveats": [
+        "A worker living in employer-provided housing must vacate within 2 months after the job ends (Standing Order 22) - different rules.",
+        "Cantonment areas: see cantonments-rent-restriction-1963."
+      ]
+    },
+    {
+      "id": "utilities-cut-by-landlord",
+      "title": "Landlord cut off electricity, gas or water",
+      "categories": ["tenancy"],
+      "user_phrases": ["malik makan ne bijli kaat di", "pani band kar diya", "gas connection kata", "landlord cut the electricity"],
+      "applies_when": "Rented premises governed by the SRPO 1979.",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "A landlord may not cut off electricity, gas, water or similar services without the tenant's consent, an authority's requisition or the Controller's direction. The tenant can apply to the Rent Controller for restoration; the Controller can order restoration and recover its cost from the landlord, and the landlord is punishable with up to 6 months' simple imprisonment, a fine, or both.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.11"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "Criminal cognizance of this offence is taken on the Controller's written complaint.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.24"}], "contact_ids": []},
+        {"order": 3, "type": "practical_tip", "action": "Keep utility bills and photos or messages showing when the service was cut.", "legal_basis": [], "contact_ids": ["slacc-legal-aid-society"]}
+      ],
+      "deadlines": [],
+      "contact_ids": ["slacc-legal-aid-society"],
+      "emergency": false,
+      "caveats": []
+    },
+    {
+      "id": "landlord-refuses-rent-or-receipt",
+      "title": "Landlord refuses to take rent or give a receipt",
+      "categories": ["tenancy"],
+      "user_phrases": ["malik makan kiraya nahi le raha", "raseed nahi deta", "naya malik aa gaya hai", "landlord refusing rent to create default"],
+      "applies_when": "Rented premises governed by the SRPO 1979.",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "Unless agreed otherwise, rent is due by the 10th of the following month and the landlord must give a written receipt. If the landlord refuses or avoids taking rent, send it by postal money order or deposit it with the Rent Controller - those receipts prove payment.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.10"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "This matters because non-payment within 15 days of the agreed date (or 60 days if none) is a ground for eviction.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.15(2)"}], "contact_ids": []},
+        {"order": 3, "type": "legal", "action": "If the property was sold or inherited, the new owner must notify the tenant by registered post; rent paid within 30 days of that notice is not a default.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.18"}], "contact_ids": []}
+      ],
+      "deadlines": [],
+      "contact_ids": ["slacc-legal-aid-society"],
+      "emergency": false,
+      "caveats": []
+    },
+    {
+      "id": "rent-increase-or-fair-rent",
+      "title": "Rent increase and fair rent",
+      "categories": ["tenancy"],
+      "user_phrases": ["malik makan kiraya barha raha hai", "har saal kitna kiraya barh sakta hai", "fair rent kya hota hai", "rent increase limit"],
+      "applies_when": "Rented premises governed by the SRPO 1979.",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "A landlord cannot charge more than the agreed rent, or more than the fair rent once fixed by the Controller.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.7"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "Either the tenant or the landlord can apply to the Rent Controller to fix the fair rent (based on similar nearby rents, costs, taxes and the property's annual value).", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.8"}], "contact_ids": []},
+        {"order": 3, "type": "legal", "action": "Once fair rent is fixed it cannot be raised for 3 years, and an increase may not exceed 10% a year of the existing rent.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.9"}], "contact_ids": ["slacc-legal-aid-society"]}
+      ],
+      "deadlines": [],
+      "contact_ids": ["slacc-legal-aid-society"],
+      "emergency": false,
+      "caveats": ["How the 10% cap applies to increases written into a private rent agreement (where no fair rent was fixed) should be confirmed by a lawyer - do not state it as settled."]
+    },
+    {
+      "id": "rent-agreement-and-tenant-registration",
+      "title": "Rent agreement and police tenant registration",
+      "categories": ["tenancy"],
+      "user_phrases": ["kiraya nama kaise banaun", "rent agreement attest", "police mein kirayedar ka andraj", "tenant registration Karachi"],
+      "applies_when": "Renting premises in Sindh.",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "The tenancy agreement must be in writing; if it is not compulsorily registrable, it must be attested by the Rent Controller, a Civil Judge or a First Class Magistrate. This deed is the proof of tenancy.", "legal_basis": [{"law_id": "sindh-rented-premises-ordinance-1979", "ref": "s.5"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "The landlord, tenant and property dealer must give the tenant's information to the police.", "legal_basis": [{"law_id": "sindh-information-temporary-residents-2015", "ref": "information-to-police"}], "contact_ids": []},
+        {"order": 3, "type": "legal", "action": "Registration is free at the police station or facilitation centre (owner's and tenant's CNICs, rent agreement, affidavit, tenant's photo), or online on TRUST.", "legal_basis": [{"law_id": "sindh-information-temporary-residents-2015", "ref": "procedure (Karachi Police)"}], "contact_ids": ["karachi-police-tenant-registration"]}
+      ],
+      "deadlines": [],
+      "contact_ids": ["karachi-police-tenant-registration"],
+      "emergency": false,
+      "caveats": ["Deadlines and penalties under the tenant registration law have not been extracted - do not state them."]
+    },
+    {
+      "id": "need-free-lawyer",
+      "title": "Need free legal advice or a free lawyer",
+      "categories": ["legal_aid"],
+      "user_phrases": ["muft wakeel chahiye", "wakeel ki fees nahi de sakta", "free legal advice", "kis se mashwara karun"],
+      "applies_when": "Anyone who cannot afford a lawyer.",
+      "steps": [
+        {"order": 1, "type": "contact", "action": "Call the Sindh Legal Advisory Call Center for free legal advice (24/7). The Legal Aid Society also takes up some cases for free representation.", "legal_basis": [], "contact_ids": ["slacc-legal-aid-society"]},
+        {"order": 2, "type": "contact", "action": "For human rights violations, the Ministry of Human Rights helpline 1099 gives free legal advice and referrals.", "legal_basis": [], "contact_ids": ["mohr-1099"]},
+        {"order": 3, "type": "legal", "action": "If a case is in court: ask the District Legal Empowerment Committee at the District & Sessions Court for free legal representation.", "legal_basis": [{"law_id": "dlec-rules-2011", "ref": "purpose"}], "contact_ids": ["dlec-legal-aid"]},
+        {"order": 4, "type": "legal", "action": "The Pakistan Bar Council accepts free legal aid applications online.", "legal_basis": [{"law_id": "pbc-free-legal-aid-rules-1999", "ref": "application"}], "contact_ids": ["pbc-free-legal-aid"]}
+      ],
+      "deadlines": [],
+      "contact_ids": ["slacc-legal-aid-society", "mohr-1099", "dlec-legal-aid", "pbc-free-legal-aid"],
+      "emergency": false,
+      "caveats": ["LAJA (federal Legal Aid and Justice Authority) exists, but no official contact was verified - do not give a LAJA phone number."]
+    },
+    {
+      "id": "complaint-against-government-department",
+      "title": "Complaint against a Sindh Government department",
+      "categories": ["government_complaints"],
+      "user_phrases": ["sarkari daftar kaam nahi kar raha", "file mahino se ruki hai", "rishwat maang rahe hain", "government department complaint"],
+      "applies_when": "Maladministration by a Sindh Government department or institution.",
+      "steps": [
+        {"order": 1, "type": "legal", "action": "First approach the department's higher authority in writing.", "legal_basis": [{"law_id": "sindh-ombudsman-act-1991", "ref": "procedure"}], "contact_ids": []},
+        {"order": 2, "type": "legal", "action": "Then complain to the Provincial Ombudsman (Mohtasib) Sindh within 3 months of first learning of the problem (a late complaint is taken up only in special circumstances) - free; in English, Urdu or Sindhi; online, email, post or in person; attach the correspondence and a CNIC copy. Anonymous complaints are not investigated.", "legal_basis": [{"law_id": "sindh-ombudsman-act-1991", "ref": "jurisdiction"}, {"law_id": "sindh-ombudsman-act-1991", "ref": "procedure"}, {"law_id": "sindh-ombudsman-act-1991", "ref": "cost"}, {"law_id": "sindh-ombudsman-act-1991", "ref": "s.10(3)"}], "contact_ids": ["mohtasib-sindh"]},
+        {"order": 3, "type": "legal", "action": "If you disagree with the Ombudsman's decision, a representation can be made to the Governor of Sindh within 30 days of the decision - count from the date of the decision, not from when you received it.", "legal_basis": [{"law_id": "sindh-ombudsman-act-1991", "ref": "s.32"}], "contact_ids": []},
+        {"order": 4, "type": "contact", "action": "Other channels: the Chief Minister's public complaint cell; for human rights violations, the Human Rights Department complaint cell.", "legal_basis": [], "contact_ids": ["sindh-cm-complaint-cell", "sindh-hrd-complaint-cell"]}
+      ],
+      "deadlines": [
+        {"what": "Complaint to the Provincial Ombudsman (Mohtasib) Sindh", "limit": "3 months from the day you first learned of the matter (late complaints only in special circumstances)", "legal_basis": {"law_id": "sindh-ombudsman-act-1991", "ref": "s.10(3)"}},
+        {"what": "Representation to the Governor against the Ombudsman's decision", "limit": "30 days from the date of the decision or order", "legal_basis": {"law_id": "sindh-ombudsman-act-1991", "ref": "s.32"}}
+      ],
+      "contact_ids": ["mohtasib-sindh", "sindh-cm-complaint-cell", "sindh-hrd-complaint-cell"],
+      "emergency": false,
+      "caveats": []
+    },
+    {
+      "id": "police-complaint",
+      "title": "Complaint about police conduct",
+      "categories": ["police"],
+      "user_phrases": ["police FIR nahi kaat rahi", "thane mein badtameezi", "police ke khilaf shikayat"],
+      "applies_when": "Police in Sindh.",
+      "steps": [
+        {"order": 1, "type": "contact", "action": "Complain to the IGP Complaint Cell (1715) or to CPLC (24/7 helpline 1102, or its online report form).", "legal_basis": [], "contact_ids": ["sindh-igp-complaint-1715", "cplc-1102"]},
+        {"order": 2, "type": "contact", "action": "For human rights violations, also complain to the Human Rights Department complaint cell or the Sindh Human Rights Commission.", "legal_basis": [], "contact_ids": ["sindh-hrd-complaint-cell", "shrc"]},
+        {"order": 3, "type": "contact", "action": "Get free legal advice on next steps.", "legal_basis": [], "contact_ids": ["slacc-legal-aid-society"]}
+      ],
+      "deadlines": [],
+      "contact_ids": ["sindh-igp-complaint-1715", "cplc-1102", "sindh-hrd-complaint-cell", "shrc", "slacc-legal-aid-society"],
+      "emergency": false,
+      "caveats": ["Legal remedies for refusal to register an FIR were not researched - do not cite sections; refer to SLACC."]
+    },
+    {
+      "id": "domestic-violence-or-woman-in-danger",
+      "title": "Domestic violence or a woman in danger",
+      "categories": ["harassment", "family", "women"],
+      "user_phrases": ["shohar maar peet karta hai", "ghar mein tashaddud", "ghar se nikal diya", "mujhe khatra hai"],
+      "applies_when": "Sindh.",
+      "steps": [
+        {"order": 1, "type": "contact", "action": "In immediate danger, call police emergency 15.", "legal_basis": [], "contact_ids": ["sindh-police-15"]},
+        {"order": 2, "type": "contact", "action": "Women Development Department helpline 1094 takes complaints of women facing violence; it also runs district women complaint cells and shelters (Darul Aman, safe houses).", "legal_basis": [], "contact_ids": ["sindh-wdd-1094"]},
+        {"order": 3, "type": "contact", "action": "Madadgar helpline 1098 for women protection.", "legal_basis": [], "contact_ids": ["madadgaar-1098"]},
+        {"order": 4, "type": "legal", "action": "Sindh has a Domestic Violence (Prevention and Protection) Act, 2013 whose definitions cover harassment among other abuse; for remedies under it, get legal advice.", "legal_basis": [{"law_id": "sindh-domestic-violence-2013", "ref": "s.1(2)"}, {"law_id": "sindh-domestic-violence-2013", "ref": "definitions"}], "contact_ids": ["slacc-legal-aid-society"]}
+      ],
+      "deadlines": [],
+      "contact_ids": ["sindh-police-15", "sindh-wdd-1094", "madadgaar-1098", "slacc-legal-aid-society"],
+      "emergency": true,
+      "caveats": ["Protection-order procedure under the 2013 Act was not extracted - do not describe it."]
+    }
+  ]
+}
