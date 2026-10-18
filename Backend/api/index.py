@@ -1,15 +1,29 @@
-import sys
-from pathlib import Path
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
-# Add parent directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+app = FastAPI(
+    title="Legal Saathi API",
+    version="1.0.0",
+    description="Legal information assistant for Karachi, Sindh, Pakistan"
+)
 
-from app.main import app
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-# Handle root path redirect
 @app.get("/")
 async def root():
-    return {"message": "Legal Saathi API", "version": "1.0.0"}
+    return {"message": "Legal Saathi API", "status": "running", "version": "1.0.0"}
 
-# Export for Vercel
-__all__ = ["app"]
+@app.get("/health")
+async def health():
+    return {"status": "healthy"}
+
+@app.get("/api/v1/health")
+async def health_v1():
+    return {"status": "healthy", "version": "1.0.0"}
