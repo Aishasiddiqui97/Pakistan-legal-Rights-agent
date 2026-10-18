@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "route.schema.json",
+  "title": "issue_routes.json - problem-to-solution routes",
+  "description": "Maps a common user problem (in Roman Urdu / English) to ordered steps. Every legal_basis must be a law_id + ref that exists in laws.json key_provisions; every contact id must exist in support_contacts.json with display = true. The validator checks these links.",
+  "type": "object",
+  "required": ["dataset", "schema_version", "last_updated", "how_to_use", "fallback", "routes"],
+  "properties": {
+    "dataset": {"const": "issue_routes"},
+    "schema_version": {"type": "string"},
+    "last_updated": {"$ref": "#/$defs/date"},
+    "maintainer": {"type": "string"},
+    "how_to_use": {"type": "string"},
+    "fallback": {
+      "type": "object",
+      "required": ["when", "say", "contact_ids"],
+      "properties": {
+        "when": {"type": "string"},
+        "say": {"type": "string"},
+        "contact_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/id"}}
+      }
+    },
+    "routes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/route"}}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "category": {
+      "enum": ["employment", "harassment", "tenancy", "legal_aid", "human_rights", "government_complaints",
+               "children", "cyber", "family", "women", "police", "emergency", "general"]
+    },
+    "legal_basis": {
+      "type": "object",
+      "required": ["law_id", "ref"],
+      "additionalProperties": false,
+      "properties": {
+        "law_id": {"$ref": "#/$defs/id"},
+        "ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "step": {
+      "type": "object",
+      "required": ["order", "type", "action", "legal_basis", "contact_ids"],
+      "properties": {
+        "order": {"type": "integer", "minimum": 1, "description": "1, 2, 3 ... in sequence."},
+        "type": {
+          "description": "legal = based on a verified provision (legal_basis required); practical_tip = common-sense advice, not law (legal_basis must be empty); contact = go to / call a contact (contact_ids required, legal_basis empty).",
+          "enum": ["legal", "practical_tip", "contact"]
+        },
+        "action": {"type": "string", "minLength": 1},
+        "legal_basis": {"type": "array", "items": {"$ref": "#/$defs/legal_basis"}},
+        "contact_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}}
+      }
+    },
+    "deadline": {
+      "type": "object",
+      "required": ["what", "limit", "legal_basis"],
+      "properties": {
+        "what": {"type": "string"},
+        "limit": {"type": "string"},
+        "legal_basis": {"$ref": "#/$defs/legal_basis"}
+      }
+    },
+    "route": {
+      "type": "object",
+      "required": ["id", "title", "categories", "user_phrases", "applies_when", "steps", "deadlines", "contact_ids", "emergency", "caveats"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "title": {"type": "string"},
+        "categories": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/category"}},
+        "user_phrases": {"type": "array", "minItems": 1, "items": {"type": "string"}, "description": "How users describe the problem (Roman Urdu and English) - use for intent matching."},
+        "applies_when": {"type": "string"},
+        "steps": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/step"}},
+        "deadlines": {"type": "array", "items": {"$ref": "#/$defs/deadline"}},
+        "contact_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/id"}},
+        "emergency": {"type": "boolean", "description": "true = show emergency contacts (15) before anything else."},
+        "caveats": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

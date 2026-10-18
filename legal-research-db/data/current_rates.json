@@ -1,0 +1,69 @@
+{
+  "dataset": "current_rates",
+  "schema_version": "1.0",
+  "last_updated": "2026-10-17",
+  "maintainer": "Member 2 - Legal Research & Verified Support Database",
+  "note": "Figures that change every year live here, not in laws.json. Re-check every July (new budget year) and whenever the Sindh Labour Department posts a new notification.",
+  "rates": [
+    {
+      "id": "sindh-minimum-wage-2026-27",
+      "title": "Sindh minimum wages from 1 July 2026",
+      "jurisdiction": "sindh",
+      "law_id": "sindh-minimum-wages-2015",
+      "effective_from": "2026-07-01",
+      "currency": "PKR",
+      "period": "per month",
+      "rates": [
+        {"category": "unskilled", "amount": 43000},
+        {"category": "semi_skilled", "amount": 44484},
+        {"category": "skilled", "amount": 53350},
+        {"category": "highly_skilled", "amount": 55626}
+      ],
+      "official_announcement": "Sindh Labour & HR Department website news item: 'Minimum Wage Unskilled Rs. 43,000/-, Skilled Rs. 53,350/-, Semi-Skilled Rs. 44,484/- & Highly Skilled Rs. 55,626/- w.e.f 01-07-2026' (posted 22 Sep 2026; notification PDFs posted 17 Aug 2026).",
+      "notification_pdfs": [
+        "https://lhr.sindh.gov.pk/storage/notification/eRHxYWmL5awemcMnDNRq7yNp7txdgiAefkkVYwx4.pdf",
+        "https://lhr.sindh.gov.pk/storage/notification/0iEj67Lb1ahRdATsc5mkuLtnGNQDmcJJ7kpevyZS.pdf"
+      ],
+      "unverified_details": {
+        "display": false,
+        "per_day_unskilled": 1654,
+        "per_hour_unskilled": 207,
+        "coverage": "Reported as covering permanent, temporary, contract, daily-wage and piece-rate workers; semi-skilled/skilled/highly-skilled rates reported as applying to 60 industries.",
+        "why_unverified": "These details come from the July 2026 proposed notification as reported by Business Recorder and The News. The final notification PDF is a scanned image that could not be machine-read. Read the PDF manually before using them."
+      },
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_page"},
+          {"url": "https://wageindicator.org/work/minimum-wage/updates/2026/minimum-wage-increased-in-sindh-pakistan-from-1-july-2026-august-19-2026/", "publisher": "WageIndicator Foundation (notification issued 17 Aug 2026)", "kind": "secondary"},
+          {"url": "https://www.brecorder.com/news/40428794/unskilled-workers-sindh-govt-for-raising-minimum-wage-to-rs43000", "publisher": "Business Recorder (proposed notification details)", "kind": "secondary"}
+        ],
+        "notes": "Monthly amounts verified on the official Labour Department website (news item of 22 Sep 2026), re-checked 2026-10-17. Both notification PDFs are scanned images, so the amounts rest on the website announcement until the PDFs are read manually."
+      }
+    }
+  ],
+  "history": {
+    "id": "sindh-minimum-wage-history",
+    "law_id": "sindh-minimum-wages-2015",
+    "category": "unskilled",
+    "unit": "PKR per month",
+    "entries": [
+      {"amount": 14000, "notification_issued": "2016-10-14", "source_kind": "official_listing"},
+      {"amount": 15000, "notification_issued": "2017-08-24", "source_kind": "official_listing"},
+      {"amount": 16200, "notification_issued": "2018-10-08", "source_kind": "official_listing"},
+      {"amount": 17500, "notification_issued": "2019-09-19", "source_kind": "official_listing"},
+      {"amount": 25000, "notification_issued": "2021-07-09", "note": "Revised notification issued 2022-07-07", "source_kind": "official_listing"},
+      {"amount": 37000, "effective_from": "2024-07-01", "source_kind": "secondary"},
+      {"amount": 40000, "effective_from": "2025-07-01", "source_kind": "secondary"},
+      {"amount": 43000, "effective_from": "2026-07-01", "source_kind": "official_page"}
+    ],
+    "sources": [
+      {"url": "https://lhr.sindh.gov.pk/", "publisher": "Labour & Human Resources Department, Government of Sindh (notification titles)", "kind": "official_listing"},
+      {"url": "https://profit.pakistantoday.com.pk/2024/08/01/minimum-wage-set-at-rs37000-month-effective-july-2024", "publisher": "Profit / Pakistan Today", "kind": "secondary"},
+      {"url": "https://tribune.com.pk/story/2558678/sindh-govt-sets-minimum-wage-at-rs40000", "publisher": "The Express Tribune", "kind": "secondary"}
+    ],
+    "verified_on": "2026-10-16",
+    "notes": "History is for context only. Always quote the current rate from 'rates'. The Labour Department site also lists a 'Minimum Wage Notification 2023' (03 Nov 2023); its amount was not read, so 2023 is missing from this history."
+  }
+}
