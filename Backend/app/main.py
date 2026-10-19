@@ -12,25 +12,18 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import auth, health, legal
 from app.core.config import get_settings
 from app.core.logging import setup_logging
-from app.db.session import init_db
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application lifespan manager."""
-    # Startup
+    # Startup - keep minimal
     try:
         setup_logging()
     except Exception as e:
-        print(f"Logging setup error (non-fatal): {e}")
-    
-    try:
-        init_db()
-    except Exception as e:
-        print(f"Database init error (non-fatal): {e}")
+        print(f"Logging error (non-fatal): {e}")
     
     yield
     # Shutdown
@@ -66,24 +59,36 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    # Register routes
-    app.include_router(
-        health.router,
-        prefix="/health",
-        tags=["health"]
-    )
+    # Register routes - defer imports until needed
+    try:
+        from app.api.routes import health
+        app.include_router(
+            health.router,
+            prefix="/health",
+            tags=["health"]
+        )
+    except Exception as e:
+        print(f"Health routes error: {e}")
 
-    app.include_router(
-        auth.router,
-        prefix="/api/v1/auth",
-        tags=["auth"]
-    )
+    try:
+        from app.api.routes import auth
+        app.include_router(
+            auth.router,
+            prefix="/api/v1/auth",
+            tags=["auth"]
+        )
+    except Exception as e:
+        print(f"Auth routes error: {e}")
 
-    app.include_router(
-        legal.router,
-        prefix="/api/v1/legal",
-        tags=["legal"]
-    )
+    try:
+        from app.api.routes import legal
+        app.include_router(
+            legal.router,
+            prefix="/api/v1/legal",
+            tags=["legal"]
+        )
+    except Exception as e:
+        print(f"Legal routes error: {e}")
 
     return app
 

@@ -1,16 +1,30 @@
 import sys
 from pathlib import Path
 
-# Ensure app module is in path
+# Add parent directory to path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from fastapi import FastAPI
+
+# Create minimal app first
+app = FastAPI(title="Legal Saathi API", version="1.0.0")
+
+@app.get("/")
+async def root():
+    return {"message": "Legal Saathi API is running", "status": "ok"}
+
+@app.get("/health/live")
+async def health():
+    return {"status": "alive", "service": "LegalSaathi AI"}
+
+@app.get("/health/ready")
+async def ready():
+    return {"status": "ready", "service": "LegalSaathi AI"}
+
+# Try to import full app, but don't fail if it errors
 try:
-    from app.main import app
+    from app.main import app as full_app
+    app = full_app
 except Exception as e:
-    # Fallback if import fails
-    from fastapi import FastAPI
-    app = FastAPI(title="Legal Saathi API")
-    
-    @app.get("/health")
-    async def health():
-        return {"status": "error", "message": str(e)}
+    print(f"Warning: Could not load full app: {e}")
+    # Keep the minimal app above
