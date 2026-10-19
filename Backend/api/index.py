@@ -5,10 +5,16 @@ from fastapi.middleware.cors import CORSMiddleware
 # Create simple app
 app = FastAPI(title="Legal Saathi API", version="1.0.0")
 
-# Add CORS
+# Add CORS - Allow all origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "https://pakistan-legal-rights-agent.vercel.app",
+        "https://pakistan-legal-rights-agent-xnqz.vercel.app",
+        "*"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
