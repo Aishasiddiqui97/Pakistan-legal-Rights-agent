@@ -58,6 +58,11 @@ class Settings(BaseSettings):
     # Vector Store
     vector_store_path: str = Field(default="./data/vector_store")
 
+    # Embedding Model
+    embedding_model: str = Field(default="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+    embedding_dimension: int = Field(default=384)
+    embedding_cache_dir: str = Field(default="./data/model_cache")
+
     # Chunking
     chunk_size: int = Field(default=1000)
     chunk_overlap: int = Field(default=200)
@@ -70,6 +75,8 @@ class Settings(BaseSettings):
     jwt_secret_key: str = Field(default="legalsaathi-secure-jwt-secret-key-change-in-production")
     jwt_algorithm: str = Field(default="HS256")
     jwt_access_token_expire_minutes: int = Field(default=1440)
+
+    
 
 
 @lru_cache
