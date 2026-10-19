@@ -1,7 +1,7 @@
 """Embedding generation service."""
 from typing import List
 
-from sentence_transformers import SentenceTransformer
+from fastembed import TextEmbedding
 
 from app.core.config import get_settings
 from app.core.exceptions import RetrievalError
@@ -28,7 +28,12 @@ class EmbeddingService:
             settings = get_settings()
             logger.info(f"Loading embedding model: {settings.embedding_model}")
             try:
-                self._model = SentenceTransformer(settings.embedding_model)
+                # Assign to the class, not the instance, so the singleton
+                # actually shares one loaded model.
+                EmbeddingService._model = TextEmbedding(
+                    model_name=settings.embedding_model,
+                    cache_dir=settings.embedding_cache_dir,
+                )
                 logger.info("Embedding model loaded successfully")
             except Exception as e:
                 logger.error(f"Failed to load embedding model: {e}")
@@ -48,7 +53,7 @@ class EmbeddingService:
             RetrievalError: If embedding fails
         """
         try:
-            embedding = self._model.encode(text, convert_to_numpy=True)
+            embedding = next(iter(self._model.embed([text])))
             return embedding.tolist()
         except Exception as e:
             logger.error(f"Embedding generation failed: {e}")
@@ -68,13 +73,11 @@ class EmbeddingService:
         Raises:
             RetrievalError: If embedding fails
         """
+        if not texts:
+            return []
+
         try:
-            embeddings = self._model.encode(
-                texts,
-                batch_size=batch_size,
-                convert_to_numpy=True,
-                show_progress_bar=len(texts) > 100
-            )
+            embeddings = self._model.embed(texts, batch_size=batch_size)
             return [emb.tolist() for emb in embeddings]
         except Exception as e:
             logger.error(f"Batch embedding generation failed: {e}")
