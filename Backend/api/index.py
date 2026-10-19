@@ -1,18 +1,12 @@
-"""Vercel serverless function entry point."""
-import sys
-from pathlib import Path
-
-# Add parent directory to path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
+"""Vercel serverless function entry point - Minimal FastAPI app."""
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-# Create a minimal fallback app
-fallback_app = FastAPI(title="Legal Saathi API")
+# Create simple app
+app = FastAPI(title="Legal Saathi API", version="1.0.0")
 
-# Add CORS to fallback
-fallback_app.add_middleware(
+# Add CORS
+app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_credentials=True,
@@ -20,29 +14,25 @@ fallback_app.add_middleware(
     allow_headers=["*"],
 )
 
-@fallback_app.get("/")
+# Routes
+@app.get("/")
 async def root():
-    return {"message": "Legal Saathi API", "status": "ok"}
+    return {
+        "message": "LegalSaathi AI - Legal Information Assistant",
+        "status": "running",
+        "version": "1.0.0",
+        "docs": "/docs",
+        "health": "/health/live"
+    }
 
-@fallback_app.get("/health/live")
+@app.get("/health/live")
 async def health_live():
     return {"status": "alive", "service": "LegalSaathi AI"}
 
-@fallback_app.get("/health/ready")
+@app.get("/health/ready")
 async def health_ready():
     return {"status": "ready", "service": "LegalSaathi AI"}
 
-@fallback_app.get("/docs")
-async def redirect_docs():
-    return {"message": "API Documentation available at /docs"}
-
-# Try to import the real app
-app = fallback_app
-try:
-    from app.main import app as main_app
-    app = main_app
-    print("Successfully loaded app from app.main")
-except ImportError as e:
-    print(f"Import error: {e}. Using fallback app.")
-except Exception as e:
-    print(f"Error loading app: {e}. Using fallback app.")
+@app.get("/docs", include_in_schema=False)
+async def docs():
+    return {"message": "Swagger UI available at /docs"}
