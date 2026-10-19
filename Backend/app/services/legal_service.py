@@ -69,9 +69,9 @@ class LegalService:
             except ValueError:
                 return self._build_unsupported_topic_response(request_id)
 
-        # Retrieve relevant context
+        # Retrieve relevant context (English query; the embedding model is English-only)
         search_results, formatted_context = self.retrieval_service.get_relevant_context(
-            query=request.question,
+            query=self._to_english_query(request.question),
             category=category,
             top_k=5,
         )
@@ -137,6 +137,30 @@ class LegalService:
             and city.lower() in ["karachi", "khi"]
             and province.lower() in ["sindh"]
         )
+
+    def _to_english_query(self, question: str) -> str:
+        """Translate the question to plain English for retrieval, falling back to the original."""
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "Translate the user's text (English, Urdu, or Roman Urdu) into plain English. "
+                    "Output only the translation, with no explanation or quotes."
+                ),
+            },
+            {"role": "user", "content": question},
+        ]
+
+        try:
+            translated = self.groq_service.generate_completion(messages, temperature=0.0, max_tokens=200)
+            translated = translated.strip()
+            if translated:
+                logger.info(f"Retrieval query translated: {question!r} -> {translated!r}")
+                return translated
+        except Exception as e:
+            logger.warning(f"Query translation failed, using original question: {e}")
+
+        return question
 
     def _check_clarification_needed(
         self, question: str, category: str, context: str, user_context: Optional[str] = None

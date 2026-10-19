@@ -37,12 +37,14 @@ ENV/
 
 # Database
 *.db
+# Shipped with the app: chunk text is read from here by vector_id
+!legalsaathi.db
 *.db-journal
 *.sqlite
 *.sqlite3
 
-# Vector Store
-data/vector_store/
+# Embedding model download cache (fetched at runtime)
+data/model_cache/
 
 # Logs
 *.log
