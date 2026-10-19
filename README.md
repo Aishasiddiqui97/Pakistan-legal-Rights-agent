@@ -2,7 +2,7 @@
 
 An AI-powered legal information assistant for Sindh, Pakistan. Provides instant access to Pakistani labor laws, workplace harassment regulations, and tenant-landlord laws using Groq's advanced LLM and RAG (Retrieval-Augmented Generation).
 
-**Live Demo:** https://pakistan-legal-rights-agent-xnqz.vercel.app
+**🔗 Live Demo:** https://pakistan-legal-rights-agent.vercel.app/
 
 ---
 
@@ -325,8 +325,9 @@ This project is open source and available under the MIT License.
 ## 📞 Contact
 
 For questions or issues:
-- GitHub: https://github.com/Aishasiddiqui97/Pakistan-legal-Rights-agent
-- Email: [Your Email]
+- **GitHub:** https://github.com/Aishasiddiqui97/Pakistan-legal-Rights-agent
+- **Live Demo:** https://pakistan-legal-rights-agent.vercel.app/
+- **Backend API:** https://pakistan-legal-rights-agent-xnqz.vercel.app/
 
 ---
 
