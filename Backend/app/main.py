@@ -22,8 +22,11 @@ from app.db.session import init_db
 async def lifespan(app: FastAPI):
     """Application lifespan manager."""
     # Startup
-    setup_logging()
-    init_db()
+    try:
+        setup_logging()
+        init_db()
+    except Exception as e:
+        print(f"Startup error: {e}")
     yield
     # Shutdown
     pass
@@ -71,6 +74,7 @@ def create_app() -> FastAPI:
     return app
 
 
+# Create app instance at module level for Vercel
 app = create_app()
 
 
