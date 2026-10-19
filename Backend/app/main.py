@@ -50,10 +50,6 @@ def create_app() -> FastAPI:
     )
 
     # Health check routes
-    @app.get("/", tags=["root"])
-    async def root():
-        return {"message": "Legal Saathi API", "status": "ok", "version": "1.0.0"}
-
     @app.get("/health/live")
     async def health_live():
         return {"status": "alive", "service": "LegalSaathi AI"}
