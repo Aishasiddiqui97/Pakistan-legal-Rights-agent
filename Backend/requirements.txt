@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fastapi==0.104.1
 uvicorn==0.24.0
 pydantic==2.5.0
@@ -12,3 +13,17 @@ faiss-cpu==1.7.4
 sentence-transformers==2.2.2
 sqlalchemy==2.0.23
 sqlite3-python==1.0.0
+=======
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.0
+sqlalchemy==2.0.36
+groq==0.13.1
+python-dotenv==1.0.1
+python-multipart==0.0.20
+aiofiles==24.1.0
+bcrypt==4.2.1
+PyJWT==2.10.1
+email-validator==2.2.0
+>>>>>>> 2bbface7c8b73e84b3c11964a56d2900bcb85037
