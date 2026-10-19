@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Backend/api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.11"
+      }
+    },
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/node",
+      "config": {
+        "buildCommand": "npm run build",
+        "outputDirectory": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "Backend/api/index.py"
+    },
+    {
+      "src": "/health/(.*)",
+      "dest": "Backend/api/index.py"
+    },
+    {
+      "src": "/docs",
+      "dest": "Backend/api/index.py"
+    },
+    {
+      "src": "/openapi.json",
+      "dest": "Backend/api/index.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/dist/$1"
+    }
+  ]
+}

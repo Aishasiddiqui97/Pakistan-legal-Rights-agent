@@ -49,6 +49,25 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
+    # Root endpoint - redirects to API docs
+    @app.get("/", tags=["root"])
+    async def root():
+        """Welcome endpoint with documentation links."""
+        return {
+            "message": "LegalSaathi AI - Legal Information Assistant",
+            "status": "running",
+            "version": "1.0.0",
+            "documentation": {
+                "swagger": "/docs",
+                "openapi": "/openapi.json",
+                "health": "/health/live"
+            },
+            "api_endpoints": {
+                "auth": "/api/v1/auth",
+                "legal": "/api/v1/legal"
+            }
+        }
+
     # Health check routes
     @app.get("/health/live")
     async def health_live():

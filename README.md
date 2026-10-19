@@ -36,7 +36,7 @@ An AI-powered legal information assistant for Sindh, Pakistan. Provides instant 
 - **Build Tool:** Vite
 - **Styling:** Tailwind CSS
 - **HTTP Client:** Axios
-- **Deployment:** Vercel
+- **Deployment:** Vercel (Monorepo)
 
 ---
 
@@ -72,6 +72,11 @@ Backend will run on: `http://localhost:8000`
 curl http://localhost:8000/health/live
 ```
 
+**API Documentation:**
+```
+http://localhost:8000/docs
+```
+
 ### Frontend Setup
 
 ```bash
@@ -80,10 +85,13 @@ cd frontend
 # Install dependencies
 npm install
 
-# Create environment file
+# Create environment file for development
 cp .env.example .env.local
 
-# Update API URL (for production)
+# For LOCAL development, keep API pointing to localhost:
+# VITE_API_BASE_URL=http://localhost:8000/api/v1
+
+# For PRODUCTION, use deployed backend:
 # VITE_API_BASE_URL=https://pakistan-legal-rights-agent-xnqz.vercel.app/api/v1
 
 # Run development server
