@@ -1,3 +1,4 @@
+"""Vercel serverless function entry point."""
 import sys
 from pathlib import Path
 
@@ -6,25 +7,27 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from fastapi import FastAPI
 
-# Create minimal app first
-app = FastAPI(title="Legal Saathi API", version="1.0.0")
+# Create a minimal fallback app
+fallback_app = FastAPI(title="Legal Saathi API")
 
-@app.get("/")
+@fallback_app.get("/")
 async def root():
-    return {"message": "Legal Saathi API is running", "status": "ok"}
+    return {"message": "Legal Saathi API", "status": "ok"}
 
-@app.get("/health/live")
-async def health():
-    return {"status": "alive", "service": "LegalSaathi AI"}
+@fallback_app.get("/health/live")
+async def health_live():
+    return {"status": "alive"}
 
-@app.get("/health/ready")
-async def ready():
-    return {"status": "ready", "service": "LegalSaathi AI"}
+@fallback_app.get("/health/ready")
+async def health_ready():
+    return {"status": "ready"}
 
-# Try to import full app, but don't fail if it errors
+# Try to import the real app
 try:
-    from app.main import app as full_app
-    app = full_app
+    from app.main import app
+except ImportError as e:
+    print(f"Import error: {e}")
+    app = fallback_app
 except Exception as e:
-    print(f"Warning: Could not load full app: {e}")
-    # Keep the minimal app above
+    print(f"Unexpected error: {e}")
+    app = fallback_app
