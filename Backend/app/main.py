@@ -24,9 +24,14 @@ async def lifespan(app: FastAPI):
     # Startup
     try:
         setup_logging()
+    except Exception as e:
+        print(f"Logging setup error (non-fatal): {e}")
+    
+    try:
         init_db()
     except Exception as e:
-        print(f"Startup error: {e}")
+        print(f"Database init error (non-fatal): {e}")
+    
     yield
     # Shutdown
     pass
@@ -34,19 +39,28 @@ async def lifespan(app: FastAPI):
 
 def create_app() -> FastAPI:
     """Create and configure FastAPI application."""
-    settings = get_settings()
+    try:
+        settings = get_settings()
+    except Exception as e:
+        print(f"Settings load error: {e}")
+        settings = None
 
     app = FastAPI(
-        title=settings.app_name,
+        title="LegalSaathi AI",
         version="1.0.0",
         description="Legal information assistant for Karachi, Sindh, Pakistan",
         lifespan=lifespan,
     )
 
     # Configure CORS
+    if settings and settings.cors_origins_list:
+        cors_origins = settings.cors_origins_list
+    else:
+        cors_origins = ["*"]
+    
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=settings.cors_origins_list,
+        allow_origins=cors_origins,
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
@@ -61,13 +75,13 @@ def create_app() -> FastAPI:
 
     app.include_router(
         auth.router,
-        prefix=f"{settings.api_v1_prefix}/auth",
+        prefix="/api/v1/auth",
         tags=["auth"]
     )
 
     app.include_router(
         legal.router,
-        prefix=f"{settings.api_v1_prefix}/legal",
+        prefix="/api/v1/legal",
         tags=["legal"]
     )
 
@@ -75,7 +89,16 @@ def create_app() -> FastAPI:
 
 
 # Create app instance at module level for Vercel
-app = create_app()
+try:
+    app = create_app()
+except Exception as e:
+    print(f"Failed to create app: {e}")
+    from fastapi import FastAPI
+    app = FastAPI()
+    
+    @app.get("/health/live")
+    async def fallback_health():
+        return {"status": "error", "message": str(e)}
 
 
 if __name__ == "__main__":
