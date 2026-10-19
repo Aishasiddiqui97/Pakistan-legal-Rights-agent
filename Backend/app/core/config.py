@@ -51,15 +51,11 @@ class Settings(BaseSettings):
     # Logging
     log_level: str = Field(default="INFO")
 
-    # Embedding Model
-    embedding_model: str = Field(default="sentence-transformers/paraphrase-multilingual-mpnet-base-v2")
-    embedding_dimension: int = Field(default=768)
-
     # Vector Store
     vector_store_path: str = Field(default="./data/vector_store")
 
     # Embedding Model
-    embedding_model: str = Field(default="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+    embedding_model: str = Field(default="BAAI/bge-small-en-v1.5")
     embedding_dimension: int = Field(default=384)
     embedding_cache_dir: str = Field(default="./data/model_cache")
 

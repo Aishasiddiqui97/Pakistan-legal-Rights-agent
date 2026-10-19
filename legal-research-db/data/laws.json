@@ -1,0 +1,1104 @@
+{
+  "dataset": "laws",
+  "schema_version": "1.0",
+  "last_updated": "2026-10-17",
+  "maintainer": "Member 2 - Legal Research & Verified Support Database",
+  "disclaimer": "Legal information for awareness, not legal advice. Summaries are paraphrased; the official Gazette text prevails. Check each entry's verification block before citing it.",
+  "levels": {
+    "A": "Official full text was read; every key_provision below was checked against that text.",
+    "B": "The law is confirmed by an official source (government listing or PDF, court judgment, official department page, UN/state media). Only the key_provisions listed are verified - do not describe anything else from this law.",
+    "C": "Secondary sources only. Kept for research, never shown to users."
+  },
+  "laws": [
+    {
+      "id": "sindh-standing-orders-2015",
+      "title": "Sindh Terms of Employment (Standing Orders) Act, 2015",
+      "short_name": "Standing Orders Act",
+      "act_number": "Sindh Act No. XI of 2016",
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {"passed": "2016-03-21", "assented": "2016-04-25", "published": "2016-04-29"},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/6jLG9Ha7bNMwJgKNpGyxfmIVa4YzXmeLAvV60TXW.pdf",
+      "other_official_urls": ["https://www.sindhlaws.gov.pk/Setup/Publications_SindhCode/PUB-NEW-18-000108.pdf"],
+      "replaces": "Industrial and Commercial Employment (Standing Orders) Ordinance, 1968, in its application to Sindh (s.14).",
+      "scope": "Industrial and commercial establishments in Sindh employing 10 or more workers (now, or on any day in the previous 12 months), plus classes notified by Government. Not applicable where government statutory service rules apply. Some Standing Orders (e.g. SO 13 bonus, SO 15 closure) do not initially apply to industrial establishments with 20 or fewer persons.",
+      "amendments": [
+        {
+          "title": "Sindh Terms of Employment (Standing Orders) (Amendment) Act, 2021",
+          "act_number": "Sindh Act No. XXVIII of 2021",
+          "dates": {"passed": "2021-07-02", "assented": "2021-07-28", "published": "2021-08-04"},
+          "url": "https://www.sindhlaws.gov.pk/setup/publications_SindhCode/PUB-NEW-23-000058.pdf",
+          "reviewed": true,
+          "summary": "Adds 'seasonal worker' as a class with a seasonal card (SO 1(a)(vii), SO 1(h), SO 2(7)); removes the old proviso in SO 16(6) that gave seasonal workers one month's gratuity per season; inserts SO 20-A (extra month's wages at the end of a season)."
+        }
+      ],
+      "key_provisions": [
+        {"ref": "s.1(4)", "point": "Applies to industrial and commercial establishments with 10 or more workers.", "source": 0},
+        {"ref": "s.2(1)(n)", "point": "'Worker' includes permanent, probationer, badli, temporary, apprentice and contract workers, but not an occupier or manager who has hiring and firing authority.", "source": 0},
+        {"ref": "s.5", "point": "The employer must display the Act in English, Urdu and Sindhi (and in the language of the majority of workers) near the entrance and in all departments.", "source": 0},
+        {"ref": "s.7", "point": "Contravening the Standing Orders is punishable with fines; prosecutions are brought by the Inspector and tried by the Labour Court.", "source": 0},
+        {"ref": "s.11", "point": "No discrimination on the basis of gender, religion, political affiliation, sect, colour, caste, creed or ethnic background in enforcing the Act.", "source": 0},
+        {"ref": "SO 1", "point": "Classes of worker: permanent, probationer, badli, temporary, apprentice, contract worker (seasonal worker added in 2021). Probation is 3 months; a worker engaged on work likely to last more than 9 months becomes permanent after satisfactorily completing 3 months' probation. Temporary work is work likely to finish within 9 months.", "source": 0},
+        {"ref": "SO 3", "point": "Every worker must be given an appointment letter at the time of appointment stating the terms and conditions of employment, including wages. Transfers and promotions must also be given in writing.", "source": 0},
+        {"ref": "SO 9", "point": "Paid holidays and leave apply as provided by law; all festival holidays declared by Government are paid. A leave application must be decided within a week, and a refusal must be recorded in writing with reasons.", "source": 0},
+        {"ref": "SO 10(2)", "point": "Wages must be paid before the 7th day after the wage period ends (establishments with up to 1,000 workers) or before the 10th day (more than 1,000 workers).", "source": 0},
+        {"ref": "SO 10(3)", "point": "In commercial establishments, work beyond 9 hours a day or 48 hours a week must be paid at twice the normal wage rate.", "source": 0},
+        {"ref": "SO 12", "point": "Establishments with 20 or more workers must insure all permanent workers (group insurance) against natural death, disability, and death or injury not covered by workmen's compensation or social security law; if the employer fails, the employer pays the equivalent amount.", "source": 0},
+        {"ref": "SO 14(3)", "point": "Workers laid off because of plant failure, curtailment of production or similar causes get half their daily wages as compensation for the first 14 days of lay-off.", "source": 0},
+        {"ref": "SO 15", "point": "An employer may not terminate more than 50% of the workers or close the whole establishment without prior Government permission (except for fire, catastrophe, power stoppage, epidemic or civil commotion).", "source": 0},
+        {"ref": "SO 16(1)", "point": "Terminating a permanent worker for any reason other than misconduct requires one month's notice, or one month's wages (average of the last 3 months) in lieu. The same one-month notice applies when a permanent worker leaves.", "source": 0},
+        {"ref": "SO 16(2)", "point": "Temporary workers, probationers, badlis and contract workers are not entitled to notice of termination (and need not give notice when leaving).", "source": 0},
+        {"ref": "SO 16(3)", "point": "No worker may be terminated, removed, retrenched, discharged or dismissed except by a written order that explicitly states the reason. An aggrieved worker can use the individual grievance procedure of the Sindh Industrial Relations Act, 2013.", "source": 0, "note": "The Standing Order cross-refers to 'section 37' of the Sindh Industrial Relations Act, 2013; the grievance section of that Act is s.34, and High Court of Sindh judgments apply s.34 together with SO 16(3)."},
+        {"ref": "SO 16(4)", "point": "On termination, earned wages and other dues (including payment for unavailed leave) must be paid before the end of the second working day.", "source": 0},
+        {"ref": "SO 16(6)", "point": "On resignation, or on termination for any reason other than misconduct, the worker gets gratuity of one month's wages for every completed year of service (or part of a year above 6 months) - unless, for that period, the employer ran a provident fund with an employer contribution at least equal to the worker's (and the provident fund amount is not less than the gratuity).", "source": 0, "note": "Wording as amended by Sindh Act No. XXVIII of 2021 (seasonal-worker proviso removed)."},
+        {"ref": "SO 16(7)", "point": "A worker is entitled to the full provident fund balance, including the employer's contributions, even after resigning or being dismissed.", "source": 0},
+        {"ref": "SO 16(10)", "point": "If a worker is not allowed to work or to mark attendance, the worker may report this in writing to the area Inspector within 10 days; the employer is then barred from initiating action against the worker.", "source": 0},
+        {"ref": "SO 17", "point": "A permanent worker is entitled to a service certificate when the employment ends for any reason.", "source": 0},
+        {"ref": "SO 18-19", "point": "Retrenchment within a category is last-come, first-go; retrenched workers get preference if the employer hires again within one year.", "source": 0},
+        {"ref": "SO 20-A", "point": "A seasonal worker who worked throughout the season (at least 75% of its days) gets one extra month's wages at the end of the season.", "source": 1},
+        {"ref": "SO 21(3)", "point": "Misconduct includes wilful insubordination, theft, fraud or dishonesty, wilful damage, bribery, habitual absence or absence without leave for more than 10 days, habitual late attendance, riotous behaviour, habitual negligence, illegal strike and go-slow.", "source": 0},
+        {"ref": "SO 21(4)", "point": "No dismissal for misconduct unless the worker is informed in writing of the alleged misconduct within one month and given a chance to explain; an independent inquiry is required and the worker may nominate a co-worker to assist.", "source": 0},
+        {"ref": "SO 21(5)", "point": "Suspension pending inquiry may not exceed one week at a time or four weeks in total (with limited exceptions), and full wages are payable during suspension.", "source": 0},
+        {"ref": "SO 22", "point": "A worker occupying employer-provided housing must vacate it within 2 months after the employment ends; after that the employer may seek summary eviction from a First Class Magistrate.", "source": 0}
+      ],
+      "keywords": ["appointment letter", "naukri se nikal diya", "nokri khatam", "termination", "notice period", "ek mahine ka notice", "gratuity", "bonus", "probation", "permanent worker", "kachi naukri", "contract worker", "temporary worker", "misconduct", "inquiry", "suspension", "service certificate", "retrenchment", "layoff", "overtime", "company quarter"],
+      "caveats": [
+        "Applies only where 10 or more workers are employed - confirm the size of the establishment first.",
+        "If the employer operates in more than one province (trans-provincial), federal law and the NIRC may apply instead of Sindh forums - see federal-industrial-relations-2012."
+      ],
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/6jLG9Ha7bNMwJgKNpGyxfmIVa4YzXmeLAvV60TXW.pdf", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_text"},
+          {"url": "https://www.sindhlaws.gov.pk/setup/publications_SindhCode/PUB-NEW-23-000058.pdf", "publisher": "Law Department, Government of Sindh (Sindh Code)", "kind": "official_text"},
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"}
+        ],
+        "notes": "Full text of the 2015 Act and of the 2021 Amendment Act read."
+      }
+    },
+    {
+      "id": "sindh-payment-of-wages-2015",
+      "title": "Sindh Payment of Wages Act, 2015",
+      "short_name": "Payment of Wages Act",
+      "act_number": "Sindh Act No. VI of 2017",
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {"passed": "2017-01-30", "assented": "2017-03-10", "published": "2017-03-22"},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/nCSYViYCle1TPJp9l2vjT8bUbh5aEXngBNAtxvN2.pdf",
+      "other_official_urls": [],
+      "replaces": "Payment of Wages Act, 1936, in its application to Sindh (s.29).",
+      "scope": "Persons employed in factories, industrial and commercial establishments, mines and railways in Sindh.",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "s.2(1)(b)", "point": "Covers commercial establishments including banks, insurance companies, clubs, hotels, restaurants, departmental stores, cinemas, schools, colleges and private educational institutions, hospitals, private health centres and clinical laboratories, and private security agencies run on a commercial basis.", "source": 0},
+        {"ref": "s.2(1)(d)", "point": "'Employed person' includes permanent, probationer, badli, temporary, apprentice and contract workers, but not an occupier or manager with hiring and firing authority.", "source": 0},
+        {"ref": "s.3", "point": "Every employer, including a contractor, is responsible for paying the wages of persons employed by them.", "source": 0},
+        {"ref": "s.4", "point": "The employer fixes wage periods; no wage period may exceed one month.", "source": 0},
+        {"ref": "s.5(1)", "point": "Wages must be paid before the 7th day after the wage period (where fewer than 1,000 persons are employed) or before the 10th day (others), on a working day.", "source": 0},
+        {"ref": "s.5(2)", "point": "When the employer terminates employment, earned wages must be paid before the end of the second working day.", "source": 0},
+        {"ref": "s.6", "point": "Wages must be paid through a crossed cheque or bank transfer, together with a pay slip showing the details.", "source": 0},
+        {"ref": "s.7", "point": "Only listed deductions are allowed: fines, absence, damage or loss caused by the worker's neglect, approved amenities or services, recovery of advances or overpayments, income tax, court orders, provident fund, and approved co-operative or insurance payments.", "source": 0},
+        {"ref": "s.8", "point": "Fines only for acts or omissions approved and displayed in a notice, and only after a chance to show cause; total fines in one wage period cannot exceed 3% of wages, and cannot be recovered in instalments or after 60 days.", "source": 0},
+        {"ref": "s.15(1)", "point": "Claims about illegal deductions, delayed wages, or unpaid provident fund or gratuity dues are decided by an Authority notified for the area (a Commissioner for Workmen's Compensation or a Directorate of Labour officer of at least grade 18).", "source": 0},
+        {"ref": "s.15(2)", "point": "The worker, a lawyer, an authorised trade union official, a Labour Inspector or the worker's heirs may apply, within 3 years of the deduction or of the date the wages were due (later only if sufficient cause is shown).", "source": 0},
+        {"ref": "s.15(3)", "point": "The Authority can order refund or payment plus compensation of up to 10 times the amount deducted (no compensation for delay caused by a bona fide error or dispute, an emergency, or the worker's failure to collect).", "source": 0},
+        {"ref": "s.15(4)", "point": "A malicious or vexatious applicant can be ordered to pay the employer a penalty of up to Rs 5,000.", "source": 0},
+        {"ref": "s.16", "point": "One application can cover a group of workers of the same establishment whose wages for the same period are unpaid; in a group application compensation is capped at Rs 10 per worker.", "source": 0},
+        {"ref": "s.17", "point": "Appeal against the Authority's direction lies to the Labour Court within 30 days (an employer must first deposit the amount ordered).", "source": 0},
+        {"ref": "s.20(3)", "point": "Discrimination in wages between men and women is punishable with a fine of Rs 20,000 to 50,000 (Rs 50,000 to 75,000 for a repeat offence).", "source": 0},
+        {"ref": "s.23", "point": "Any contract or agreement by which a worker gives up rights under this Act is void to that extent.", "source": 0},
+        {"ref": "s.24", "point": "On closure, insolvency, winding up or liquidation, workers' dues (wages, gratuity, provident fund) are recovered from the proceeds.", "source": 0},
+        {"ref": "s.25", "point": "No discrimination on grounds of sex, religion, descent, tribe, political affiliation, sect, colour, caste, creed or ethnic background in enforcing the Act.", "source": 0}
+      ],
+      "keywords": ["tankhwah nahi mili", "salary nahi di", "salary late", "wages delay", "deduction", "katauti", "jurmana", "fine", "pay slip", "bank transfer", "final settlement", "dues", "gratuity claim", "provident fund claim"],
+      "caveats": [
+        "The Authority for each area is notified by Government; the Sindh Labour Department can say which office handles a given district.",
+        "A separate 6-month claim route exists for minimum-wage shortfalls (see sindh-minimum-wages-2015, s.10)."
+      ],
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/nCSYViYCle1TPJp9l2vjT8bUbh5aEXngBNAtxvN2.pdf", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_text"},
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"},
+          {"url": "https://caselaw.shc.gov.pk/caselaw/view-file/MjE3MTUzY2Ztcy1kYzgz", "publisher": "High Court of Sindh (order referring to the 'Commissioner for Workers' Compensation & Authority under the Sindh Payment of Wages Act, Hyderabad')", "kind": "court"}
+        ],
+        "notes": "Full text read."
+      }
+    },
+    {
+      "id": "sindh-minimum-wages-2015",
+      "title": "Sindh Minimum Wages Act, 2015",
+      "short_name": "Minimum Wages Act",
+      "act_number": "Sindh Act No. VIII of 2016",
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {"passed": "2016-01-25", "assented": "2016-04-07", "published": "2016-04-12"},
+      "official_text_url": "https://humanrights.sindh.gov.pk/storage/rulesRegulations/fqVb7dOULaCVv7WKLUJibqYWQVV0IKcgQ18EWhLc.pdf",
+      "other_official_urls": [
+        "https://lhr.sindh.gov.pk/storage/rulesRegulations/uA3mng1YeqXnkK0K8cBP33AmXgQSfygerEZHQ07v.pdf",
+        "https://www.sindhlaws.gov.pk/Setup/Publications_SindhCode/PUB-NEW-22-000004.pdf"
+      ],
+      "replaces": "Minimum Wages Ordinance, 1961; Minimum Wages for Unskilled Workers Ordinance, 1969; Employees Cost of Living Allowance (Relief) Act, 1973 - in Sindh (s.21).",
+      "scope": "All industrial and commercial establishments in Sindh.",
+      "amendments": [
+        {
+          "title": "Sindh Minimum Wages (Amendment) Act, 2018",
+          "act_number": null,
+          "dates": {},
+          "url": null,
+          "reviewed": false,
+          "summary": "Mentioned in a High Court of Sindh judgment; text not yet reviewed."
+        }
+      ],
+      "key_provisions": [
+        {"ref": "s.1(3)", "point": "Applies to all industrial establishments and commercial establishments in Sindh.", "source": 0},
+        {"ref": "s.2(ii)-(iii)", "point": "An adolescent is a person aged 14 to under 18; an adult is 18 or older.", "source": 0},
+        {"ref": "s.2(vi)", "point": "'Commercial establishment' includes banks, insurance companies, clubs, hotels, restaurants, cinemas, schools, colleges, private educational institutions, hospitals, private health centres, laboratories and private security agencies run on a commercial basis; the Act also applies to employees of registered societies and voluntary social welfare organisations.", "source": 0},
+        {"ref": "s.2(xv)", "point": "Minimum wages include basic pay plus statutory allowances (cost of living allowance, dearness allowance and ad hoc relief).", "source": 0},
+        {"ref": "s.2(xx)", "point": "'Worker' excludes Federal and Provincial Government employees and persons employed in an employer capacity or notified as occupier/manager.", "source": 0},
+        {"ref": "s.6", "point": "Minimum rates are recommended by the Minimum Wages Board and declared by Government notification in the official Gazette; they take effect on publication unless another date is given.", "source": 0},
+        {"ref": "s.9(1)", "point": "No employer may pay a worker less than the declared minimum rate (subject only to authorised deductions).", "source": 0},
+        {"ref": "s.9(2)", "point": "Workers already entitled to higher wages under an agreement, contract, award or custom keep the higher wages.", "source": 0},
+        {"ref": "s.9(3)", "point": "Paying below the minimum rate is punishable with imprisonment up to 6 months, or a fine of Rs 20,000 to 50,000, or both - plus paying the worker the shortfall.", "source": 0},
+        {"ref": "s.10", "point": "An Authority notified for the area hears claims for non-payment or delayed payment of minimum wages; the worker (or someone authorised) applies within 6 months of the due date (up to 1 year with sufficient cause); the Authority can order payment plus a penalty of up to 10 times the wages withheld.", "source": 0},
+        {"ref": "s.11", "point": "Appeal against the Authority's order lies to the Labour Court within 30 days.", "source": 0},
+        {"ref": "s.14", "point": "Factory and shop inspectors are also inspectors under this Act (shop inspectors for shops and establishments with 9 or fewer workers).", "source": 0},
+        {"ref": "s.15(4)", "point": "Discriminating between men and women in paying minimum wages is punishable with a fine of Rs 20,000 to 50,000 (Rs 50,000 to 75,000 for a repeat offence).", "source": 0},
+        {"ref": "s.18", "point": "No discrimination on the basis of sex, religion, political affiliation, sect, colour, caste, creed or ethnic background in enforcing the Act.", "source": 0}
+      ],
+      "keywords": ["minimum wage", "kam se kam tankhwah", "kam tankhwah", "underpaid", "Minimum Wages Board", "barabar tankhwah", "female worker pay"],
+      "caveats": [
+        "Never hardcode the rate - read the current figure from current_rates.json.",
+        "The 2018 amendment has not been reviewed yet."
+      ],
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://humanrights.sindh.gov.pk/storage/rulesRegulations/fqVb7dOULaCVv7WKLUJibqYWQVV0IKcgQ18EWhLc.pdf", "publisher": "Human Rights Department, Government of Sindh (copy of the Act as published by the Provincial Assembly)", "kind": "official_text"},
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"},
+          {"url": "https://caselaw.shc.gov.pk/caselaw/view-file/MTU0NTc4Y2Ztcy1kYzgz", "publisher": "High Court of Sindh (judgment mentioning the 2018 amendment)", "kind": "court"}
+        ],
+        "notes": "Full text of the 2015 Act read. 2018 amendment not reviewed."
+      }
+    },
+    {
+      "id": "sindh-industrial-relations-2013",
+      "title": "Sindh Industrial Relations Act, 2013",
+      "short_name": "SIRA 2013",
+      "act_number": "Sindh Act No. XXIX of 2013",
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {"passed": "2013-03-15", "assented": "2013-03-28", "published": "2013-04-01"},
+      "official_text_url": "https://sindhhighcourt.gov.pk/downloads/source_files/Sindh%20Industrial%20Relation%20Act,%202013.pdf",
+      "other_official_urls": ["https://lhr.sindh.gov.pk/storage/rulesRegulations/yVCMoSHG9gdsHsZNXYUAUIsUcKPvYXw2HbsZ2pQZ.pdf"],
+      "replaces": null,
+      "scope": "Persons employed in any establishment or industry in Sindh, including fishing and agriculture, with listed exclusions.",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "s.1(3)", "point": "Applies to persons employed in any establishment or industry in Sindh, including fishing and agriculture; excludes, among others, police and defence services, State administration (other than Railway and Pakistan Post workmen), certain security and fire staff, and non-commercial hospitals/care institutions and non-commercial education or emergency services.", "source": 0},
+        {"ref": "s.3", "point": "Workers may form and join trade unions of their choice without prior authorisation; where women are employed, the union executive must include women in proportion to their employment.", "source": 0},
+        {"ref": "s.17", "point": "Unfair labour practices by employers include refusing to employ, discriminating against, or dismissing, transferring or threatening a worker for being a union member or office-bearer or for union activity.", "source": 0},
+        {"ref": "s.34(1)", "point": "A worker can bring a grievance about any right under any law, award or settlement to the employer's notice in writing (personally, or through the shop steward or collective bargaining agent) within 3 months of the day the cause arose.", "source": 0},
+        {"ref": "s.34(2)-(3)", "point": "The employer must communicate a written decision within 15 days (within 7 days if the grievance was raised through the shop steward or collective bargaining agent).", "source": 0},
+        {"ref": "s.34(5)", "point": "When the matter is taken to the Labour Court, it must decide within 90 days.", "source": 0},
+        {"ref": "s.34(6)", "point": "If the employer does not decide in time, or the worker is dissatisfied, the worker may take the matter to the Labour Court within 60 days of the employer's decision or of the end of the reply period.", "source": 0},
+        {"ref": "s.34(8)", "point": "Not complying with a Labour Court decision under s.34 within 7 days (or the time set) is punishable with imprisonment up to 3 months, or fine up to Rs 500,000, or both (prosecution on the worker's written complaint).", "source": 0},
+        {"ref": "s.34(10)", "point": "Workers with a common grievance arising from a common cause may file a joint application.", "source": 0},
+        {"ref": "s.45", "point": "Labour Courts are presided over by a serving or former District Judge or Additional District Judge.", "source": 0},
+        {"ref": "s.46(4)", "point": "No court fee is payable for filing documents in a Labour Court.", "source": 0},
+        {"ref": "s.47(3)", "point": "An appeal against a Labour Court's final decision (including under s.34) lies to the Labour Appellate Tribunal within 30 days of communication of the decision.", "source": 0},
+        {"ref": "s.61", "point": "A worker may be represented by an office-bearer of the collective bargaining agent; lawyers may appear before the Labour Court or Tribunal with its permission, but not in conciliation proceedings.", "source": 0}
+      ],
+      "keywords": ["grievance notice", "shikayat notice", "Labour Court", "labour court case", "union", "trade union", "bahali", "reinstatement", "Labour Appellate Tribunal", "unfair labour practice"],
+      "caveats": [
+        "Text checked against the High Court of Sindh Judges' Library compilation (September 2014); later amendments and the Sindh Industrial Relations Rules, 2021 have not been reviewed.",
+        "Trans-provincial establishments may fall under the federal Industrial Relations Act, 2012 (see federal-industrial-relations-2012)."
+      ],
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://sindhhighcourt.gov.pk/downloads/source_files/Sindh%20Industrial%20Relation%20Act,%202013.pdf", "publisher": "High Court of Sindh, Judges' Library (compiled text)", "kind": "court"},
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"},
+          {"url": "https://caselaw.shc.gov.pk/caselaw/view-file/MTY2ODUxY2Ztcy1kYzgz", "publisher": "High Court of Sindh (judgment applying the s.34 time limits)", "kind": "court"}
+        ],
+        "notes": "Full text read from the High Court of Sindh compilation."
+      }
+    },
+    {
+      "id": "sindh-domestic-workers-welfare-2025",
+      "title": "Sindh Domestic Workers Welfare Act, 2025",
+      "short_name": "Domestic Workers Act",
+      "act_number": "Sindh Act No. XVIII of 2026",
+      "jurisdiction": "sindh",
+      "categories": ["employment", "harassment"],
+      "dates": {"passed": "2026-05-18", "assented": "2026-06-16", "published": "2026-06-22"},
+      "official_text_url": "https://pas.gov.pk/uploads/acts/Sindh_Act_No.XVIII_of_2026.pdf",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Domestic work in or for households across Sindh (child care, elderly care, sick care, natal/post-natal care and ancillary work).",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "s.1", "point": "Extends to the whole of Sindh and came into force at once. The published s.1(1) calls it the 'Sindh Domestic Workers Welfare Bill, 2025' (a drafting slip; the notification publishes it as an Act).", "source": 0},
+        {"ref": "s.3", "point": "No child below 16 may work in a household in any capacity; workers under 18 may only do light work that does not harm health or development.", "source": 0},
+        {"ref": "s.4", "point": "Harassment complaints by a woman domestic worker against a household or employer (or by female household members against a domestic worker) fall under the Ombudsperson appointed under s.7 of the 2010 workplace harassment law.", "source": 0},
+        {"ref": "s.5", "point": "No bonded or forced labour; no discrimination (religion, race, caste, creed, sex, ethnicity, place of birth, domicile, migration, etc.); the worker must be addressed as a 'domestic worker', not a 'servant'; no extra work without free consent and extra pay; dignified working conditions and safety; benefits include social security and old-age benefits.", "source": 0},
+        {"ref": "s.6(1)-(3)", "point": "Every domestic worker must be given a letter of employment in the prescribed form, with a copy sent to the Inspector (manually or digitally); existing workers were to receive letters within 60 days of the Act's commencement.", "source": 0},
+        {"ref": "s.6(4)-(5)", "point": "Full-time and live-in workers work only 8 hours a day; no domestic worker may be required to work more than 6 days a week (a 7th day only by mutual agreement, at double wages).", "source": 0},
+        {"ref": "s.7", "point": "Festival holidays with full pay according to faith; 6 weeks' paid maternity leave (paid directly by the employer if the worker is not registered with an institution); 10 casual leaves (at most 2 consecutive days) and 8 sick leaves (with a medical certificate) per year on full pay.", "source": 0},
+        {"ref": "s.9", "point": "Wages may not be less than the minimum wage notified under the Sindh Minimum Wages Act, 2015.", "source": 0},
+        {"ref": "s.10", "point": "Live-in workers who choose to live at the workplace must get adequate accommodation and decent living conditions.", "source": 0},
+        {"ref": "s.11", "point": "A yearly medical examination and prescribed vaccinations at the employer's cost.", "source": 0},
+        {"ref": "s.13", "point": "Termination requires one month's written notice by either side, or one month's wages (average of the last 3 months) in lieu.", "source": 0},
+        {"ref": "s.14", "point": "Wages are due within 5 days after the wage period (which cannot exceed one month); when the employer terminates, earned wages must be paid within 2 working days; payment in coin or currency notes.", "source": 0},
+        {"ref": "s.15", "point": "Paying below the minimum wage: fine up to 40% of the unskilled minimum wage plus the shortfall; wage claims are settled as under the Sindh Minimum Wages Act, with appeal to the Labour Court within 30 days.", "source": 0},
+        {"ref": "s.16-20", "point": "A Domestic Workers Welfare Fund is created; domestic workers register with the Sindh Employees Social Security Institution and employers register (renewable every 3 years).", "source": 0},
+        {"ref": "s.21-22", "point": "Disputes go to a Dispute Resolution Committee notified by the Labour Department and must be presented within 30 days of the dispute arising; appeal to the district Appellate Authority within 30 days of the award.", "source": 0, "note": "Exact places: s.21(3) proviso - dispute presented within 30 days from the date it arises; s.21(4) - appeal within 30 days of the date the award was made; s.22(1) - the Department appoints an Appellate Authority in each district (re-read 2026-10-17)."},
+        {"ref": "s.25", "point": "Employer contraventions are fined up to 25% of the unskilled minimum wage (first offence) or 40% (repeat); knowingly employing a child in breach of s.3 is fined 1 to 2 times the unskilled minimum wage.", "source": 0},
+        {"ref": "s.30", "point": "A household may be inspected only after a complaint and on the Dispute Resolution Committee's direction.", "source": 0}
+      ],
+      "keywords": ["gharelu mulazim", "ghar ka kaam", "maasi", "naukrani", "domestic worker", "house help", "cook", "driver", "babysitter", "maternity leave", "chutti", "8 ghante"],
+      "caveats": [
+        "New law (published June 2026). Dispute Resolution Committees, Inspectors and rules may not be notified yet - confirm the current office with the Sindh Labour Department before naming one."
+      ],
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://pas.gov.pk/uploads/acts/Sindh_Act_No.XVIII_of_2026.pdf", "publisher": "Provincial Assembly of Sindh", "kind": "official_text"}
+        ],
+        "notes": "Full text read."
+      }
+    },
+    {
+      "id": "sindh-prohibition-employment-children-2017",
+      "title": "Sindh Prohibition of Employment of Children Act, 2017",
+      "short_name": "Child Employment Act",
+      "act_number": "Sindh Act No. III of 2017",
+      "jurisdiction": "sindh",
+      "categories": ["employment", "children"],
+      "dates": {"passed": "2017-01-25", "assented": "2017-03-15", "published": "2017-03-22"},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/sQGe6HhiUD1MD0sM2Eh9CkCD28MyOMBc5j6x3Bwf.pdf",
+      "other_official_urls": [],
+      "replaces": "Employment of Children Act, 1991, in its application to Sindh (s.24).",
+      "scope": "Any industrial, commercial or agricultural establishment, mine, business, trade or workplace where economic activity is carried on, including charitable and welfare organisations.",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "s.2", "point": "A child is a person under 14; an adolescent is a person aged 14 to under 18.", "source": 0},
+        {"ref": "s.3(1)", "point": "No child may be employed or permitted to work in any establishment.", "source": 0},
+        {"ref": "s.3(2)", "point": "No adolescent may be employed in hazardous work listed in the Schedule (38 items, including transport, mines and quarries, power-driven cutting machinery, tanning, toxic chemicals, LPG/CNG filling sites, glass furnaces, carpet weaving, stone crushing, lifting 15 kg or more, work at 2 metres height or more, scavenging, building and construction).", "source": 0},
+        {"ref": "s.7", "point": "Adolescents may work at most 3 hours before a 1-hour rest, 7 hours a day including rest, never between 7 pm and 8 am, never overtime, and not in two establishments on the same day.", "source": 0},
+        {"ref": "s.8", "point": "Every adolescent worker gets one whole day off each week.", "source": 0},
+        {"ref": "s.9(3)", "point": "The adolescent hours and notice rules (ss.7-9) do not apply where work is done by the occupier with family help, or in Government-recognised skill schools.", "source": 0},
+        {"ref": "s.14(1)", "point": "Employing a child: imprisonment up to 6 months, or fine up to Rs 50,000, or both. In hazardous work: imprisonment up to 3 years and fine of Rs 10,000 to 100,000. In slavery, trafficking, debt bondage, forced labour, sexual exploitation or drug trade: imprisonment of 5 to 10 years and fine of Rs 200,000 to 1,000,000.", "source": 0},
+        {"ref": "s.14(2)", "point": "Employing an adolescent in hazardous work: imprisonment up to 1 year, or fine up to Rs 75,000, or both.", "source": 0},
+        {"ref": "s.17", "point": "Any person, police officer or Labour Inspector may file a complaint; offences are tried by the Labour Court.", "source": 0},
+        {"ref": "s.22", "point": "The occupier must ensure that working adolescents under 16 (and children acquiring skills) attend compulsory schooling, and keep proof of it.", "source": 0}
+      ],
+      "keywords": ["bacha mazdoori", "child labour", "kam umar bachay", "under 14", "chota bacha kaam", "teenage worker", "hazardous work"],
+      "caveats": [
+        "For work inside households, the Sindh Domestic Workers Welfare Act, 2025 sets a higher minimum age of 16 (see sindh-domestic-workers-welfare-2025, s.3)."
+      ],
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/sQGe6HhiUD1MD0sM2Eh9CkCD28MyOMBc5j6x3Bwf.pdf", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_text"}
+        ],
+        "notes": "Full text read, including the Schedule of hazardous work."
+      }
+    },
+    {
+      "id": "sindh-home-based-workers-2018",
+      "title": "Sindh Home-Based Workers Act, 2018",
+      "short_name": "Home-Based Workers Act",
+      "act_number": "Sindh Act No. XXXVII of 2018",
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {"passed": "2018-05-09", "assented": "2018-05-23", "published": "2018-05-29"},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/Wcfe2HxMyMk4Pb2l2R5GmsLQfhrkhkIp3x6HM21B.pdf",
+      "other_official_urls": [
+        "https://www.sindhlaws.gov.pk/setup/publications_SindhCode/PUB-NEW-26-000035.pdf",
+        "https://scsw.sindh.gov.pk/storage/rulesRegulations/7pdmLlBb0qKA0aFik22bpKPSRYkWVMKz157XhFwA.pdf"
+      ],
+      "replaces": null,
+      "scope": "Home-based workers in Sindh.",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "preamble", "point": "Provides for the social protection and rights of home-based workers in Sindh.", "source": 0},
+        {"ref": "council-registration", "point": "Provides for a Council for Home-Based Workers and for the registration of home-based workers and of employers who engage them.", "source": 0}
+      ],
+      "keywords": ["home based worker", "ghar se kaam", "piece rate", "silai", "kadhai", "embroidery", "packing ka kaam"],
+      "caveats": ["Level B: only the listed points are verified. Read the official text before describing other rights."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://www.sindhlaws.gov.pk/setup/publications_SindhCode/PUB-NEW-26-000035.pdf", "publisher": "Law Department, Government of Sindh (Sindh Code)", "kind": "official_text"},
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"}
+        ],
+        "notes": "Dates and Act number from the official text's first page; full text not yet read."
+      }
+    },
+    {
+      "id": "sindh-shops-commercial-establishment-2015",
+      "title": "Sindh Shops and Commercial Establishment Act, 2015",
+      "short_name": "Shops Act",
+      "act_number": "Sindh Act No. XII of 2016",
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/BGUHOVhjWrpnGye93qff0OTpi7Do5FEtFMk4bSqA.pdf",
+      "other_official_urls": ["https://www.sindhlaws.gov.pk/Setup/Publications_SindhCode/PUB-NEW-18-000109.pdf"],
+      "replaces": null,
+      "scope": "Shops and commercial establishments in Sindh.",
+      "amendments": [
+        {
+          "title": "Sindh Shops and Commercial Establishment (Amendment) Act, 2021",
+          "act_number": "Sindh Act No. XXV of 2021",
+          "dates": {"listed": "2021-08-04"},
+          "url": "https://sindhlaws.gov.pk/setup/publications_SindhCode/PUB-NEW-23-000055.pdf",
+          "reviewed": false,
+          "summary": "Listed on the Sindh Code (Labour Department section); not reviewed."
+        }
+      ],
+      "key_provisions": [
+        {"ref": "s.1(2)", "point": "Extends to the whole of Sindh.", "source": 0},
+        {"ref": "preamble", "point": "Regulates the hours and other conditions of work and employment of persons employed in shops and commercial establishments in Sindh.", "source": 0}
+      ],
+      "keywords": ["dukaan", "shop worker", "salesman", "shop timing", "overtime"],
+      "caveats": ["Level B: working hours, overtime and leave rules have not been extracted yet - do not quote them."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://www.sindhlaws.gov.pk/Setup/Publications_SindhCode/PUB-NEW-18-000109.pdf", "publisher": "Law Department, Government of Sindh (Sindh Code)", "kind": "official_text"},
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"}
+        ],
+        "notes": "Only the title page and contents were seen."
+      }
+    },
+    {
+      "id": "sindh-factories-2015",
+      "title": "Sindh Factories Act, 2015",
+      "short_name": "Factories Act",
+      "act_number": "Sindh Act No. XIII of 2016",
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/vvE55rVbpomC9o6VWibHzoR5ISdxrF8weh1h2oLK.pdf",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Factories in Sindh.",
+      "amendments": [
+        {"title": "Factories (Amendment) Act, 2021", "act_number": "Sindh Act No. XXI of 2021", "dates": {"listed": "2021-08-04"}, "url": "https://www.sindhlaws.gov.pk/setup/publications_SindhCode/PUB-NEW-23-000051.pdf", "reviewed": false, "summary": "Not reviewed."},
+        {"title": "Factories (Amendment) Act, 2026", "act_number": "Sindh Act No. XIV of 2026", "dates": {"listed": "2026-05-19"}, "url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-26-000139.pdf", "reviewed": false, "summary": "Listed on the Sindh Code alphabetical index; not reviewed."}
+      ],
+      "key_provisions": [],
+      "keywords": ["factory", "kaarkhana", "mill", "working hours", "safety"],
+      "caveats": ["Level B with no extracted provisions: name the law and link it only. The Act number is taken from cross-references in the Standing Orders (Amendment) Act, 2021 and the Child Employment Act, 2017."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"},
+          {"url": "https://sindhlaws.gov.pk/Alpha.aspx?pg=ACT", "publisher": "Law Department, Government of Sindh (Sindh Code alphabetical index)", "kind": "official_listing"}
+        ],
+        "notes": "Text not read."
+      }
+    },
+    {
+      "id": "sindh-workers-compensation-2015",
+      "title": "Sindh Workers' Compensation Act, 2015",
+      "short_name": "Workers' Compensation Act",
+      "act_number": null,
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/IfEZUazP2dAmeYSGOTGx2faFpHzqkApJBtsgRjW9.pdf",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Compensation for workers in Sindh.",
+      "amendments": [],
+      "key_provisions": [],
+      "keywords": ["injury compensation", "kaam pe chot", "accident", "death compensation"],
+      "caveats": ["Level B with no extracted provisions: name the law and link it only."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"},
+          {"url": "https://lhr.sindh.gov.pk/introduction", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"}
+        ],
+        "notes": "Text not read."
+      }
+    },
+    {
+      "id": "sindh-employees-social-security-2016",
+      "title": "Sindh Employees' Social Security Act, 2016",
+      "short_name": "Social Security Act (SESSI)",
+      "act_number": "Sindh Act No. VI of 2016",
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/KANBQxC5k8CN1GcMOgnnrMvp5odGR6ZEvjo9iSlA.pdf",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Social security for employees in Sindh (Sindh Employees Social Security Institution).",
+      "amendments": [
+        {"title": "Employees Social Security (Amendment) Act, 2021", "act_number": "Sindh Act No. XIX of 2021", "dates": {"listed": "2021-08-04"}, "url": "https://sindhlaws.gov.pk/setup/publications_SindhCode/PUB-NEW-23-000049.pdf", "reviewed": false, "summary": "Not reviewed."},
+        {"title": "Sindh Employees Social Security Institution (Amendment) Act, 2022", "act_number": null, "dates": {}, "url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/x8YqIX4x1ScJJfY2IBptJTNVwQwKhOPRYy6z4Ste.pdf", "reviewed": false, "summary": "Not reviewed."}
+      ],
+      "key_provisions": [],
+      "keywords": ["SESSI", "social security", "sehat card", "medical", "ilaj"],
+      "caveats": ["Level B with no extracted provisions: name the law and link it only. Act number taken from the Domestic Workers Act, 2025 (s.2(xvi))."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"},
+          {"url": "https://pas.gov.pk/uploads/acts/Sindh_Act_No.XVIII_of_2026.pdf", "publisher": "Provincial Assembly of Sindh (cross-reference giving the Act number)", "kind": "official_text"}
+        ],
+        "notes": "Text not read."
+      }
+    },
+    {
+      "id": "sindh-employees-old-age-benefits-2014",
+      "title": "Sindh Employees' Old-Age Benefits Act, 2014",
+      "short_name": "Old-Age Benefits Act",
+      "act_number": null,
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/cXx8T9KcSgprWLPEc0wIm8o7OVRAzzmjBBBSDoan.pdf",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Old-age benefits for employees in Sindh.",
+      "amendments": [
+        {"title": "Employees Old-Age Benefits (Amendment) Act, 2018", "act_number": "Sindh Act No. XIX of 2018", "dates": {"listed": "2018-05-17"}, "url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-26-000049.pdf", "reviewed": false, "summary": "Not reviewed."}
+      ],
+      "key_provisions": [],
+      "keywords": ["pension", "budhapa pension", "EOBI", "old age"],
+      "caveats": ["Level B with no extracted provisions. How this provincial Act operates alongside the federal EOBI scheme was not verified - do not advise on pension entitlement from this entry."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"}
+        ],
+        "notes": "Text not read."
+      }
+    },
+    {
+      "id": "sindh-bonded-labour-abolition-2015",
+      "title": "Sindh Bonded Labour System (Abolition) Act, 2015",
+      "short_name": "Bonded Labour Act",
+      "act_number": null,
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/WSQjBswozVG7XndOoE8Sz14h7XZjVvo0A7zLzVta.pdf",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Abolition of the bonded labour system in Sindh.",
+      "amendments": [],
+      "key_provisions": [],
+      "keywords": ["bonded labour", "qarz ki mazdoori", "peshgi", "jabri mushaqqat", "forced labour"],
+      "caveats": ["Level B with no extracted provisions: name the law and link it only."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"}
+        ],
+        "notes": "Text not read."
+      }
+    },
+    {
+      "id": "sindh-occupational-safety-health-2017",
+      "title": "Sindh Occupational Safety and Health Act, 2017",
+      "short_name": "OSH Act",
+      "act_number": null,
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/LI5P0CUNnStsWaGGZ1HqlGi1b1vVn9grDIbmYmY4.pdf",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Occupational safety and health in Sindh.",
+      "amendments": [],
+      "key_provisions": [],
+      "keywords": ["safety", "hifazati saman", "workplace safety", "accident"],
+      "caveats": ["Level B with no extracted provisions: name the law and link it only."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"}
+        ],
+        "notes": "Text not read."
+      }
+    },
+    {
+      "id": "sindh-women-agricultural-workers-2019",
+      "title": "Sindh Women Agricultural Workers Act, 2019",
+      "short_name": "Women Agricultural Workers Act",
+      "act_number": null,
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/5XOLWveXIxumyfxAgRVI4KGeOzrz660U0u6CGg7P.pdf",
+      "other_official_urls": ["https://humanrights.sindh.gov.pk/storage/rulesRegulations/kScMrCcmASHmsoWrlaqhghZDOOrmMjzJ2V0BjtsV.pdf"],
+      "replaces": null,
+      "scope": "Women agricultural workers in Sindh.",
+      "amendments": [],
+      "key_provisions": [],
+      "keywords": ["khet mazdoor aurat", "hari", "women farm worker", "kapas chunai"],
+      "caveats": ["Level B with no extracted provisions: name the law and link it only."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"},
+          {"url": "https://humanrights.sindh.gov.pk/hr-acts", "publisher": "Human Rights Department, Government of Sindh", "kind": "official_listing"}
+        ],
+        "notes": "Text not read."
+      }
+    },
+    {
+      "id": "sindh-workers-welfare-fund-2014",
+      "title": "Sindh Workers Welfare Fund Act, 2014",
+      "short_name": "Workers Welfare Fund Act",
+      "act_number": null,
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/Rwc5secQRNgv5QK7t1REq7N2lLhFLVHhLJNwlbjh.pdf",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Workers' welfare fund in Sindh.",
+      "amendments": [
+        {"title": "Sindh Workers Welfare Fund (Amendment) Act, 2023", "act_number": null, "dates": {}, "url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/7SX0XxnsFl5jTHL1igDVihZjpMX1BArp2vKCyrRX.pdf", "reviewed": false, "summary": "Not reviewed."}
+      ],
+      "key_provisions": [],
+      "keywords": ["welfare fund", "WWF", "worker welfare", "scholarship", "jahez grant"],
+      "caveats": ["Level B with no extracted provisions: name the law and link it only."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"}
+        ],
+        "notes": "Text not read."
+      }
+    },
+    {
+      "id": "sindh-companies-profits-workers-participation-2015",
+      "title": "Sindh Companies Profits (Workers Participation) Act, 2015",
+      "short_name": "Workers Participation Act",
+      "act_number": null,
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "dates": {},
+      "official_text_url": "https://lhr.sindh.gov.pk/storage/rulesRegulations/V3doFYODJuFm56pskUPeKEA1RhkemyZ9Lnm3h0zB.pdf",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Workers' participation in company profits in Sindh.",
+      "amendments": [],
+      "key_provisions": [],
+      "keywords": ["WPPF", "profit share", "munafa mein hissa"],
+      "caveats": ["Level B with no extracted provisions: name the law and link it only."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/rules-act-policies", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_listing"}
+        ],
+        "notes": "Text not read."
+      }
+    },
+    {
+      "id": "federal-industrial-relations-2012",
+      "title": "Industrial Relations Act, 2012 (federal)",
+      "short_name": "IRA 2012",
+      "act_number": "Act No. X of 2012",
+      "jurisdiction": "federal",
+      "categories": ["employment"],
+      "dates": {},
+      "official_text_url": null,
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Islamabad Capital Territory and trans-provincial establishments (operating in more than one province).",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "applicability", "point": "For a trans-provincial establishment (one operating in more than one province), the High Court of Sindh has applied the federal Industrial Relations Act, 2012 instead of the Sindh labour forums.", "source": 1},
+        {"ref": "s.33", "point": "Individual grievances under the IRA 2012 are filed before the National Industrial Relations Commission (NIRC); the High Court of Sindh has applied a 60-day limit for filing the grievance application after the grievance notice period.", "source": 0}
+      ],
+      "keywords": ["NIRC", "trans provincial", "bank employee", "telecom employee", "federal labour law"],
+      "caveats": ["Level B (court judgments only). Whether a particular employer is trans-provincial is a legal question - refer the user to SLACC (0800-70806) or a lawyer."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://caselaw.shc.gov.pk/caselaw/view-file/MjEyNDEwY2Ztcy1kYzgz", "publisher": "High Court of Sindh (judgment on grievance under s.33 IRA 2012 before NIRC)", "kind": "court"},
+          {"url": "https://caselaw.shc.gov.pk/caselaw/view-file/MTY1MDE4Y2Ztcy1kYzgz", "publisher": "High Court of Sindh (judgment on a trans-provincial employer)", "kind": "court"}
+        ],
+        "notes": "Act text not read; the Act number appears in a High Court of Sindh judgment ('Act X of 2012')."
+      }
+    },
+    {
+      "id": "protection-against-harassment-workplace-2010",
+      "title": "Protection against Harassment of Women at the Workplace Act, 2010 (as amended by Act No. V of 2022)",
+      "short_name": "Workplace Harassment Act",
+      "act_number": "Act No. IV of 2010",
+      "jurisdiction": "national",
+      "categories": ["harassment", "employment"],
+      "dates": {"date_in_act": "2010-03-06", "amended": "2022-01-25"},
+      "official_text_url": "https://sja.gos.pk/assets/Updated_Laws/Protection%20against%20Harassment%20of%20Women%20at%20the%20Workplace%20Act%2C%202010%20%28Amendments%20upto%20date%29.pdf",
+      "other_official_urls": [
+        "https://www.fospah.gov.pk/SiteImage/Misc/PAHAW%202010.pdf",
+        "https://www.fospah.gov.pk/SiteImage/Misc/PAHAW_amend_2022.pdf"
+      ],
+      "replaces": null,
+      "scope": "Workplaces across Pakistan; Ombudspersons at federal and provincial level.",
+      "amendments": [
+        {"title": "Protection against Harassment of Women at the Workplace (Amendment) Act, 2022", "act_number": "Act No. V of 2022", "dates": {"gazette": "2022-01-25"}, "url": "https://www.fospah.gov.pk/SiteImage/Misc/PAHAW_amend_2022.pdf", "reviewed": true, "summary": "Incorporated in the Sindh Judicial Academy updated text that was read: 'any person' can complain, wider definitions of employee, employer, harassment (incl. gender discrimination and cyber stalking) and workplace, 90-day decision limit."}
+      ],
+      "key_provisions": [
+        {"ref": "s.1(2)", "point": "Extends to the whole of Pakistan.", "source": 0},
+        {"ref": "s.2(e)", "point": "'Complainant' means any person aggrieved by harassment, including a former employee who was removed, dismissed or resigned, and a parent or guardian where the complainant is a minor.", "source": 0},
+        {"ref": "s.2(f)", "point": "'Employee' includes regular, contractual, piece-rate, gig, temporary, part-time and freelance workers, and students, performers, artists, sportspersons, interns, trainees, domestic workers, home-based workers and apprentices - paid or unpaid.", "source": 0},
+        {"ref": "s.2(h)", "point": "'Harassment' means (i) unwelcome sexual advances, requests for sexual favours, stalking or cyber stalking, or other verbal, visual, written or physical conduct of a sexual nature or sexually demeaning attitudes (including gestures) that interfere with work or create an intimidating, hostile or offensive environment, or punishing a refusal or making it a condition of employment; or (ii) discrimination on the basis of gender, whether or not sexual in nature.", "source": 0},
+        {"ref": "s.2(n)", "point": "'Workplace' covers any place where work or services are performed - including educational institutions, gigs, studios, performance venues, courts, highways and sports facilities - and any situation linked to work outside the office.", "source": 0},
+        {"ref": "s.3", "point": "Every organisation must constitute a 3-member Inquiry Committee with at least one woman member.", "source": 0},
+        {"ref": "s.4(1)", "point": "Within 3 days of a written complaint, the Inquiry Committee must send the charges to the accused, who has 7 days to submit a written defence (otherwise the inquiry proceeds ex parte).", "source": 0},
+        {"ref": "s.4(3)", "point": "Inquiry evidence is confidential; both parties may be accompanied by a CBA representative, friend or colleague; no adverse action may be taken against the complainant or witnesses; the employer or accused must not create a hostile environment for the complainant.", "source": 0},
+        {"ref": "s.4(4)", "point": "Findings are due within 30 days. Penalties: minor (censure, withholding promotion or increment, stopping at efficiency bar, recovering compensation from the accused) or major (demotion, compulsory retirement, removal, dismissal, suspension or cancellation of a professional licence, fine - part of which may go to the complainant).", "source": 0},
+        {"ref": "s.6", "point": "A party aggrieved by the Competent Authority's decision may appeal to the Ombudsperson within 30 days.", "source": 0},
+        {"ref": "s.7", "point": "Ombudspersons are appointed at both the federal and provincial levels.", "source": 0},
+        {"ref": "s.8(1)", "point": "The complainant may choose to complain either to the Ombudsperson or to the organisation's Inquiry Committee.", "source": 0},
+        {"ref": "s.8(2)", "point": "The Ombudsperson issues a show-cause notice within 3 days of receiving the complaint; the accused must reply within 5 days.", "source": 0},
+        {"ref": "s.8(6)", "point": "The Ombudsperson must decide a complaint or appeal within 90 days.", "source": 0},
+        {"ref": "s.9", "point": "A representation against the Ombudsperson's decision lies to the President (federal) or the Governor (provincial) within 30 days, to be decided within 90 days.", "source": 0},
+        {"ref": "s.10", "point": "The Ombudsperson has civil-court powers (summons, evidence, inspection of premises, contempt) and can impose the penalties listed in s.4(4).", "source": 0},
+        {"ref": "s.11", "point": "Employers must adopt the Code of Conduct, form the Inquiry Committee, designate a Competent Authority and display the Code in English and the language of most employees. If they fail, any employee can petition the District Court; the fine is Rs 25,000 to 100,000.", "source": 0},
+        {"ref": "Schedule (Code)", "point": "A single incident that makes a person uncomfortable or afraid can be harassment; retaliation (including counter-blast defamation suits) is part of harassment; a delay in reporting does not affect the merits of the case.", "source": 0},
+        {"ref": "forum-choice", "point": "FOSPAH's regional offices decide workplace harassment complaints from federal or trans-provincial organisations operating in their region; provincial matters go to the provincial Ombudsperson.", "source": 3}
+      ],
+      "keywords": ["harassment", "jinsi harassment", "workplace harassment", "boss tang karta hai", "ganday messages", "inquiry committee", "ombudsperson", "mohtasib", "gender discrimination", "cyber stalking", "badla", "retaliation", "FOSPAH"],
+      "caveats": [
+        "Text read is the federal Act as amended up to 25 January 2022, compiled by the Sindh Judicial Academy. The Sindh Domestic Workers Welfare Act, 2025 refers to it as the 'Sindh Protection against Harassment of Women at the Workplace Act, 2010 (Act No. IV of 2010)'. Whether every 2022 amendment is applied identically by the Sindh provincial Ombudsperson was not confirmed - check with that office before asserting it.",
+        "Criminal action is separate and possible at the same time: see ppc-509 and, for online conduct, peca-2016."
+      ],
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://sja.gos.pk/assets/Updated_Laws/Protection%20against%20Harassment%20of%20Women%20at%20the%20Workplace%20Act%2C%202010%20%28Amendments%20upto%20date%29.pdf", "publisher": "Sindh Judicial Academy (updated text, amendments up to 25 Jan 2022)", "kind": "official_text"},
+          {"url": "https://www.fospah.gov.pk/", "publisher": "Federal Ombudsperson Secretariat for Protection Against Harassment", "kind": "official_page"},
+          {"url": "https://pas.gov.pk/uploads/acts/Sindh_Act_No.XVIII_of_2026.pdf", "publisher": "Provincial Assembly of Sindh (cross-reference naming the Act)", "kind": "official_text"},
+          {"url": "https://fospah.gov.pk/NewsDetail/ZTI1NTExZjEtZGRmYy00YjQwLThiM2EtNjNkN2QwNzY0ZTMw", "publisher": "FOSPAH news (regional office jurisdiction)", "kind": "official_page"}
+        ],
+        "notes": "Full updated text read, including the Schedule (Code of Conduct)."
+      }
+    },
+    {
+      "id": "ppc-509",
+      "title": "Pakistan Penal Code, 1860 - Section 509 (insulting modesty or causing sexual harassment)",
+      "short_name": "PPC 509",
+      "act_number": "Act XLV of 1860, s.509 as substituted by the Criminal Law (Amendment) Act, 2009",
+      "jurisdiction": "national",
+      "categories": ["harassment"],
+      "dates": {},
+      "official_text_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5lo-sg-jjjjjjjjjjjjj",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Criminal offence, applicable throughout Pakistan.",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "s.509", "point": "Section 509 PPC, as amended, recognises sexual harassment as a criminal offence.", "source": 0},
+        {"ref": "s.509 (punishment)", "point": "Maximum punishment: imprisonment up to 3 years, or fine up to Rs 500,000, or both.", "source": 0}
+      ],
+      "keywords": ["509", "FIR", "police case", "chhed chhaar", "sexual harassment crime", "street harassment"],
+      "caveats": ["Level B: the exact wording of s.509 was not read from Pakistan Code (marked 'under review' there). Do not quote the section text."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://pcsw.punjab.gov.pk/protection_against_harrassment", "publisher": "Punjab Commission on the Status of Women (Government of Punjab)", "kind": "official_page"},
+          {"url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5lo-sg-jjjjjjjjjjjjj", "publisher": "Pakistan Code, Ministry of Law and Justice (PPC page)", "kind": "official_listing"}
+        ],
+        "notes": "Punishment confirmed on a government page; section text to be read on Pakistan Code."
+      },
+      "research_notes": "The Criminal Law (Amendment) Act, 2009 text (seen on a secondary site) describes s.509(ii) as covering sexual advances, demands for sexual favours and verbal, written or physical conduct of a sexual nature. Verify on Pakistan Code before using."
+    },
+    {
+      "id": "peca-2016",
+      "title": "Prevention of Electronic Crimes Act, 2016",
+      "short_name": "PECA",
+      "act_number": "Act XL of 2016",
+      "jurisdiction": "national",
+      "categories": ["harassment", "cyber"],
+      "dates": {},
+      "official_text_url": null,
+      "other_official_urls": ["https://www.pta.gov.pk/assets/media/2025-04-07-PECA---Amendment-2023.pdf"],
+      "replaces": null,
+      "scope": "Electronic and online crimes across Pakistan.",
+      "amendments": [
+        {"title": "Prevention of Electronic Crimes (Amendment) Act, 2023", "act_number": null, "dates": {"gazette": "2023-07-24"}, "url": "https://www.pta.gov.pk/assets/media/2025-04-07-PECA---Amendment-2023.pdf", "reviewed": false, "summary": "Gazette copy hosted by PTA; amends s.22, inserts s.24A, amends s.30 and inserts s.30A (contents not reviewed)."},
+        {"title": "Prevention of Electronic Crimes (Amendment) Act, 2025", "act_number": null, "dates": {}, "url": null, "reviewed": false, "summary": "Created the NCCIA framework; text not reviewed (secondary sources only)."}
+      ],
+      "key_provisions": [
+        {"ref": "act-and-amendments", "point": "PECA is Act XL of 2016 and has been amended since (for example, a 2023 amendment Act inserted new sections and amended s.30).", "source": 0},
+        {"ref": "enforcement-agency", "point": "Cybercrime complaints are now handled by the National Cyber Crime Investigation Agency (NCCIA); the FIA Cyber Crime Wing was dissolved and its matters moved to the NCCIA.", "source": 1},
+        {"ref": "helpline", "point": "The NCCIA runs a helpline (1799) and an online complaint portal.", "source": 3}
+      ],
+      "keywords": ["online harassment", "blackmail", "fake account", "tasveerain leak", "cyber crime", "NCCIA", "FIA cyber", "social media", "WhatsApp dhamki"],
+      "caveats": ["Level B: offence sections and punishments were changed by amendments - do not quote them until read on Pakistan Code."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://www.pta.gov.pk/assets/media/2025-04-07-PECA---Amendment-2023.pdf", "publisher": "Pakistan Telecommunication Authority (Gazette copy of PECA amendment 2023)", "kind": "official_text"},
+          {"url": "https://www.app.com.pk/domestic/national-cyber-crime-investigation-agency-becomes-independent-authority/", "publisher": "Associated Press of Pakistan (state news agency)", "kind": "un_or_state_media"},
+          {"url": "https://www.nccia.gov.pk/", "publisher": "National Cyber Crime Investigation Agency", "kind": "official_page"},
+          {"url": "https://pid.gov.pk/site/press_detail/29307", "publisher": "Press Information Department, Government of Pakistan", "kind": "official_page"}
+        ],
+        "notes": "Act text not read."
+      },
+      "research_notes": "Sections commonly used for online harassment, per a Digital Rights Foundation case report (secondary): s.20 (offences against dignity of a natural person), s.21 (offences against modesty of a natural person and minor), s.24 (cyber stalking). Secondary sources also say the 2025 amendment gave the NCCIA exclusive investigation powers under s.30. Verify on Pakistan Code."
+    },
+    {
+      "id": "sindh-domestic-violence-2013",
+      "title": "Domestic Violence (Prevention and Protection) Act, 2013 (Sindh)",
+      "short_name": "Sindh Domestic Violence Act",
+      "act_number": "Sindh Act No. XX of 2013",
+      "jurisdiction": "sindh",
+      "categories": ["harassment", "family"],
+      "dates": {"passed": "2013-03-08", "assented": "2013-03-12", "published": "2013-03-19"},
+      "official_text_url": "https://www.pas.gov.pk/uploads/acts/Sindh%20Act%20No.XX%20of%202013.pdf",
+      "other_official_urls": ["https://humanrights.sindh.gov.pk/storage/rulesRegulations/HfImuDRVy473WxY6CJL8qrX4y0EXr2N2k9qdDwVG.pdf"],
+      "replaces": null,
+      "scope": "Domestic violence in Sindh.",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "s.1(2)", "point": "Extends to the whole of Sindh.", "source": 0},
+        {"ref": "definitions", "point": "The Act's definitions include 'harassment' (by reference to section 509 of the Pakistan Penal Code) among the abuse it covers.", "source": 0},
+        {"ref": "protection-committees", "point": "Government constitutes Protection Committees (including a Social Welfare Officer) for the purposes of the Act.", "source": 0}
+      ],
+      "keywords": ["gharelu tashaddud", "domestic violence", "shohar maar peet karta hai", "ghar mein zulm"],
+      "caveats": ["Level B: remedies and court procedure have not been extracted - refer users to WDD 1094, Madadgar 1098 or SLACC 0800-70806."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://www.pas.gov.pk/uploads/acts/Sindh%20Act%20No.XX%20of%202013.pdf", "publisher": "Provincial Assembly of Sindh", "kind": "official_text"},
+          {"url": "https://humanrights.sindh.gov.pk/hr-acts", "publisher": "Human Rights Department, Government of Sindh", "kind": "official_listing"}
+        ],
+        "notes": "Only the opening pages were seen."
+      }
+    },
+    {
+      "id": "sindh-protection-human-rights-2011",
+      "title": "Sindh Protection of Human Rights Act, 2011",
+      "short_name": "SHRC Act",
+      "act_number": null,
+      "jurisdiction": "sindh",
+      "categories": ["human_rights"],
+      "dates": {},
+      "official_text_url": "https://humanrights.sindh.gov.pk/storage/rulesRegulations/0fxGz8LQ7neI8Be6CvZ8GckEoozdMsmEm0bk8fOR.pdf",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Establishes the Sindh Human Rights Commission.",
+      "amendments": [
+        {"title": "Sindh Protection of Human Rights (Amendment) Act, 2023", "act_number": null, "dates": {}, "url": "https://www.shrc.org.pk/downloads/Sindh-Protection-of-Human-Rights-(Amendment)-Act-2023.pdf", "reviewed": false, "summary": "Not reviewed."},
+        {"title": "Sindh Protection of Human Rights (Amendment) Act, 2026", "act_number": null, "dates": {}, "url": "https://www.shrc.org.pk/downloads/The-Sindh-Protection-of-Human-Rights-(Amendment)-Act-2026.pdf", "reviewed": false, "summary": "Not reviewed."}
+      ],
+      "key_provisions": [
+        {"ref": "inquiries", "point": "The Sindh Human Rights Commission inquires, on its own motion or on a petition by the victim or anyone on the victim's behalf, into complaints of human rights violations.", "source": 1},
+        {"ref": "definition", "point": "Under the 2011 Act, human rights are the rights relating to life, liberty, equality and dignity guaranteed by the Constitution and enforceable by law.", "source": 1}
+      ],
+      "keywords": ["human rights", "insani huqooq", "SHRC", "commission"],
+      "caveats": ["Level B: Commission powers and procedure not extracted."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://humanrights.sindh.gov.pk/hr-acts", "publisher": "Human Rights Department, Government of Sindh", "kind": "official_listing"},
+          {"url": "https://www.shrc.org.pk/", "publisher": "Sindh Human Rights Commission (statutory body; linked from the Human Rights Department site)", "kind": "official_page"}
+        ],
+        "notes": "Act text not read."
+      }
+    },
+    {
+      "id": "sindh-ombudsman-act-1991",
+      "title": "Establishment of the Office of Ombudsman for the Province of Sindh Act, 1991",
+      "short_name": "Sindh Ombudsman Act",
+      "act_number": null,
+      "jurisdiction": "sindh",
+      "categories": ["government_complaints"],
+      "dates": {"listed": "1992-01-23"},
+      "official_text_url": "https://sindhlaws.gov.pk/LawDocument.aspx?PubID=PUB-15-000768&Lang=EN",
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Complaints of maladministration by Sindh Government agencies.",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "jurisdiction", "point": "The Provincial Ombudsman (Mohtasib) Sindh investigates complaints of maladministration - decisions contrary to law, arbitrary, biased or discriminatory acts, corruption or favouritism, neglect, delay or inefficiency - by Sindh Government departments and institutions.", "source": 1},
+        {"ref": "procedure", "point": "Complaints may be made in English, Urdu or Sindhi - online, by email, by post or in person. First approach the agency's higher authorities, and attach that correspondence and a copy of the CNIC.", "source": 1},
+        {"ref": "cost", "point": "The Ombudsman's services are free; anonymous complaints are not investigated.", "source": 2},
+        {"ref": "s.10(3)", "point": "A complaint must be made within 3 months from the day the aggrieved person first had notice of the matter complained of. The Ombudsman may still take up a late complaint if there are special circumstances.", "source": [3, 4], "note": "Section number and wording from the 1991 Ordinance that preceded the Act; the Ombudsman's official flyer states the same 3-month limit."},
+        {"ref": "s.32", "point": "A person aggrieved by a decision or order of the Ombudsman may make a representation to the Governor of Sindh within 30 days of the decision or order. Count the 30 days from the date of the decision: the statutory wording runs from the decision, while the Ombudsman's FAQ says 30 days from receipt.", "source": [2, 3, 4], "note": "Section number and wording from the 1991 Ordinance that preceded the Act; the Act's own text could not be opened."}
+      ],
+      "keywords": ["mohtasib", "ombudsman", "sarkari mehkama", "government department complaint", "rishwat", "file nahi chal rahi"],
+      "caveats": ["Level B: the Act's own text could not be read (the sindhlaws.gov.pk copy blocks automated access; the copy on mohtasibsindh.gov.pk is a scanned image). s.10(3) and s.32 are taken from the 1991 Ordinance that preceded the Act and match the Ombudsman's official flyer - confirm against the Act before quoting section numbers in a formal document."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://sindhlaws.gov.pk/SindhGazetteDetailDepartment.aspx?X=ACT&DepID=DSC-000039", "publisher": "Law Department, Government of Sindh (Sindh Code - Ombudsman)", "kind": "official_listing"},
+          {"url": "https://mohtasibsindh.gov.pk/MakeAComplaint/MakingAComplaint", "publisher": "Provincial Ombudsman (Mohtasib) Sindh", "kind": "official_page"},
+          {"url": "https://mohtasibsindh.gov.pk/MakeAComplaint/ComplaintFAQs", "publisher": "Provincial Ombudsman (Mohtasib) Sindh", "kind": "official_page"},
+          {"url": "https://mohtasibsindh.gov.pk/FolderFlyer.pdf", "publisher": "Provincial Ombudsman (Mohtasib) Sindh - information flyer (3-month complaint limit; 30 days for representation to the Governor)", "kind": "official_page"},
+          {"url": "https://www.sindhlaws.gov.pk/Setup/Publications_SindhCode/PUB-16-000490.pdf", "publisher": "Law Department, Government of Sindh - Establishment of the Office of Ombudsman for the Province of Sindh Ordinance, 1991 (Sindh Ordinance No. IX of 1991), which preceded the Act", "kind": "official_text"}
+        ],
+        "notes": "Act text not read. On 2026-10-17, s.10(3) (3 months) and s.32 (30 days) were read in the 1991 Ordinance on sindhlaws.gov.pk and in the Ombudsman's flyer. The earlier ref 'representation' was renamed 's.32'."
+      }
+    },
+    {
+      "id": "sindh-rented-premises-ordinance-1979",
+      "title": "Sind Rented Premises Ordinance, 1979",
+      "short_name": "SRPO 1979",
+      "act_number": "Sind Ordinance No. XVII of 1979",
+      "jurisdiction": "sindh",
+      "categories": ["tenancy"],
+      "dates": {"promulgated": "1979-11-21"},
+      "official_text_url": "https://sja.gos.pk/assets/Updated_Laws/Sindh%20Rented%20Premises%20Ordinance,1979.pdf",
+      "other_official_urls": ["https://www.sindhlaws.gov.pk/Setup/Publications_SindhCode/PUB-15-000592-U.pdf"],
+      "replaces": "Sind Urban Rent Restriction Ordinance, 1959 (s.27).",
+      "scope": "Rented premises (buildings or land, not hotels) in urban areas of Sindh, except premises owned or requisitioned by the Federal or Provincial Government.",
+      "amendments": [
+        {"title": "Amendments incorporated in the compiled text", "act_number": "Sind Ordinances II and XII of 1980, IV of 1984; Sind Act I of 1986; Sindh Ordinance XIV of 2001", "dates": {}, "url": "https://sja.gos.pk/assets/Updated_Laws/Sindh%20Rented%20Premises%20Ordinance,1979.pdf", "reviewed": true, "summary": "Footnotes in the Sindh Judicial Academy compilation show these amendments; the compiled text was read."}
+      ],
+      "key_provisions": [
+        {"ref": "s.2", "point": "'Landlord' includes anyone entitled to receive the rent; 'tenant' includes a person still in possession after the tenancy ends and heirs in possession; 'premises' means a building or land let on rent, excluding hotels; 'personal use' means use by the owner or the owner's spouse, son or daughter.", "source": 0},
+        {"ref": "s.3", "point": "Applies to all premises in urban areas (within a Town Committee, Municipal Committee, Municipal Corporation or Metropolitan Corporation) except premises owned or requisitioned by the Federal or Provincial Government; Government may exclude premises or areas by notification.", "source": 0},
+        {"ref": "s.4", "point": "Rent Controllers - judicial officers with at least 3 years as Civil Judge - are appointed for each district.", "source": 0},
+        {"ref": "s.5", "point": "Every tenancy agreement must be in writing; if it is not compulsorily registrable, it must be attested by the Rent Controller, a Civil Judge or a First Class Magistrate. The registered or attested deed is the accepted proof of the landlord-tenant relationship.", "source": 0},
+        {"ref": "s.7", "point": "A landlord cannot charge more than the agreed rent, or more than the fair rent once the Controller has fixed it.", "source": 0},
+        {"ref": "s.8", "point": "On application by the tenant or the landlord, the Controller fixes the fair rent, considering rents of similar nearby premises, rising construction and repair costs, new taxes, and the annual value used for property tax.", "source": 0},
+        {"ref": "s.9", "point": "Once fair rent is fixed, it cannot be increased for 3 years; an increase may not exceed 10% per year of the existing rent.", "source": 0},
+        {"ref": "s.10", "point": "Unless agreed otherwise, rent is due by the 10th of the following month; the landlord must give a written receipt. If the landlord refuses or avoids taking rent, the tenant may send it by postal money order or deposit it with the Rent Controller - these receipts are proof of payment.", "source": 0},
+        {"ref": "s.11", "point": "A landlord may not cut off electricity, gas, water or similar services without the tenant's consent, an authority's requisition or the Controller's direction. The tenant can apply to the Controller for restoration, and the landlord is punishable with simple imprisonment up to 6 months, or fine, or both.", "source": 0},
+        {"ref": "s.12", "point": "If the landlord fails to carry out necessary repairs or whitewashing, the Controller may allow the tenant to do it and deduct the cost from the rent.", "source": 0},
+        {"ref": "s.13", "point": "No tenant can be evicted except in accordance with this Ordinance.", "source": 0},
+        {"ref": "s.14", "point": "A landlord who is a widow, a minor whose parents are both dead, a salaried employee retiring within 6 months or already retired, or a person who is (or within 6 months will be) 60, may demand vacant possession for personal use by written notice of at least 2 months. This is not available if the building was let after retirement, turning 60 or being widowed or orphaned, or if the landlord already occupies a building they own. The Controller then orders eviction summarily.", "source": 0},
+        {"ref": "s.15(2)", "point": "The Controller orders eviction only if satisfied that: the tenant did not pay rent within 15 days after the agreed due date, or within 60 days of it falling due if there is no agreement (a first default of up to 6 months, admitted at the first hearing, can be cured by paying); without written consent the tenant sublet or handed over possession, changed the use, or breached the tenancy conditions; the tenant impaired the value or utility of the premises; the tenant caused nuisance to neighbours; the landlord has sanction to reconstruct; or the landlord genuinely needs it for own use or the use of spouse or children.", "source": 0},
+        {"ref": "s.15(3)-(4), s.15-A", "point": "If a landlord who obtained possession for reconstruction does not demolish within 6 months or start building within 2 years, or re-lets or does not personally use premises taken for personal use within a year, the evicted tenant can apply to be restored; misuse of a personal-use eviction is fined up to one year's rent.", "source": 0},
+        {"ref": "s.16", "point": "Once an eviction case is filed, the Controller may order the tenant to deposit arrears and then monthly rent by the 10th of each month; if the tenant fails, the defence is struck off and possession is ordered.", "source": 0},
+        {"ref": "s.17", "point": "If an eviction application is frivolous or vexatious, the Controller may order the landlord to pay the tenant compensation of up to 10 times the monthly rent.", "source": 0},
+        {"ref": "s.18", "point": "When ownership changes, the new owner must inform the tenant in writing by registered post; the tenant is not in default if the rent is paid within 30 days of when that notice would normally have arrived.", "source": 0},
+        {"ref": "s.19", "point": "A respondent gets up to 15 days from the notice to file a written reply; evidence is given by affidavit with cross-examination.", "source": 0},
+        {"ref": "s.21", "point": "An appeal against a final (not interim) order of the Controller lies to the District Judge within 30 days; the appellate order is final.", "source": 0},
+        {"ref": "s.22", "point": "Final orders are executed by the Controller, not through a separate suit.", "source": 0},
+        {"ref": "s.24", "point": "Courts take cognizance of offences under the Ordinance only on the Controller's written complaint.", "source": 0}
+      ],
+      "keywords": ["kiraya", "kirayedar", "malik makan", "landlord", "tenant", "eviction", "makaan khali karwana", "rent agreement", "kiraya nama", "rent controller", "bijli kaat di", "pani band", "gas band", "kiraya barhana", "fair rent", "raseed", "receipt", "money order"],
+      "caveats": [
+        "First check the location: cantonment areas are governed by the Cantonments Rent Restriction Act, 1963 (see cantonments-rent-restriction-1963); Islamabad by the Islamabad Rent Restriction Ordinance, 2001.",
+        "Workers living in employer-provided housing: see Standing Order 22 (sindh-standing-orders-2015).",
+        "Security deposit refunds are not dealt with in this compiled text (s.6 was omitted in 1984) - refer the user to SLACC rather than inventing a rule."
+      ],
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://sja.gos.pk/assets/Updated_Laws/Sindh%20Rented%20Premises%20Ordinance,1979.pdf", "publisher": "Sindh Judicial Academy (compiled and updated text)", "kind": "official_text"},
+          {"url": "https://caselaw.shc.gov.pk/caselaw/view-file/MjA1ODcxY2Ztcy1kYzgz", "publisher": "High Court of Sindh (judgment applying ss.10(3), 15(2) and 21)", "kind": "court"}
+        ],
+        "notes": "Full compiled text read."
+      }
+    },
+    {
+      "id": "sindh-information-temporary-residents-2015",
+      "title": "Sindh Information of Temporary Residents Act, 2015",
+      "short_name": "Tenant Registration Act",
+      "act_number": "Sindh Act No. XXI of 2015",
+      "jurisdiction": "sindh",
+      "categories": ["tenancy"],
+      "dates": {"passed": "2015-04-13", "assented": "2015-05-12", "published": "2015-05-18"},
+      "official_text_url": "https://www.sindhlaws.gov.pk/Setup/Publications_SindhCode/PUB-NEW-19-000024.pdf",
+      "other_official_urls": ["https://www.shrc.org.pk/downloads/laws/Sindh/The-Sindh-Information-of-Temporary-Residents-Act-2015.pdf"],
+      "replaces": "Sindh Information of Temporary Residents Ordinance, 2015.",
+      "scope": "Tenants and other temporary residents in Sindh.",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "information-to-police", "point": "When premises are rented, the property dealer, landlord and tenant must give the police information about the tenant in the prescribed manner.", "source": 0},
+        {"ref": "use-of-information", "point": "Information received under the Act may not be used for any other purpose; police check compliance through spot inspections.", "source": 0},
+        {"ref": "procedure (Karachi Police)", "point": "Registration at the police station or a police facilitation centre is free and done on the spot (about 15-20 minutes). Documents: original and copy of the owner's and the tenant's CNIC, the rent agreement, an affidavit and the tenant's photograph. A certificate is issued. Online: Tenant Registration portal (TRUST).", "source": 1}
+      ],
+      "keywords": ["tenant registration", "kirayedar ka andraj", "police verification", "TRUST", "thana registration"],
+      "caveats": ["Level B: penalty amounts and deadlines were not extracted. Note: the Sindh Code PDF's running header wrongly shows another Act's name; the body is this Act."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://www.shrc.org.pk/downloads/laws/Sindh/The-Sindh-Information-of-Temporary-Residents-Act-2015.pdf", "publisher": "Sindh Human Rights Commission (copy of the Act as published by the Provincial Assembly)", "kind": "official_text"},
+          {"url": "https://karachipolice.gov.pk/services/how-to-apply-for-tenant-registration-process/", "publisher": "Karachi Police (Sindh Police)", "kind": "official_page"},
+          {"url": "https://www.sindhlaws.gov.pk/Setup/Publications_SindhCode/PUB-NEW-19-000024.pdf", "publisher": "Law Department, Government of Sindh (Sindh Code)", "kind": "official_text"}
+        ],
+        "notes": "Opening pages of the Act seen; procedure from Karachi Police."
+      }
+    },
+    {
+      "id": "cantonments-rent-restriction-1963",
+      "title": "Cantonments Rent Restriction Act, 1963",
+      "short_name": "Cantonment Rent Act",
+      "act_number": null,
+      "jurisdiction": "federal",
+      "categories": ["tenancy"],
+      "dates": {},
+      "official_text_url": null,
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Rent matters for buildings within cantonment limits (including cantonments in Karachi).",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "scope", "point": "Rent disputes for buildings within cantonment limits are decided under this Act by the cantonment's (Additional) Controller of Rents - for example in Clifton Cantonment and Karachi Cantonment cases decided by the High Court of Sindh.", "source": 0},
+        {"ref": "s.17", "point": "Landlords file eviction applications under s.17; grounds seen in High Court of Sindh cases include default in payment of rent and bona fide personal need.", "source": 1},
+        {"ref": "s.17(8)-(9)", "point": "The Controller can pass a tentative rent order to deposit arrears and future rent; if the tenant does not comply, the defence is struck off and eviction is ordered.", "source": 1},
+        {"ref": "s.24", "point": "Appeals (First Rent Appeals) against the Controller's orders are heard by the High Court of Sindh.", "source": 1}
+      ],
+      "keywords": ["cantonment", "Clifton Cantonment", "Karachi Cantonment", "cantonment board", "rent controller cantonment"],
+      "caveats": ["Level B (court judgments only). The Act text was not read; the direct Pakistan Code link was not captured."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://caselaw.shc.gov.pk/caselaw/view-file/MjE5OTYzY2Ztcy1kYzgz", "publisher": "High Court of Sindh (FRA No. 06 of 2018)", "kind": "court"},
+          {"url": "https://caselaw.shc.gov.pk/caselaw/view-file/MjgwNTg5Y2Ztcy1kYzgz", "publisher": "High Court of Sindh (First Rent Appeal, Clifton Cantonment)", "kind": "court"},
+          {"url": "https://caselaw.shc.gov.pk/caselaw/view-file/MTM1NzcyY2Ztcy1kYzgz", "publisher": "High Court of Sindh (FRA No. 07 of 2017, Karachi Cantonment)", "kind": "court"}
+        ],
+        "notes": "Verified through High Court of Sindh judgments."
+      }
+    },
+    {
+      "id": "islamabad-rent-restriction-2001",
+      "title": "Islamabad Rent Restriction Ordinance, 2001",
+      "short_name": "Islamabad Rent Ordinance",
+      "act_number": "Ordinance IV of 2001",
+      "jurisdiction": "federal_ict",
+      "categories": ["tenancy"],
+      "dates": {},
+      "official_text_url": null,
+      "other_official_urls": ["https://www.na.gov.pk/uploads/documents/61c4711c139b9_755.pdf"],
+      "replaces": null,
+      "scope": "Islamabad Capital Territory only.",
+      "amendments": [
+        {"title": "Islamabad Rent Restriction (Amendment) Act, 2021", "act_number": null, "dates": {"gazette": "2021-12-09"}, "url": "https://www.na.gov.pk/uploads/documents/61c4711c139b9_755.pdf", "reviewed": false, "summary": "Amends ss.2, 5, 8, 10, 21, 23 and inserts s.16A; contents not reviewed."}
+      ],
+      "key_provisions": [
+        {"ref": "scope", "point": "Regulates landlord-tenant relations for rented premises in the Islamabad Capital Territory; amended by the Islamabad Rent Restriction (Amendment) Act, 2021.", "source": 0}
+      ],
+      "keywords": ["Islamabad rent", "ICT tenant"],
+      "caveats": ["Not applicable in Sindh. Use only for users renting in Islamabad."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://www.na.gov.pk/uploads/documents/61c4711c139b9_755.pdf", "publisher": "National Assembly of Pakistan (Gazette copy of the 2021 amendment)", "kind": "official_text"}
+        ],
+        "notes": "Only the amendment Act's preamble and headings were seen."
+      }
+    },
+    {
+      "id": "legal-aid-justice-authority-2020",
+      "title": "Legal Aid and Justice Authority Act, 2020",
+      "short_name": "LAJA Act",
+      "act_number": null,
+      "jurisdiction": "federal",
+      "categories": ["legal_aid"],
+      "dates": {},
+      "official_text_url": null,
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "Federal Legal Aid and Justice Authority (LAJA).",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "functions", "point": "LAJA's functions include legal aid and assistance to poor and vulnerable groups, particularly women and children; public awareness of legal aid and laws; research on legal aid; and advising the government on fair trial and due process.", "source": 0}
+      ],
+      "keywords": ["LAJA", "free lawyer", "muft wakeel", "legal aid authority"],
+      "caveats": ["Level B (UN and state media). No official LAJA phone number or website was verified - do not show contact details."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://www.undp.org/pakistan/press-releases/legal-aid-and-justice-authority-european-union-and-undp-hold-consultative-workshop-enhance-access-legal-aid-pakistan", "publisher": "UNDP Pakistan", "kind": "un_or_state_media"},
+          {"url": "https://www.app.com.pk/?p=666181", "publisher": "Associated Press of Pakistan (state news agency)", "kind": "un_or_state_media"}
+        ],
+        "notes": "Act text not read."
+      },
+      "research_notes": "The Act text is cited by the International Bar Association at mohr.gov.pk/SiteImage/Misc/files/laag.pdf (not opened). In March 2025 the Vakeel Online platform was integrated into LAJA (press report)."
+    },
+    {
+      "id": "pbc-free-legal-aid-rules-1999",
+      "title": "Pakistan Bar Council Free Legal Aid Rules, 1999",
+      "short_name": "PBC Free Legal Aid Rules",
+      "act_number": "Rules under the Legal Practitioners and Bar Councils Act, 1973",
+      "jurisdiction": "national",
+      "categories": ["legal_aid"],
+      "dates": {},
+      "official_text_url": null,
+      "other_official_urls": ["https://www.pakistanbarcouncil.org/index.php/supreme-court/free-legal-aid"],
+      "replaces": null,
+      "scope": "Free legal aid by the Pakistan Bar Council.",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "application", "point": "The Pakistan Bar Council accepts applications for free legal aid under its Free Legal Aid Rules, 1999 from people who cannot afford a lawyer; an online application form is available for the Central Free Legal Aid Committee.", "source": 0}
+      ],
+      "keywords": ["free legal aid", "bar council", "muft wakeel", "gareeb ke liye wakeel"],
+      "caveats": ["Level B. Provincial and district free legal aid committees are described only by secondary sources - confirm with the Sindh Bar Council or the local District Bar Association before naming them."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://www.pakistanbarcouncil.org/index.php/supreme-court/free-legal-aid", "publisher": "Pakistan Bar Council (statutory body)", "kind": "official_page"}
+        ],
+        "notes": "Rules text not read."
+      },
+      "research_notes": "Secondary sources (International Bar Association, LEAP Pakistan) describe Central, Provincial and District Free Legal Aid Committees under these Rules."
+    },
+    {
+      "id": "dlec-rules-2011",
+      "title": "District Legal Empowerment Committee (Constitution & Functions) Rules, 2011",
+      "short_name": "DLEC Rules",
+      "act_number": "Rules made by the Law and Justice Commission of Pakistan",
+      "jurisdiction": "national",
+      "categories": ["legal_aid"],
+      "dates": {},
+      "official_text_url": null,
+      "other_official_urls": [],
+      "replaces": null,
+      "scope": "State-funded legal aid for deserving litigants at district level.",
+      "amendments": [],
+      "key_provisions": [
+        {"ref": "purpose", "point": "District Legal Empowerment Committees were set up in 2011 by the Law and Justice Commission of Pakistan to provide legal aid to deserving litigants, appointing district panels of lawyers and allocating funds for free legal representation.", "source": 0},
+        {"ref": "status-2025", "point": "In 2025 the Access to Justice Development Fund's Governing Body, chaired by the Chief Justice of Pakistan, reviewed free legal aid to deserving litigants through DLECs.", "source": 1}
+      ],
+      "keywords": ["DLEC", "free legal aid", "district court", "muft wakeel", "court fee"],
+      "caveats": ["Level B. Secondary sources say DLECs are chaired by the District & Sessions Judge and cover lawyer, court, copying and process fees - confirm at the district court before stating these details."],
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://undp.org/node/415521", "publisher": "UNDP Pakistan", "kind": "un_or_state_media"},
+          {"url": "https://www.app.com.pk/?p=1003133", "publisher": "Associated Press of Pakistan (state news agency)", "kind": "un_or_state_media"}
+        ],
+        "notes": "Rules text not read from an official source."
+      }
+    }
+  ]
+}

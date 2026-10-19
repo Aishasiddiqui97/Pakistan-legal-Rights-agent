@@ -1,0 +1,107 @@
+{
+  "dataset": "sources",
+  "schema_version": "1.0",
+  "last_updated": "2026-10-17",
+  "maintainer": "Member 2 - Legal Research & Verified Support Database",
+  "note": "Official portals used for verification, what each is good for, and quirks found during research.",
+  "portals": [
+    {
+      "id": "sindhlaws",
+      "name": "Sindh Code - Law, Parliamentary Affairs & Criminal Prosecution Department, Government of Sindh",
+      "url": "https://sindhlaws.gov.pk",
+      "use_for": "Official Sindh Acts, Ordinances, Rules and Gazette publications (English, Urdu, Sindhi).",
+      "how_to_navigate": [
+        "Sindh Code index: https://sindhlaws.gov.pk/SindhIndex.aspx (alphabetical, departmental, chronological, by Assembly tenure).",
+        "Alphabetical Acts: https://sindhlaws.gov.pk/Alpha.aspx?pg=ACT (paginated with JavaScript postbacks - browse manually).",
+        "Departmental Acts: https://sindhlaws.gov.pk/DepartmentCode.aspx?pg=ACT (Labour department code DSC-000021).",
+        "PDF URL patterns: /Setup/Publications_SindhCode/PUB-....pdf and /LawDocument.aspx?PubID=...&Lang=EN|UR|SD."
+      ],
+      "quirks": [
+        "The departmental listing for the Labour Department shows only the 2021 amendment Acts, not the principal 2015-2019 Acts - use the Labour Department site for those.",
+        "The site has its own 'Sindh Laws AI' chatbot - worth knowing for the project pitch (how our agent differs: verified helplines and step-by-step routes).",
+        "Some LawDocument.aspx pages and PDFs refuse automated tools (robots.txt) - open them in a browser. Copies under https://www.sindhlaws.gov.pk/Setup/Publications_SindhCode/ were readable on 2026-10-17."
+      ],
+      "contact": "(+92-21) 99212018, lawdepartmentsindh@gmail.com",
+      "checked_on": "2026-10-16"
+    },
+    {
+      "id": "pakistancode",
+      "name": "The Pakistan Code - Ministry of Law and Justice",
+      "url": "https://pakistancode.gov.pk/english/index.php",
+      "use_for": "Federal laws (PPC, PECA, federal labour laws, Cantonments Rent Restriction Act, Constitution).",
+      "how_to_navigate": [
+        "Category-wise search (e.g. Labour Laws, Rent Laws) and year filter on the home page.",
+        "Advanced search: https://pakistancode.gov.pk/english/Vd7Fds.php",
+        "Gazette notifications: Document Retrieval System https://drs.molaw.gov.pk/"
+      ],
+      "quirks": [
+        "The PPC, CrPC and CPC pages are marked 'Under Review'.",
+        "Disclaimer: content is for information only; the Gazette notification prevails.",
+        "Law URLs are encoded strings (e.g. .../english/UY2FqaJw1-...-sg-jjjjjjjjjjjjj); copy them from the site."
+      ],
+      "contact": "Laws of Pakistan Cell, Islamabad +92-51-9211976",
+      "checked_on": "2026-10-16"
+    },
+    {
+      "id": "humanrights-sindh",
+      "name": "Human Rights Department, Government of Sindh",
+      "url": "https://humanrights.sindh.gov.pk",
+      "use_for": "Human rights complaint cell, official list of Sindh helplines (introduction page), PDFs of rights-related Sindh Acts.",
+      "how_to_navigate": [
+        "Laws: https://humanrights.sindh.gov.pk/hr-acts",
+        "Helpline list: https://humanrights.sindh.gov.pk/introduction",
+        "Attached bodies (incl. Sindh Human Rights Commission): https://humanrights.sindh.gov.pk/attached-offices"
+      ],
+      "quirks": [
+        "Member and Secretary tables on the home page contain placeholder data (dummy names and '0092 1234567') - never scrape contacts from those tables. Other sindh.gov.pk department sites built on the same template (e.g. SCPA) have the same placeholders.",
+        "The helpline list (introduction page) still links SCPA's old complaint form (scpa.sindh.gov.pk/forms/submit), which returned 404 on 2026-10-17. The department's own complaint system is at https://humanrights.sindh.gov.pk/complains (Register / Login).",
+        "Never copy numbers from click-to-call links on government sites - use the printed text (the Mohtasib Sindh site's phone link points to an unrelated number)."
+      ],
+      "contact": "021-99219920, secretariat.humanrights.gos@gmail.com",
+      "checked_on": "2026-10-16"
+    },
+    {
+      "id": "lhr-sindh",
+      "name": "Labour & Human Resources Department, Government of Sindh",
+      "url": "https://lhr.sindh.gov.pk",
+      "use_for": "Official PDFs of all Sindh labour laws, minimum wage notifications, labour complaint form.",
+      "how_to_navigate": [
+        "All labour Acts and Rules: https://lhr.sindh.gov.pk/rules-act-policies",
+        "Notifications (minimum wages): https://lhr.sindh.gov.pk/notifications?show=notification"
+      ],
+      "quirks": ["Some notification PDFs are scanned images (no machine-readable text) - read them manually."],
+      "contact": "021-99211551",
+      "checked_on": "2026-10-16"
+    },
+    {
+      "id": "pas",
+      "name": "Provincial Assembly of Sindh",
+      "url": "https://pas.gov.pk",
+      "use_for": "Acts exactly as published after assent (newest laws appear here first, e.g. Sindh Act No. XVIII of 2026).",
+      "how_to_navigate": ["Act PDFs follow the pattern https://pas.gov.pk/uploads/acts/Sindh_Act_No.<roman>_of_<year>.pdf (older ones use spaces)."],
+      "quirks": [],
+      "contact": null,
+      "checked_on": "2026-10-16"
+    },
+    {
+      "id": "sja",
+      "name": "Sindh Judicial Academy - Updated Laws",
+      "url": "https://sja.gos.pk",
+      "use_for": "Compiled texts with all amendments incorporated (used for the SRPO 1979 and the workplace harassment Act).",
+      "how_to_navigate": ["PDFs under https://sja.gos.pk/assets/Updated_Laws/"],
+      "quirks": [],
+      "contact": null,
+      "checked_on": "2026-10-16"
+    },
+    {
+      "id": "shc",
+      "name": "High Court of Sindh - case law and Judges' Library",
+      "url": "https://caselaw.shc.gov.pk",
+      "use_for": "Judgments showing how provisions are applied (time limits, forums); compiled law texts from the Judges' Library (sindhhighcourt.gov.pk).",
+      "how_to_navigate": ["Judgment PDFs: https://caselaw.shc.gov.pk/caselaw/view-file/<id>"],
+      "quirks": ["Judgments confirm practice but are not the law's text - prefer the Act for provisions."],
+      "contact": null,
+      "checked_on": "2026-10-16"
+    }
+  ]
+}

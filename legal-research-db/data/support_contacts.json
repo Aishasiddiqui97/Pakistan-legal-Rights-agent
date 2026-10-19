@@ -1,0 +1,772 @@
+{
+  "dataset": "support_contacts",
+  "schema_version": "1.0",
+  "last_updated": "2026-10-17",
+  "maintainer": "Member 2 - Legal Research & Verified Support Database",
+  "disclaimer": "Numbers were taken from official websites on the date shown and have NOT yet been call-tested unless call_tested is true. Show the verified_on date to users. Numbers under unverified_phones are NEVER shown to users - they are waiting for a call-test.",
+  "recheck": "All displayed contacts were re-checked against their cited sources on 2026-10-17 by an independent pass; exceptions are explained in each contact's notes.",
+  "levels": {
+    "A": "Contact details appear on the organisation's own official website (or the government department that runs the service), checked on verified_on.",
+    "B": "Contact details appear on an official government listing or official document, but the organisation's own site was not checked.",
+    "C": "Secondary sources only. display must be false."
+  },
+  "contacts": [
+    {
+      "id": "slacc-legal-aid-society",
+      "name": "Sindh Legal Advisory Call Center (SLACC) - Legal Aid Society",
+      "also_known_as": ["Sindh Legal Aid Society (SLAS) - name used on the Sindh Law Department website", "Legal Aid Society (LAS)"],
+      "type": "legal_aid_helpline",
+      "jurisdiction": "sindh",
+      "categories": ["legal_aid", "employment", "harassment", "tenancy", "family", "general"],
+      "phones": [
+        {"number": "0800-70806", "label": "Toll-free legal advice helpline", "toll_free": true, "hours": "24/7"}
+      ],
+      "email": [],
+      "website": "https://las.org.pk/",
+      "complaint_url": null,
+      "online_links": ["https://sindhlegalaid.gov.pk/"],
+      "address": null,
+      "hours": "24/7",
+      "services": "Free legal advice by phone (Government of Sindh - Legal Aid Society partnership). The Legal Aid Society also offers free legal representation in court for people who cannot afford it, walk-in paralegal support and mediation.",
+      "cost": "Free (toll-free number)",
+      "related_law_ids": [],
+      "how_to_access": "Call 0800-70806 at any time.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://sindhlaws.gov.pk", "publisher": "Law, Parliamentary Affairs & Criminal Prosecution Department, Government of Sindh (homepage: 'Toll-Free Legal Aid Helpline 0800-70806')", "kind": "official_page"},
+          {"url": "https://las.org.pk/", "publisher": "Legal Aid Society", "kind": "org_own_site"},
+          {"url": "https://humanrights.sindh.gov.pk/introduction", "publisher": "Human Rights Department, Government of Sindh (helpline list)", "kind": "official_listing"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "sindhlegalaid.gov.pk (linked from the Law Department site) blocks automated access and was not opened. An old 2014 LAS page said calls from mobiles were charged at reduced rates - confirm current charging when call-testing."
+      }
+    },
+    {
+      "id": "sindh-hrd-complaint-cell",
+      "name": "Human Rights Complaint Cell - Human Rights Department, Government of Sindh",
+      "also_known_as": [],
+      "type": "government_complaint_cell",
+      "jurisdiction": "sindh",
+      "categories": ["human_rights", "general"],
+      "phones": [
+        {"number": "0800-00011", "label": "Toll-free complaint cell", "toll_free": true, "hours": null},
+        {"number": "021-99219920", "label": "Department office", "toll_free": false, "hours": "09:00-17:00"}
+      ],
+      "email": ["secretariat.humanrights.gos@gmail.com"],
+      "website": "https://humanrights.sindh.gov.pk/",
+      "complaint_url": "https://humanrights.sindh.gov.pk/complains",
+      "online_links": [],
+      "address": "3rd Floor, Army Welfare Trust (AWT) Plaza, near GPO, I.I. Chandigarh Road, Karachi",
+      "hours": "09:00-17:00 (office)",
+      "services": "Receives complaints of human rights violations in Sindh.",
+      "cost": "Free (toll-free number)",
+      "related_law_ids": ["sindh-protection-human-rights-2011"],
+      "how_to_access": "Call 0800-00011, or register and file a complaint online at humanrights.sindh.gov.pk/complains.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://humanrights.sindh.gov.pk/news/human-rights-complaint-cell-toll-free-no0800-00011", "publisher": "Human Rights Department, Government of Sindh", "kind": "official_page"},
+          {"url": "https://humanrights.sindh.gov.pk/complains", "publisher": "Human Rights Department, Government of Sindh (online complaint system: Register / Login)", "kind": "official_page"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "The toll-free number notice is dated 3 Dec 2024. Hours of the toll-free line are not stated. The online form address in the department's earlier notice (complaint.hrdsindh.gos.pk) showed 'Account Suspended' on 2026-10-17 and was replaced by the complaint page on the department's own site."
+      }
+    },
+    {
+      "id": "shrc",
+      "name": "Sindh Human Rights Commission (SHRC)",
+      "also_known_as": [],
+      "type": "statutory_commission",
+      "jurisdiction": "sindh",
+      "categories": ["human_rights", "children", "women", "general"],
+      "phones": [
+        {"number": "021-99217318", "label": "Head office, Karachi", "toll_free": false, "hours": null},
+        {"number": "021-99213328", "label": "Head office, Karachi", "toll_free": false, "hours": null},
+        {"number": "071-5824055", "label": "Regional office, Sukkur", "toll_free": false, "hours": null},
+        {"number": "074-9410352", "label": "Regional office, Larkana", "toll_free": false, "hours": null}
+      ],
+      "email": ["info@shrc.org.pk"],
+      "website": "https://www.shrc.org.pk/",
+      "complaint_url": "https://www.shrc.org.pk/complaint-form.php",
+      "online_links": [],
+      "address": "Rooms 408 & 414, 4th Floor, Building No. 3 (old KDA Building), Sindh Secretariat, Kamal Ataturk Road, Karachi-74200",
+      "hours": null,
+      "services": "Inquires, on its own motion or on a petition by the victim or anyone on the victim's behalf, into complaints of human rights violations.",
+      "cost": null,
+      "related_law_ids": ["sindh-protection-human-rights-2011"],
+      "how_to_access": "Call, email or submit the online complaint form.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://www.shrc.org.pk/", "publisher": "Sindh Human Rights Commission", "kind": "org_own_site"},
+          {"url": "https://humanrights.sindh.gov.pk/departments-wings/383", "publisher": "Human Rights Department, Government of Sindh (links to shrc.org.pk)", "kind": "official_listing"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "A WhatsApp number seen only on a third-party site was NOT added (see excluded.json)."
+      }
+    },
+    {
+      "id": "sindh-ombudsperson-harassment",
+      "name": "Provincial Ombudsman Sindh (Protection against Harassment of Women at the Workplace)",
+      "also_known_as": ["Ombudsperson Sindh (PHWWP)"],
+      "type": "ombudsperson",
+      "jurisdiction": "sindh",
+      "categories": ["harassment", "employment", "women"],
+      "phones": [],
+      "unverified_phones": [
+        {"number": "021-99222744", "label": "Head office", "why_unverified": "The official site ombudsmanphwwp.sindh.gov.pk prints '0219222744' (one digit short) in its footer and contact page. 021-99222744 appeared on the office's other website sindhwomenharassment.org (read via a search-engine copy on 2026-10-16; the site blocks automated access) and in news and directories. Call to confirm; if the Ombudsperson's office answers, move it to phones and set call_tested."},
+        {"number": "021-99333470", "label": "Camp office (also 021-99333471)", "why_unverified": "Seen only on sindhwomenharassment.org (search-engine copy) and in a third-party directory."}
+      ],
+      "email": ["ombudsmanphwwp@gmail.com"],
+      "website": "https://ombudsmanphwwp.sindh.gov.pk/",
+      "complaint_url": "https://ombudsmanphwwp.sindh.gov.pk/complains",
+      "online_links": [],
+      "address": "Room No. 710-711, 7th Floor, New Sindh Secretariat Building No. 1, Karachi",
+      "hours": "09:00-17:00",
+      "services": "Hears workplace harassment complaints in Sindh under the 2010 workplace harassment law (direct complaints and appeals against inquiry committee decisions); also the forum for harassment complaints under the Sindh Domestic Workers Welfare Act, 2025.",
+      "cost": null,
+      "related_law_ids": ["protection-against-harassment-workplace-2010", "sindh-domestic-workers-welfare-2025"],
+      "how_to_access": "Submit the online complaint form, email ombudsmanphwwp@gmail.com, or visit the head office. (The office phone number is still being verified.)",
+      "display": true,
+      "priority_call_test": true,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://ombudsmanphwwp.sindh.gov.pk/", "publisher": "Provincial Ombudsman Sindh (PHWWP) - official sindh.gov.pk site", "kind": "official_page"},
+          {"url": "https://sindhwomenharassment.org/", "publisher": "Provincial Ombudsman Sindh (PHWWP) - office's other website (blocks automated access)", "kind": "org_own_site"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "Email, address, hours and the online complaint form confirmed on the official site on 2026-10-17. Phone numbers are held in unverified_phones (not shown) until call-tested, because the official site prints a number one digit short. Camp office address differs between sources and is not shown."
+      }
+    },
+    {
+      "id": "fospah",
+      "name": "Federal Ombudsperson Secretariat for Protection Against Harassment (FOSPAH)",
+      "also_known_as": ["Federal Ombudsperson"],
+      "type": "ombudsperson",
+      "jurisdiction": "federal",
+      "categories": ["harassment", "employment", "women"],
+      "phones": [
+        {"number": "0344-4367367", "label": "Helpline (mobile)", "toll_free": false, "hours": "09:00-17:00 (office hours)"},
+        {"number": "051-9218845", "label": "Helpline (landline)", "toll_free": false, "hours": null}
+      ],
+      "email": ["complaints@fospah.gov.pk"],
+      "website": "https://www.fospah.gov.pk/",
+      "complaint_url": "https://complaints.fospah.gov.pk/",
+      "online_links": [],
+      "address": "First Floor, LG&RD Complex, Behind SBP, Opposite ILO, Sector G-5/2, Islamabad (regional office in Karachi)",
+      "hours": "09:00-17:00",
+      "services": "Workplace harassment complaints involving federal or trans-provincial organisations (regional offices, including Karachi); also women's property rights cases in Islamabad Capital Territory.",
+      "cost": null,
+      "related_law_ids": ["protection-against-harassment-workplace-2010"],
+      "how_to_access": "Register online (account with CNIC, email and mobile number), email, or call the helpline during office hours.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://www.fospah.gov.pk/", "publisher": "FOSPAH", "kind": "official_page"},
+          {"url": "https://fospah.gov.pk/NewsDetail/ZTI1NTExZjEtZGRmYy00YjQwLThiM2EtNjNkN2QwNzY0ZTMw", "publisher": "FOSPAH news (helpline hours; regional jurisdiction)", "kind": "official_page"},
+          {"url": "https://fospah.gov.pk/NewsDetail/MGViNjY2NjgtZmFjYS00YWRjLTk0YWMtYmYyMjcxMWMwNjVj", "publisher": "FOSPAH news (Regional Office in Karachi, 10 Sep 2024)", "kind": "official_page"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "A FOSPAH news item (10 Sep 2024) confirms a Regional Office in Karachi but does not give its address. Older numbers in third-party directories (051-9264444, 051-9262944) were not used."
+      }
+    },
+    {
+      "id": "sindh-wdd-1094",
+      "name": "Women Development Department Sindh - Women Helpline 1094",
+      "also_known_as": ["WDD Sindh"],
+      "type": "government_helpline",
+      "jurisdiction": "sindh",
+      "categories": ["women", "harassment", "family"],
+      "phones": [
+        {"number": "1094", "label": "Women helpline", "toll_free": null, "hours": null}
+      ],
+      "email": [],
+      "website": "https://wdd.sindh.gov.pk/",
+      "complaint_url": "https://wdd.sindh.gov.pk/complains",
+      "online_links": [],
+      "address": null,
+      "hours": null,
+      "services": "Registers complaints of distressed women (violence, gender discrimination). The department also runs women complaint cells at all district headquarters, Darul Aman shelters and safe houses.",
+      "cost": null,
+      "related_law_ids": ["sindh-domestic-violence-2013"],
+      "how_to_access": "Call 1094 or use the online complaint form; or visit the women complaint cell at the district headquarters.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://wdd.sindh.gov.pk/introduction", "publisher": "Women Development Department, Government of Sindh", "kind": "official_page"},
+          {"url": "https://humanrights.sindh.gov.pk/introduction", "publisher": "Human Rights Department, Government of Sindh (helpline list)", "kind": "official_listing"},
+          {"url": "https://www.app.com.pk/?p=1114462", "publisher": "Associated Press of Pakistan (minister confirms helpline in operation)", "kind": "un_or_state_media"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "Whether the number is toll-free and its hours are not stated on the official page."
+      }
+    },
+    {
+      "id": "scpa-1121",
+      "name": "Sindh Child Protection Authority - Child Helpline 1121",
+      "also_known_as": ["SCPA"],
+      "type": "government_helpline",
+      "jurisdiction": "sindh",
+      "categories": ["children", "employment"],
+      "phones": [
+        {"number": "1121", "label": "Child protection helpline", "toll_free": null, "hours": "24/7"}
+      ],
+      "unverified_phones": [
+        {"number": "021-99333065", "label": "Office (SCPA website footer)", "why_unverified": "Printed in the footer of scpa.sindh.gov.pk without a label; the same site shows placeholder numbers ('0092 1234567') in its officials tables. Call to confirm it is the SCPA office before showing it."}
+      ],
+      "email": [],
+      "website": "https://scpa.sindh.gov.pk/",
+      "complaint_url": "https://scpa.sindh.gov.pk/complains",
+      "online_links": [],
+      "address": "Social Welfare Training Institute, ST: 4, Block 07, Gulshan Iqbal, Karachi (as printed on the SCPA website)",
+      "hours": "24/7",
+      "services": "Complaints related to child rights, including child abuse and child labour.",
+      "cost": null,
+      "related_law_ids": ["sindh-prohibition-employment-children-2017"],
+      "how_to_access": "Call 1121, or register and file a complaint online at scpa.sindh.gov.pk/complains.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://humanrights.sindh.gov.pk/introduction", "publisher": "Human Rights Department, Government of Sindh (helpline list)", "kind": "official_listing"},
+          {"url": "https://caselaw.shc.gov.pk/caselaw/view-file/MTc2MjY5Y2Ztcy1kYzgz", "publisher": "High Court of Sindh order (DG SCPA statement: helpline 1121 operational 24/7)", "kind": "court"},
+          {"url": "https://scpa.sindh.gov.pk/", "publisher": "Sindh Child Protection Authority (own site: address, complaint form link)", "kind": "official_page"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "1121 is listed by the Human Rights Department and confirmed in a High Court order, but SCPA's own site does not show it - so Level B. The complaint form link used earlier (scpa.sindh.gov.pk/forms/submit) returned 404 on 2026-10-17; the site's own 'Complaint Form' link is used instead. The footer email is misprinted on the site ('scpasindh@gmai.com') and is not used."
+      }
+    },
+    {
+      "id": "sindh-police-15",
+      "name": "Sindh Police Emergency Helpline (Madadgar 15)",
+      "also_known_as": ["Police 15"],
+      "type": "emergency",
+      "jurisdiction": "sindh",
+      "categories": ["emergency", "harassment", "tenancy", "children"],
+      "phones": [
+        {"number": "15", "label": "Police emergency", "toll_free": null, "hours": null}
+      ],
+      "email": [],
+      "website": "https://sindhpolice.gov.pk/",
+      "complaint_url": null,
+      "online_links": [],
+      "address": null,
+      "hours": null,
+      "services": "Police emergency response.",
+      "cost": null,
+      "related_law_ids": [],
+      "how_to_access": "Dial 15 in an emergency.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://humanrights.sindh.gov.pk/introduction", "publisher": "Human Rights Department, Government of Sindh (helpline list)", "kind": "official_listing"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "Do not call-test emergency numbers; this one is universally published."
+      }
+    },
+    {
+      "id": "sindh-igp-complaint-1715",
+      "name": "Inspector General of Police Complaint Cell, Sindh Police",
+      "also_known_as": ["IGP Complaint Cell"],
+      "type": "government_complaint_cell",
+      "jurisdiction": "sindh",
+      "categories": ["police"],
+      "phones": [
+        {"number": "1715", "label": "Complaints related to police", "toll_free": null, "hours": null}
+      ],
+      "email": [],
+      "website": null,
+      "complaint_url": null,
+      "online_links": [],
+      "address": null,
+      "hours": null,
+      "services": "Complaints about police conduct.",
+      "cost": null,
+      "related_law_ids": [],
+      "how_to_access": "Call 1715.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://humanrights.sindh.gov.pk/introduction", "publisher": "Human Rights Department, Government of Sindh (helpline list)", "kind": "official_listing"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "The online complaint portal listed earlier (igpcms.sindhpolice.gov.pk) could not be opened on 2026-10-17, so no online link is shown. Check it in a browser before adding it back."
+      }
+    },
+    {
+      "id": "cplc-1102",
+      "name": "Citizens-Police Liaison Committee (CPLC)",
+      "also_known_as": ["CPLC"],
+      "type": "police_liaison",
+      "jurisdiction": "sindh",
+      "categories": ["police"],
+      "phones": [
+        {"number": "1102", "label": "24/7 helpline", "toll_free": null, "hours": "24/7"}
+      ],
+      "email": ["complaints@cplc.org.pk"],
+      "website": null,
+      "complaint_url": "https://web.cplc.app/online-complaint-form/",
+      "online_links": [],
+      "address": null,
+      "hours": "Helpline 24/7",
+      "services": "Complaints related to police (as listed by HRD Sindh); online report form for complaints and incidents.",
+      "cost": null,
+      "related_law_ids": [],
+      "how_to_access": "Call 1102, file a report with the online form, or email complaints@cplc.org.pk.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://web.cplc.app/online-complaint-form/", "publisher": "Citizens-Police Liaison Committee (own online report form: '24/7 Helpline' 1102)", "kind": "org_own_site"},
+          {"url": "https://humanrights.sindh.gov.pk/introduction", "publisher": "Human Rights Department, Government of Sindh (helpline list)", "kind": "official_listing"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "1102, '24/7' and the complaints email confirmed on CPLC's own form page on 2026-10-17."
+      }
+    },
+    {
+      "id": "sindh-cm-complaint-cell",
+      "name": "Sindh Chief Minister's Public Complaint Cell",
+      "also_known_as": [],
+      "type": "government_complaint_cell",
+      "jurisdiction": "sindh",
+      "categories": ["government_complaints"],
+      "phones": [
+        {"number": "0800-91915", "label": "Public complaint cell", "toll_free": true, "hours": null}
+      ],
+      "email": [],
+      "website": null,
+      "complaint_url": "https://cm.sindh.gov.pk/complains",
+      "online_links": [],
+      "address": null,
+      "hours": null,
+      "services": "Public complaints to the Chief Minister's office.",
+      "cost": "Toll-free",
+      "related_law_ids": [],
+      "how_to_access": "Call 0800-91915 or use the online form.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://humanrights.sindh.gov.pk/introduction", "publisher": "Human Rights Department, Government of Sindh (helpline list)", "kind": "official_listing"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "The HRD list labels this entry 'Complaints Related to Legal Aid', which looks like a copy-paste slip; scope kept generic."
+      }
+    },
+    {
+      "id": "madadgaar-1098",
+      "name": "Women Protection Unit - Madadgar (LHRLA), Helpline 1098",
+      "also_known_as": ["Madadgaar National Helpline"],
+      "type": "ngo_helpline",
+      "jurisdiction": "sindh",
+      "categories": ["women", "children", "harassment", "family"],
+      "phones": [
+        {"number": "1098", "label": "Women protection helpline", "toll_free": null, "hours": null}
+      ],
+      "email": [],
+      "website": null,
+      "complaint_url": null,
+      "online_links": [],
+      "address": null,
+      "hours": null,
+      "services": "Complaints related to women protection.",
+      "cost": null,
+      "related_law_ids": ["sindh-domestic-violence-2013"],
+      "how_to_access": "Call 1098.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://humanrights.sindh.gov.pk/introduction", "publisher": "Human Rights Department, Government of Sindh (helpline list)", "kind": "official_listing"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "LHRLA's website (lhrla.com.pk) showed only PHP errors on 2026-10-17, so no website is shown."
+      }
+    },
+    {
+      "id": "drf-cyber-harassment",
+      "name": "Digital Rights Foundation - Cyber Harassment Helpline",
+      "also_known_as": ["DRF"],
+      "type": "ngo_helpline",
+      "jurisdiction": "national",
+      "categories": ["cyber", "harassment"],
+      "phones": [
+        {"number": "0800-39393", "label": "Cyber harassment helpline", "toll_free": true, "hours": "Monday-Sunday, 09:00-17:00"}
+      ],
+      "email": ["helpdesk@digitalrightsfoundation.pk"],
+      "website": "https://digitalrightsfoundation.pk/cyber-harassment-helpline/",
+      "complaint_url": null,
+      "online_links": [],
+      "address": null,
+      "hours": "Monday-Sunday, 09:00-17:00",
+      "services": "Guidance, legal advice and digital security support for people facing online harassment; also reachable by email or by direct message on DRF's social media.",
+      "cost": "Free and confidential",
+      "related_law_ids": ["peca-2016"],
+      "how_to_access": "Call 0800-39393 (Monday-Sunday, 9am-5pm) or email helpdesk@digitalrightsfoundation.pk.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://digitalrightsfoundation.pk/cyber-harassment-helpline/", "publisher": "Digital Rights Foundation (own helpline page)", "kind": "org_own_site"},
+          {"url": "https://humanrights.sindh.gov.pk/introduction", "publisher": "Human Rights Department, Government of Sindh (helpline list)", "kind": "official_listing"},
+          {"url": "https://wdd.punjab.gov.pk/system/files/Referral%20Directory%20KPK_UNTF_0.pdf", "publisher": "Women Development Department, Government of Punjab (referral directory)", "kind": "official_listing"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "Number, hours, email and 'free and confidential' confirmed on DRF's own helpline page on 2026-10-17. That page does not itself say 'toll-free'; the toll-free flag comes from the 0800 number and the government referral directory."
+      }
+    },
+    {
+      "id": "nccia-1799",
+      "name": "National Cyber Crime Investigation Agency (NCCIA)",
+      "also_known_as": ["formerly FIA Cyber Crime Wing"],
+      "type": "law_enforcement",
+      "jurisdiction": "federal",
+      "categories": ["cyber", "harassment"],
+      "phones": [
+        {"number": "1799", "label": "Helpline", "toll_free": null, "hours": null}
+      ],
+      "unverified_phones": [
+        {"number": "021-99333950", "label": "NCCIA Karachi office", "why_unverified": "read from a search-engine copy of complaint.nccia.gov.pk; the site blocks automated access; not yet confirmed in a browser"},
+        {"number": "022-9250010", "label": "NCCIA Hyderabad office", "why_unverified": "read from a search-engine copy of complaint.nccia.gov.pk; the site blocks automated access; not yet confirmed in a browser"}
+      ],
+      "email": [],
+      "website": "https://www.nccia.gov.pk/",
+      "complaint_url": "https://complaint.nccia.gov.pk/",
+      "online_links": [],
+      "address": null,
+      "hours": "Helpline",
+      "services": "Receives and investigates cybercrime complaints (online harassment, blackmail, fake accounts, online fraud).",
+      "cost": null,
+      "related_law_ids": ["peca-2016"],
+      "how_to_access": "File online at complaint.nccia.gov.pk or call 1799.",
+      "display": true,
+      "priority_call_test": true,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-16",
+        "sources": [
+          {"url": "https://complaint.nccia.gov.pk/", "publisher": "NCCIA complaint portal ('24/7 Helpline: 1799'; 'Our Locations' with Karachi and Hyderabad offices)", "kind": "official_page"},
+          {"url": "https://www.nccia.gov.pk/", "publisher": "NCCIA", "kind": "official_page"},
+          {"url": "https://pid.gov.pk/site/press_detail/29307", "publisher": "Press Information Department, Government of Pakistan (press release, 3 Jun 2025: complaints by calling 1799)", "kind": "official_page"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "Office numbers, emails, addresses and '24/7' were read from complaint.nccia.gov.pk through a search-engine copy on 2026-10-16. The NCCIA sites refused direct automated access on 2026-10-17, so only 1799 could be re-confirmed (PID press release). Open the portal in a browser and call-test the office numbers before the demo. Two different headquarters landlines appear on different NCCIA pages, so neither is shown. Emails and office details removed until confirmed in a browser."
+      }
+    },
+    {
+      "id": "mohr-1099",
+      "name": "Ministry of Human Rights - Helpline 1099 (legal advice on human rights violations)",
+      "also_known_as": ["MoHR 1099"],
+      "type": "government_helpline",
+      "jurisdiction": "federal",
+      "categories": ["legal_aid", "human_rights", "women", "general"],
+      "phones": [
+        {"number": "1099", "label": "Toll-free legal advice helpline", "toll_free": true, "hours": null}
+      ],
+      "email": ["helpline@mohr.gov.pk"],
+      "website": "https://mohr.gov.pk/",
+      "complaint_url": null,
+      "online_links": [],
+      "address": null,
+      "hours": null,
+      "services": "Free legal advice, counselling, legal assistance and referral for victims of human rights violations, nationwide.",
+      "cost": "Free (toll-free)",
+      "related_law_ids": [],
+      "how_to_access": "Call 1099 or email the helpline.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://mohr.gov.pk/Detail/YWRiYjU0NzktMGE2Zi00NDYyLTljNzktMTA2N2M2MjBlZWZl", "publisher": "Ministry of Human Rights, Government of Pakistan", "kind": "official_page"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "sindh-labour-department",
+      "name": "Labour & Human Resources Department, Government of Sindh",
+      "also_known_as": ["Sindh Labour Department"],
+      "type": "government_department",
+      "jurisdiction": "sindh",
+      "categories": ["employment"],
+      "phones": [
+        {"number": "021-99211551", "label": "Department office", "toll_free": false, "hours": "09:00-17:00"}
+      ],
+      "email": ["info@sindh.gov.pk"],
+      "website": "https://lhr.sindh.gov.pk/",
+      "complaint_url": "https://lhr.sindh.gov.pk/complains",
+      "online_links": ["https://lhr.sindh.gov.pk/rules-act-policies"],
+      "address": "2nd Floor, Tughluq House, Burns Road, Karachi",
+      "hours": "09:00-17:00",
+      "services": "Labour law enforcement and inspection, minimum wage notifications, online complaint form.",
+      "cost": null,
+      "related_law_ids": ["sindh-payment-of-wages-2015", "sindh-minimum-wages-2015", "sindh-standing-orders-2015", "sindh-domestic-workers-welfare-2025", "sindh-prohibition-employment-children-2017"],
+      "how_to_access": "Use the online complaint form or call the department office.",
+      "display": true,
+      "priority_call_test": true,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://lhr.sindh.gov.pk/", "publisher": "Labour & Human Resources Department, Government of Sindh", "kind": "official_page"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "The email shown on the site is the generic Sindh Government address. Ask during the call-test which office/Authority takes wage claims for Karachi districts."
+      }
+    },
+    {
+      "id": "mohtasib-sindh",
+      "name": "Provincial Ombudsman (Mohtasib) Sindh",
+      "also_known_as": ["Mohtasib-e-Aala Sindh", "Ombudsman Sindh"],
+      "type": "ombudsperson",
+      "jurisdiction": "sindh",
+      "categories": ["government_complaints"],
+      "phones": [
+        {"number": "021-99211026", "label": "Head office", "toll_free": false, "hours": null},
+        {"number": "021-99211031", "label": "Head office (also -25, -28)", "toll_free": false, "hours": null}
+      ],
+      "email": ["info@mohtasibsindh.gov.pk", "mohtasibhd@yahoo.com"],
+      "website": "https://mohtasibsindh.gov.pk/",
+      "complaint_url": "https://complaints.mohtasibsindh.gov.pk/",
+      "online_links": ["https://play.google.com/store/apps/details?id=com.sindh.app.pk"],
+      "address": "Secretariat Provincial Ombudsman Sindh, Shahrah-e-Kamal Ataturk, Opp. Sindh Secretariat, Karachi",
+      "hours": null,
+      "services": "Free investigation of complaints of maladministration by Sindh Government departments and institutions. Complaints in English, Urdu or Sindhi; no anonymous complaints.",
+      "cost": "Free",
+      "related_law_ids": ["sindh-ombudsman-act-1991"],
+      "how_to_access": "First approach the agency's higher authority; then complain online, by email, post or in person, attaching the correspondence and a CNIC copy.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://mohtasibsindh.gov.pk/MakeAComplaint/MakingAComplaint", "publisher": "Provincial Ombudsman (Mohtasib) Sindh", "kind": "official_page"},
+          {"url": "https://mohtasibsindh.gov.pk/MakeAComplaint/ComplaintFAQs", "publisher": "Provincial Ombudsman (Mohtasib) Sindh", "kind": "official_page"},
+          {"url": "https://mohtasibsindh.gov.pk/FolderFlyer.pdf", "publisher": "Provincial Ombudsman (Mohtasib) Sindh (information flyer: address, phones, time limits)", "kind": "official_page"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "Use the numbers printed on the pages and flyer (flyer: 99211025, 99211031). The website's click-to-call link points to an unrelated number - never copy numbers from phone links."
+      }
+    },
+    {
+      "id": "sindh-minorities-affairs",
+      "name": "Minorities Affairs Department, Government of Sindh",
+      "also_known_as": [],
+      "type": "government_department",
+      "jurisdiction": "sindh",
+      "categories": ["human_rights"],
+      "phones": [
+        {"number": "021-99206184", "label": "Complaints related to minority rights", "toll_free": false, "hours": null}
+      ],
+      "email": [],
+      "website": null,
+      "complaint_url": "https://minorityaffairs.sindh.gov.pk/complains",
+      "online_links": [],
+      "address": null,
+      "hours": null,
+      "services": "Complaints related to minority rights.",
+      "cost": null,
+      "related_law_ids": [],
+      "how_to_access": "Call or use the online form.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://humanrights.sindh.gov.pk/introduction", "publisher": "Human Rights Department, Government of Sindh (helpline list)", "kind": "official_listing"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "plus-legal-aid",
+      "name": "Pakistan Legal United Society (PLUS)",
+      "also_known_as": ["PLUS Legal Aid"],
+      "type": "legal_aid_ngo",
+      "jurisdiction": "sindh",
+      "categories": ["legal_aid"],
+      "phones": [
+        {"number": "021-34011698", "label": "Head office, Karachi", "toll_free": false, "hours": null},
+        {"number": "022-6112571", "label": "Regional office, Hyderabad", "toll_free": false, "hours": null},
+        {"number": "071-5824119", "label": "Regional office, Sukkur", "toll_free": false, "hours": null}
+      ],
+      "email": [],
+      "website": "https://www.pluslegalaid.org.pk/",
+      "complaint_url": null,
+      "online_links": [],
+      "address": "Head office: Plot No. 213, St. 4, New Bakhtawar Goth, Block-09, Gulistan-e-Johar, Karachi. Regional offices in Hyderabad (Qasimabad) and Sukkur.",
+      "hours": null,
+      "services": "Legal aid, assistance and representation for vulnerable and marginalised communities (as described on its website); the site offers 'Get Free Legal Advice' through its contact page.",
+      "cost": "Not stated - the website offers free legal advice; ask about any fees for court representation.",
+      "related_law_ids": [],
+      "how_to_access": "Call the Karachi head office or the Hyderabad / Sukkur regional office.",
+      "display": true,
+      "priority_call_test": true,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://www.pluslegalaid.org.pk/", "publisher": "Pakistan Legal United Society (own site)", "kind": "org_own_site"},
+          {"url": "https://humanrights.sindh.gov.pk/introduction", "publisher": "Human Rights Department, Government of Sindh (helpline list)", "kind": "official_listing"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "Name, numbers and addresses confirmed on the organisation's own site on 2026-10-17 (the HRD list prints the name differently). Eligibility and fees are not stated - ask during the call-test."
+      }
+    },
+    {
+      "id": "karachi-police-tenant-registration",
+      "name": "Tenant Registration - Karachi / Sindh Police (TRUST portal)",
+      "also_known_as": ["TRUST"],
+      "type": "government_service",
+      "jurisdiction": "sindh",
+      "categories": ["tenancy"],
+      "phones": [],
+      "email": [],
+      "website": "https://karachipolice.gov.pk/services/how-to-apply-for-tenant-registration-process/",
+      "complaint_url": null,
+      "online_links": ["https://tenantregister.sindhpolice.gov.pk/"],
+      "address": "Concerned police station or police facilitation centre",
+      "hours": null,
+      "services": "Registration of tenants under the Sindh Information of Temporary Residents Act, 2015; a certificate is issued.",
+      "cost": "Free",
+      "related_law_ids": ["sindh-information-temporary-residents-2015"],
+      "how_to_access": "Visit the police station or facilitation centre with: original and copy of the owner's CNIC and the tenant's CNIC, the rent agreement, an affidavit and the tenant's photograph (about 15-20 minutes) - or register online on TRUST.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "A",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://karachipolice.gov.pk/services/how-to-apply-for-tenant-registration-process/", "publisher": "Karachi Police (Sindh Police)", "kind": "official_page"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "The official page links the TRUST portal with http; the portal ('Tenant Registration System': register with a mobile number and SMS code) also loads over https, checked 2026-10-17."
+      }
+    },
+    {
+      "id": "pbc-free-legal-aid",
+      "name": "Pakistan Bar Council - Free Legal Aid (Central Free Legal Aid Committee)",
+      "also_known_as": [],
+      "type": "legal_aid_mechanism",
+      "jurisdiction": "national",
+      "categories": ["legal_aid"],
+      "phones": [],
+      "email": [],
+      "website": "https://www.pakistanbarcouncil.org/index.php/supreme-court/free-legal-aid",
+      "complaint_url": null,
+      "online_links": ["https://www.pakistanbarcouncil.org/index.php/supreme-court/free-legal-aid"],
+      "address": null,
+      "hours": null,
+      "services": "Free legal aid for people who cannot afford a lawyer, under the Pakistan Bar Council Free Legal Aid Rules, 1999.",
+      "cost": "Free",
+      "related_law_ids": ["pbc-free-legal-aid-rules-1999"],
+      "how_to_access": "Fill the online application form on the Pakistan Bar Council website (applicant declares they are unable to afford legal costs and uploads case documents).",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://www.pakistanbarcouncil.org/index.php/supreme-court/free-legal-aid", "publisher": "Pakistan Bar Council (statutory body)", "kind": "official_page"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "Mechanism, not a helpline."
+      }
+    },
+    {
+      "id": "dlec-legal-aid",
+      "name": "District Legal Empowerment Committee (DLEC) - free legal representation through the district court",
+      "also_known_as": ["DLEC"],
+      "type": "legal_aid_mechanism",
+      "jurisdiction": "national",
+      "categories": ["legal_aid"],
+      "phones": [],
+      "email": [],
+      "website": null,
+      "complaint_url": null,
+      "online_links": [],
+      "address": "District & Sessions Court of the user's district",
+      "hours": null,
+      "services": "Free legal representation for deserving litigants through a district panel of lawyers (District Legal Empowerment Committees, set up in 2011 by the Law and Justice Commission of Pakistan).",
+      "cost": "Free for eligible litigants",
+      "related_law_ids": ["dlec-rules-2011"],
+      "how_to_access": "Ask at the District & Sessions Court for the District Legal Empowerment Committee and apply for legal aid.",
+      "display": true,
+      "priority_call_test": false,
+      "verification": {
+        "level": "B",
+        "verified_on": "2026-10-17",
+        "sources": [
+          {"url": "https://undp.org/node/415521", "publisher": "UNDP Pakistan", "kind": "un_or_state_media"},
+          {"url": "https://www.app.com.pk/?p=1003133", "publisher": "Associated Press of Pakistan (state news agency)", "kind": "un_or_state_media"}
+        ],
+        "call_tested": false,
+        "call_tested_on": null,
+        "notes": "Mechanism, not a helpline. Eligibility details not verified."
+      }
+    }
+  ]
+}
